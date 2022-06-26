@@ -1,5 +1,5 @@
 package trab2;
-
+// teste
 public class Gerente extends Funcionario {
     private int anosDeExperiencia;
 
