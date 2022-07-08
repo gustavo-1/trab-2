@@ -38,14 +38,20 @@ public class TelaInicialGUI extends JFrame {
         menuGerenteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        menuVendedorButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
                 System.out.println("aqui");
                 if(senhaGerentePasswordField.getText().equals(SENHA_MESTRE_GERENTE) == true){
                     System.out.println("Senha Correta");
                     //apagar();
                     JFrame menuGerente = new menuGerente();
-
-
                 }
+
             }
         });
     }

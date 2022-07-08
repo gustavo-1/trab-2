@@ -5,8 +5,10 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.Field;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -68,12 +70,53 @@ public class AdicionarVeiculo extends JFrame {
             //informações especificas sobre carro ou moto ainda não foram adicionadas pra eu poder comecar a testar
         Carro carroNovo = new Carro(nchaci,"tmarca","tmodelo",1,1.1,"tTipoDeCombustivel",1.1,true,0,0,0," ",0.0,0.0,0.0);
 
+
+
+
+
+
+
+        //////////////////// tenta printar todos atrubutos automatiamente(sou preguicoso não quero escrever )
+        StringBuilder result = new StringBuilder();
+        String newLine = System.getProperty("line.separator");
+
+        result.append( carroNovo.getClass().getName() );
+        result.append( " Object {" );
+        result.append(newLine);
+
+        //determine fields declared in this class only (no fields of superclass)
+        Field[] fields = carroNovo.getClass().getDeclaredFields();
+
+        //print field names paired with their values
+        for ( Field field : fields  ) {
+            result.append("  ");
+            try {
+                result.append( field.getName() );
+                result.append(": ");
+                //requires access to private field:
+                result.append( field.get(carroNovo) );
+            } catch ( IllegalAccessException ex ) {
+                System.out.println(ex);
+            }
+            result.append(newLine);
+        }
+        result.append("}");
+
+        System.out.println(result.toString());
+
+        /////////////////////////
+        ///escreve na mão(aceitei derrota)
+
         try{
-            BufferedWriter saida = new BufferedWriter(new FileWriter("carros.txt"));
+            //BufferedWriter saida = new BufferedWriter(new FileWriter("carros.txt"));
+
+            File arq = new File("carros.txt");
+            FileWriter saida = new FileWriter(arq,true);
+
 
             String textoSaida = nchaci + "|" ;
-            saida.write(textoSaida);
-            saida.newLine();
+            saida.write(textoSaida+"\n");
+
 
 
             saida.close();
