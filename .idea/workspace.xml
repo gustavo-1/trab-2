@@ -1,36 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb86f2a6-f74c-44ca-bb6a-61664a8f8b34" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AdicionarVeiculo.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AdicionarVeiculo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Carro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CriarVeiculo.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CriarVeiculo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Data.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Desktop.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Dimensoes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Funcionario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Gerente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Horario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Motocicleta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TelaInicialGUI.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TelaInicialGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Veiculo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Venda.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Vendedor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/menuGerente.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/menuGerente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trabalho2poo.iml" afterDir="false" />
-    </list>
+    <list default="true" id="bb86f2a6-f74c-44ca-bb6a-61664a8f8b34" name="Changes" comment="adiciona algumas telas" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,16 +29,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "181",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "331",
-    "last_opened_file_path": "C:/Users/gusta/IdeaProjects/trabalho2poo"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;181&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;331&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/gusta/IdeaProjects/trabalho2poo&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\gusta\IdeaProjects\trabalho2poo\src" />
@@ -120,6 +91,14 @@
       <option name="presentableId" value="Default" />
       <updated>1656175507726</updated>
     </task>
+    <task id="LOCAL-00001" summary="adiciona algumas telas">
+      <created>1657293938529</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1657293938529</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,6 +111,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adiciona algumas telas" />
+    <option name="LAST_COMMIT_MESSAGE" value="adiciona algumas telas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
