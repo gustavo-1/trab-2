@@ -18,7 +18,7 @@ public class TelaInicialGUI extends JFrame {
     private JButton menuVendedorButton;
     private JPasswordField senhaGerentePasswordField;
     private JLabel labelPic;
-    private JPasswordField senhaGerentePasswordField1;
+    private JPasswordField SenhaVendedor;
     private static final String SENHA_MESTRE_GERENTE = "senha";
     private static final String SENHA_MESTRE_FUNCIONARIO = "senha";
 
@@ -48,10 +48,10 @@ public class TelaInicialGUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
 
                 System.out.println("aqui");
-                if(senhaGerentePasswordField.getText().equals(SENHA_MESTRE_GERENTE) == true){
+                if(SenhaVendedor.getText().equals(SENHA_MESTRE_GERENTE) == true){
                     System.out.println("Senha Correta");
                     //apagar();
-                    JFrame menuGerente = new menuGerente();
+                    JFrame menuGerente = new menuFuncionario();
                 }
 
             }

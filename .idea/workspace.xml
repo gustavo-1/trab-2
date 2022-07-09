@@ -1,29 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ec128bb-b4dc-4fbe-baa4-1fb051094707" name="Changes" comment="commiting 2606">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AdicionarVeiculo.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AdicionarVeiculo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MenuVender.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MenuVender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TelaInicialGUI.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TelaInicialGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/menuGerente.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/menuGerente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/trab2/Desktop.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/trab2/Horario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/trab2/Main.java" afterDir="false" />
+    <list default="true" id="1ec128bb-b4dc-4fbe-baa4-1fb051094707" name="Changes" comment="adiciona novas janelas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/Dimensoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/Dimensoes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/Funcionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/Funcionario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/Gerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/Gerente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/Motocicleta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/Motocicleta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/Veiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/Veiculo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/Venda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/Venda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/Vendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/Vendedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/TelaInicialGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/TelaInicialGUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/TelaInicialGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/TelaInicialGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/menuGerente.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/menuFuncionario.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/menuGerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/menuFuncionario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656256732762</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="adiciona novas janelas">
+      <created>1657382986314</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1657382986314</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -137,6 +127,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit test" />
     <MESSAGE value="commiting 2606" />
-    <option name="LAST_COMMIT_MESSAGE" value="commiting 2606" />
+    <MESSAGE value="adiciona novas janelas" />
+    <option name="LAST_COMMIT_MESSAGE" value="adiciona novas janelas" />
   </component>
 </project>

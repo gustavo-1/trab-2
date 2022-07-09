@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class menuGerente extends JFrame{
+public class menuFuncionario extends JFrame{
 
     private JPanel painelGerente;
     private JButton veiculoButton;
@@ -12,7 +12,7 @@ public class menuGerente extends JFrame{
     private JButton button3;
     private JButton venderButton;
 
-    public menuGerente(){
+    public menuFuncionario(){
         super("menu gerente");
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
