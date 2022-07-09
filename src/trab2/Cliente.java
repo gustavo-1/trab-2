@@ -1,5 +1,4 @@
 package trab2;
-
 public class Cliente {
     private int cpf;
     private String nome;
