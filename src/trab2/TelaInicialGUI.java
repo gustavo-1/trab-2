@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.util.Arrays;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -46,9 +47,9 @@ public class TelaInicialGUI extends JFrame {
         menuVendedorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                JPasswordField senhacripto = new JPasswordField(SENHA_MESTRE_GERENTE);
                 System.out.println("aqui");
-                if(SenhaVendedor.getText().equals(SENHA_MESTRE_GERENTE) == true){
+                if(Arrays.equals(SenhaVendedor.getPassword(), senhacripto.getPassword())){
                     System.out.println("Senha Correta");
                     //apagar();
                     JFrame menuGerente = new menuFuncionario();

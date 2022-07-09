@@ -28,7 +28,7 @@
           </component>
         </children>
       </grid>
-      <component id="15cf9" class="javax.swing.JButton" binding="menuGerenteButton" default-binding="true">
+      <component id="92840" class="javax.swing.JButton" binding="menuVendedorButton" default-binding="true">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -36,7 +36,7 @@
           <text value="Menu Gerente"/>
         </properties>
       </component>
-      <component id="92840" class="javax.swing.JButton" binding="menuVendedorButton" default-binding="true">
+      <component id="15cf9" class="javax.swing.JButton" binding="menuGerenteButton" default-binding="true">
         <constraints>
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -44,7 +44,7 @@
           <text value="Menu Vendedor"/>
         </properties>
       </component>
-      <component id="7d446" class="javax.swing.JPasswordField" binding="senhaGerentePasswordField" default-binding="true">
+      <component id="60df0" class="javax.swing.JPasswordField" binding="SenhaVendedor">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -52,10 +52,9 @@
         </constraints>
         <properties>
           <text value=""/>
-          <toolTipText value="Senha Gerente"/>
         </properties>
       </component>
-      <component id="60df0" class="javax.swing.JPasswordField" binding="SenhaVendedor">
+      <component id="7d446" class="javax.swing.JPasswordField" binding="senhaGerentePasswordField" default-binding="true">
         <constraints>
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -63,6 +62,7 @@
         </constraints>
         <properties>
           <text value=""/>
+          <toolTipText value="Senha Gerente"/>
         </properties>
       </component>
     </children>
