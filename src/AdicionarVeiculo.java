@@ -2,15 +2,10 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.reflect.Field;
 
-import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 public class AdicionarVeiculo extends JFrame {
     private JTextField Nchaci;
@@ -21,7 +16,6 @@ public class AdicionarVeiculo extends JFrame {
     private JPanel Painel;
     private JButton button1;
     private JTextField modelo;
-    private JTextField peso;
     private JCheckBox vendidoCheckBox;
     private JLabel JLabelPeso;
     private JLabel JLabelStatus;
@@ -31,6 +25,14 @@ public class AdicionarVeiculo extends JFrame {
     private JLabel JLabelKM;
     private JLabel JLabelMarca;
     private JLabel JLabelNumero;
+    private JTextField peso;
+    private JTextField potencia;
+    private JTextField nCilindros;
+    private JTextField nOcupantes;
+    private JTextField tipo;
+    private JTextField altura;
+    private JTextField largura;
+    private JTextField comprimento;
 
     public AdicionarVeiculo(){
         super("menu vendedor");
@@ -59,16 +61,24 @@ public class AdicionarVeiculo extends JFrame {
 
     public void adicionar() throws IOException {
         int nchaci = Integer.parseInt(Nchaci.getText());
-        //String tmarca = marca.getText();
-       // String tmodelo = modelo.getText();
-       // int tano= Integer.parseInt(ano.getText());
-        //double tquilometragem = Double.parseDouble(quilometragem.getText());
-       // String tTipoDeCombustivel = tipoCombustivel.getText();
-        //double tPeso = Double.parseDouble(peso.getText());
-        ///boolean tVendido = vendidoCheckBox.isSelected();
+        String tmarca = marca.getText();
+        String tmodelo = modelo.getText();
+        int tano= Integer.parseInt(ano.getText());
+        double tquilometragem = Double.parseDouble(quilometragem.getText());
+        String tTipoDeCombustivel = tipoCombustivel.getText();
+        double tPeso = Double.parseDouble(peso.getText());
+        boolean tVendido = vendidoCheckBox.isSelected();
+
+        int tpotencia = Integer.parseInt(potencia.getText());
+        int tnDeCilindros = Integer.parseInt(nCilindros.getText());
+        int tnDeOcupantes = Integer.parseInt(nOcupantes.getText());
+        String ttipo  = tipo.getText();
+        double talt= Double.parseDouble(altura.getText());
+        double tlarg= Double.parseDouble(largura.getText());
+        double tcompri= Double.parseDouble(comprimento.getText());
 
             //informações especificas sobre carro ou moto ainda não foram adicionadas pra eu poder comecar a testar
-        Carro carroNovo = new Carro(nchaci,"tmarca","tmodelo",1,1.1,"tTipoDeCombustivel",1.1,true,0,0,0," ",0.0,0.0,0.0);
+        Carro carroNovo = new Carro(nchaci,tmarca,tmodelo,tano,tquilometragem,tTipoDeCombustivel,tPeso,tVendido,tpotencia,tnDeCilindros,tnDeOcupantes,ttipo,talt,tlarg,tcompri);
 
 
 
@@ -76,37 +86,8 @@ public class AdicionarVeiculo extends JFrame {
 
 
 
-        //////////////////// tenta printar todos atrubutos automatiamente(sou preguicoso não quero escrever )
-        StringBuilder result = new StringBuilder();
-        String newLine = System.getProperty("line.separator");
 
-        result.append( carroNovo.getClass().getName() );
-        result.append( " Object {" );
-        result.append(newLine);
-
-        //determine fields declared in this class only (no fields of superclass)
-        Field[] fields = carroNovo.getClass().getDeclaredFields();
-
-        //print field names paired with their values
-        for ( Field field : fields  ) {
-            result.append("  ");
-            try {
-                result.append( field.getName() );
-                result.append(": ");
-                //requires access to private field:
-                result.append( field.get(carroNovo) );
-            } catch ( IllegalAccessException ex ) {
-                System.out.println(ex);
-            }
-            result.append(newLine);
-        }
-        result.append("}");
-
-        System.out.println(result.toString());
-
-        /////////////////////////
-        ///escreve na mão(aceitei derrota)
-
+        //escreve em arquivo veiculo criado
         try{
             //BufferedWriter saida = new BufferedWriter(new FileWriter("carros.txt"));
 
@@ -114,8 +95,8 @@ public class AdicionarVeiculo extends JFrame {
             FileWriter saida = new FileWriter(arq,true);
 
 
-            String textoSaida = nchaci + "|" ;
-            saida.write(textoSaida+"\n");
+            String textoSaida = "\n" + nchaci + "~"+ tmarca+ "~" + tmodelo + "~"+ tano + "~"+ tquilometragem + "~"+tTipoDeCombustivel+ "~" + tPeso + "~"+ tVendido  +"~"+tpotencia +"~"+tnDeCilindros+ "~" +tnDeOcupantes +"~"+ ttipo  +"~"+talt +"~"+tlarg+ "~"+tcompri;
+            saida.write(textoSaida);
 
 
 

@@ -24,9 +24,19 @@ public class menuGerente extends JFrame{
                 irParaAdicionarVeiculo();
             }
         });
+        clienteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                irParaAdicionarCliente();
+            }
+        });
     }
     public void irParaAdicionarVeiculo(){
         AdicionarVeiculo f = new AdicionarVeiculo();
+
+    }
+    public void irParaAdicionarCliente(){
+        AdicionarCliente f = new AdicionarCliente();
 
     }
 }
