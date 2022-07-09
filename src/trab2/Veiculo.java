@@ -1,6 +1,6 @@
 package trab2;
 
-public class Veiculo{
+public abstract class Veiculo{
     protected int numeroDoChassi;
     protected String marca;
     protected String modelo;
@@ -20,8 +20,6 @@ public class Veiculo{
        this.tipoCombustivel = t;
        this.peso = p;
        this.vendido=v;
-
-
     }
 
     public void setAno(int ano) {

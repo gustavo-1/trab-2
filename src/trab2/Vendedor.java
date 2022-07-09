@@ -1,5 +1,4 @@
 package trab2;
- // teste
 public class Vendedor extends Funcionario {
     private double tempoRestante;
     private Gerente gerente;

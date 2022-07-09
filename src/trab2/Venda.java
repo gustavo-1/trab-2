@@ -1,5 +1,4 @@
 package trab2;
-
 public class Venda {
     private int id;
     private Vendedor vendedor;
@@ -7,8 +6,7 @@ public class Venda {
     private Veiculo veiculo;//por enquanto é um veiculo, mas no futuro devera ser so um carro ou moto, nunca a classe pai, que nao pode ser instanciada
     private double valor;
     private Data data;
-    private int hora;
-    private int minutos;
+    private Horario horario;
 
     public Venda(int id, Vendedor vendedor, Cliente cliente, Veiculo veiculo, double valor, int dia, int mes, int ano,int hora, int minutos){
         this.id = id;
@@ -17,8 +15,8 @@ public class Venda {
         this.veiculo = veiculo;
         this.valor=valor;
         this.data = new Data(dia, mes, ano);
-        this.hora=hora;
-        this.minutos = minutos;
+        horario = new Horario(hora,minutos);
+
     }
     public Cliente getCliente() {
         return cliente;
@@ -26,15 +24,11 @@ public class Venda {
     public Data getData() {
         return data;
     }
-    public int getHora() {
-        return hora;
-    }
+
     public int getId() {
         return id;
     }
-    public int getMinutos() {
-        return minutos;
-    }
+
     public double getValor() {
         return valor;
     }
@@ -50,15 +44,11 @@ public class Venda {
     public void setData(Data data) {
         this.data = data;
     }
-    public void setHora(int hora) {
-        this.hora = hora;
-    }
+
     public void setId(int id) {
         this.id = id;
     }
-    public void setMinutos(int minutos) {
-        this.minutos = minutos;
-    }
+
     public void setValor(double valor) {
         this.valor = valor;
     }
@@ -67,5 +57,13 @@ public class Venda {
     }
     public void setVendedor(Vendedor vendedor) {
         this.vendedor = vendedor;
+    }
+
+    public Horario getHorario() {
+        return horario;
+    }
+
+    public void setHorario(Horario horario) {
+        this.horario = horario;
     }
 }

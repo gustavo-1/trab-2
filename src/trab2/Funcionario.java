@@ -1,6 +1,5 @@
 package trab2;
-
-public class Funcionario{
+public abstract class Funcionario{
     protected String rg;
     protected Data dataNascimento;
     protected Data dataAdmissao; 
