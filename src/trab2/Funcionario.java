@@ -1,15 +1,17 @@
 package trab2;
 public abstract class Funcionario{
     protected String rg;
+    protected String nome;
     protected Data dataNascimento;
     protected Data dataAdmissao; 
-    protected double salario;   
+    protected double salario;
 
-    public Funcionario(String r, Data dn,Data da, double s){
+    public Funcionario(String r, String nome, Data dn, Data da, double s){
         this.rg=r;
         this.dataNascimento = dn;
         this.dataAdmissao= da;
         this.salario = s;
+        this.nome = nome;
     }
 
     public Data getDataAdmissao() {
@@ -20,6 +22,9 @@ public abstract class Funcionario{
     }
     public String getRg() {
         return rg;
+    }
+    public String getNome() {
+        return nome;
     }
     public double getSalario() {
         return salario;

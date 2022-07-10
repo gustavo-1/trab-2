@@ -3,6 +3,7 @@ package trab2;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 import java.io.IOException;
 import java.util.Arrays;
 
@@ -15,8 +16,10 @@ public class TelaInicialGUI extends JFrame {
     private JFrame frame;
     private JLabel displayField;
     private ImageIcon image;
-    private JButton menuGerenteButton;
     private JButton menuVendedorButton;
+    private JButton menuGerenteButton;
+
+    private JButton close;
     private JPasswordField senhaGerentePasswordField;
     private JLabel labelPic;
     private JPasswordField SenhaVendedor;
@@ -36,15 +39,22 @@ public class TelaInicialGUI extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(painelInicial);
         this.pack();
+        this.setLocationRelativeTo(null);
         this.setVisible(true);
 
-        menuGerenteButton.addActionListener(new ActionListener() {
+        menuVendedorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                /* System.out.println("aqui");
+                if(Arrays.equals(SenhaVendedor.getPassword(), (.........).getPassword())){ // Senha guardada no banco de dados após o cadastro
+                    System.out.println("Senha Correta");
+                    //apagar();
+                    JFrame menuVendedor = new menuVendedor();
+                }
+                close();*/
             }
         });
-        menuVendedorButton.addActionListener(new ActionListener() {
+        menuGerenteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JPasswordField senhacripto = new JPasswordField(SENHA_MESTRE_GERENTE);
@@ -52,11 +62,22 @@ public class TelaInicialGUI extends JFrame {
                 if(Arrays.equals(SenhaVendedor.getPassword(), senhacripto.getPassword())){
                     System.out.println("Senha Correta");
                     //apagar();
-                    JFrame menuGerente = new menuFuncionario();
+                    JFrame menuGerente = new menuGerente();
+                    close();
                 }
-
             }
         });
+        close.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                close();
+            }
+        });
+    }
+
+    private void close(){
+        setVisible(false);
+        dispose();
     }
     private void apagar(){
         frame.setVisible(false);
@@ -64,7 +85,7 @@ public class TelaInicialGUI extends JFrame {
 
     public static void main(String[] args) throws IOException {
 
-        JFrame frame = new TelaInicialGUI("Consecionaria Jose");
+        JFrame frame = new TelaInicialGUI("Concessionária Jose");
 
 
     }

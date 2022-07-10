@@ -4,8 +4,8 @@ public class Carro extends Veiculo {
     private int potencia;
     private int nDeCilindros;
     private int nDeOcupantes;
-    private String tipo;
-    private Dimensoes dimensoes;
+    private String tipo; /* utilitário, sedan, hatch, esportivo */
+    private Dimensoes dimensoes; /* altura, largura e comprimento */
 
     public Carro(int n,String ma, String mo, int a, double k, String t, double p,boolean v, int po, int nDeCil, int nDeOcu, String tip, double alt, double larg, double comp){
         super(n, ma, mo, a, k, t, p, v);

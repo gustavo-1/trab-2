@@ -1,7 +1,7 @@
 package trab2;
 public class Motocicleta extends Veiculo {
     private int cilindradas;
-    private String tipo;
+    private String tipo; /* trail, street, esportiva, custom */
 
 
     public Motocicleta(int n,String ma, String mo, int a, double k, String t, double p,boolean v, int cil, String tip){
