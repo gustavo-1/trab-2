@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ec128bb-b4dc-4fbe-baa4-1fb051094707" name="Changes" comment="Solução para o problema dos getText(); que não era um método seguro para comparar senhas, uma vez que as guardavam como strings&#10;&#10;Problema dos botões Gerente e Vendedor - onde Gerente abria menu Vendedor e Vendedor abria menu Gerente - resolvido.">
+    <list default="true" id="1ec128bb-b4dc-4fbe-baa4-1fb051094707" name="Changes" comment="adiciona tela de adicionar vendedor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/Funcionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/Funcionario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/Vendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/Vendedor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/trab2/menuGerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/menuGerente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/menuVendedor.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/menuVendedor.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/menuVendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/menuVendedor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +50,7 @@
       <recent name="C:\Users\gusta\IdeaProjects\trab-2\src\trab2" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AdicionarVendedor">
+  <component name="RunManager" selected="Application.trab2.TelaInicialGUI">
     <configuration name="AdicionarVendedor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="trab2.AdicionarVendedor" />
       <module name="trab2matheus" />
@@ -112,8 +112,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AdicionarVendedor" />
         <item itemvalue="Application.trab2.TelaInicialGUI" />
+        <item itemvalue="Application.AdicionarVendedor" />
         <item itemvalue="Application.trab2.AdicionarMotocicleta" />
         <item itemvalue="Application.trab2.AdicionarCarro" />
         <item itemvalue="Application.TelaInicialGUI" />
@@ -171,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657393540766</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="adiciona tela de adicionar vendedor">
+      <created>1657580415166</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1657580415166</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -188,8 +195,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit test" />
     <MESSAGE value="commiting 2606" />
-    <MESSAGE value="adiciona novas janelas" />
     <MESSAGE value="Solução para o problema dos getText(); que não era um método seguro para comparar senhas, uma vez que as guardavam como strings&#10;&#10;Problema dos botões Gerente e Vendedor - onde Gerente abria menu Vendedor e Vendedor abria menu Gerente - resolvido." />
-    <option name="LAST_COMMIT_MESSAGE" value="Solução para o problema dos getText(); que não era um método seguro para comparar senhas, uma vez que as guardavam como strings&#10;&#10;Problema dos botões Gerente e Vendedor - onde Gerente abria menu Vendedor e Vendedor abria menu Gerente - resolvido." />
+    <MESSAGE value="adiciona novas janelas" />
+    <MESSAGE value="adiciona tela de adicionar vendedor" />
+    <option name="LAST_COMMIT_MESSAGE" value="adiciona tela de adicionar vendedor" />
   </component>
 </project>
