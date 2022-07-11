@@ -106,6 +106,7 @@ public class menuGerente extends JFrame{
     }
 
     public void irParaAdicionarCliente(){
+
         AdicionarCliente f = new AdicionarCliente();
     }
     public void irParaAlterarCliente(){

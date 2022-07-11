@@ -6,10 +6,10 @@ public abstract class Funcionario{
     protected Data dataAdmissao; 
     protected double salario;
 
-    public Funcionario(String r, String nome, Data dn, Data da, double s){
+    public Funcionario(String r, String nome, int dia, int mes, int ano,int diae, int mese,int anoe, double s){
         this.rg=r;
-        this.dataNascimento = dn;
-        this.dataAdmissao= da;
+        this.dataNascimento = new Data(dia,mes,ano);
+        this.dataAdmissao= new Data(diae,mese,anoe);
         this.salario = s;
         this.nome = nome;
     }

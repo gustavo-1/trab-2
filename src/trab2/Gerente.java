@@ -2,8 +2,8 @@ package trab2;
 public class Gerente extends Funcionario {
     private int anosDeExperiencia;
 
-    public Gerente(String r, String nome, Data dn,Data da, double s, int a){
-        super(r, nome, dn, da, s);
+    public Gerente(String r, String nome,  int dia, int mes, int ano,int diae, int mese,int anoe, double s, int a){
+        super(r, nome, dia,mes,ano,diae,mese,anoe, s);
         this.anosDeExperiencia=a;
     }
 
