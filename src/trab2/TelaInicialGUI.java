@@ -3,7 +3,6 @@ package trab2;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
 import java.io.IOException;
 import java.util.Arrays;
 
@@ -23,6 +22,9 @@ public class TelaInicialGUI extends JFrame {
     private JPasswordField senhaGerentePasswordField;
     private JLabel labelPic;
     private JPasswordField SenhaVendedor;
+    JTextField logingerente;
+    private JTextField loginvendedor;
+    private static final String NOME_MESTRE_GERENTE = "admin";
     private static final String SENHA_MESTRE_GERENTE = "senha";
     private static final String SENHA_MESTRE_FUNCIONARIO = "senha";
 
@@ -41,6 +43,7 @@ public class TelaInicialGUI extends JFrame {
         this.pack();
         this.setLocationRelativeTo(null);
         this.setVisible(true);
+
 
         menuVendedorButton.addActionListener(new ActionListener() {
             @Override
@@ -87,8 +90,6 @@ public class TelaInicialGUI extends JFrame {
 
         JFrame frame = new TelaInicialGUI("Concessionária Jose");
 
-
     }
-
 
 }
