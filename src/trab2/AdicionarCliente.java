@@ -104,7 +104,7 @@ public class AdicionarCliente extends JFrame {
             FileWriter saida = new FileWriter(arq, true);
 
 
-            String textoSaida = "\n" + cpf + "~" + nome + "~" + dia + "~" + mes + "~" + ano + "~" + rua + "~" + nrua + "~" + bairro + "~" + cidade + "~" + renda + "~" + dependentes;
+            String textoSaida = cpf + "~" + nome + "~" + dia + "~" + mes + "~" + ano + "~" + rua + "~" + nrua + "~" + bairro + "~" + cidade + "~" + renda + "~" + dependentes+"\n";
             saida.write(textoSaida);
 
 

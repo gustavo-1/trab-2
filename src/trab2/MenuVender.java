@@ -13,8 +13,9 @@ public class MenuVender extends JFrame{
     private JPanel painelvender;
     private JList list1;
     private JButton button1;
-    private JList listaCliente;
+    private JList jlistaCliente;
     static List<Carro>  listaCarros= new ArrayList<Carro>();
+    static List<Cliente>  listaCliente= new ArrayList<Cliente>();
 
     public MenuVender(){
         ler();
@@ -25,10 +26,11 @@ public class MenuVender extends JFrame{
 
 
 
-        DefaultListModel model = criaModelo();
+        DefaultListModel modeloCarros = criaModeloCarro();
+        list1.setModel(modeloCarros);
 
-        list1.setModel(model);
-
+        DefaultListModel modeloCliente = criaModeloCliente();
+        jlistaCliente.setModel(modeloCliente);
 
         button1.addActionListener(new ActionListener() {
             @Override
@@ -38,6 +40,8 @@ public class MenuVender extends JFrame{
 
             }
         });
+
+
     }
 
     public static void main(String[] args) {
@@ -62,13 +66,14 @@ public class MenuVender extends JFrame{
     }
     public void ler(){
 
-
+        //ler carros
         try{
             //BufferedWriter saida = new BufferedWriter(new FileWriter("carros.txt"));
 
             File arq = new File("carros.txt");
             Scanner myReader = new Scanner(arq);
             //BufferedReader leitor = new BufferedReader(arq);
+
 
             Carro tempCarro;
 
@@ -108,6 +113,7 @@ public class MenuVender extends JFrame{
                 listaCarros.add(tempCarro);
 
 
+
             }
 
 
@@ -116,13 +122,84 @@ public class MenuVender extends JFrame{
         catch (IOException e){
             System.out.println("erro: "+e);
         }
+
+
+
+        //ler clientes
+        try{
+
+
+            File arq2= new File("clientes.txt");
+            Scanner myReader2 = new Scanner(arq2);
+
+
+
+            while(myReader2.hasNextLine()){
+
+
+
+                String leitura = myReader2.nextLine();
+                System.out.println("leitura:\n"+leitura);
+
+                String[] atributos2 = leitura.split("~");
+
+                int cpf = Integer.parseInt(atributos2[0]) ;
+                String nome = atributos2[1];
+                int dia =  Integer.parseInt(atributos2[2]) ;
+                int mes =  Integer.parseInt(atributos2[3]) ;
+                int ano =  Integer.parseInt(atributos2[4]) ;
+
+                // endereço
+                String rua = atributos2[5];
+                int nrua =  Integer.parseInt(atributos2[6]) ;
+                String bairro = atributos2[7];
+                String cidade= atributos2[8];
+                // fim
+
+                int renda =  Integer.parseInt(atributos2[9]) ;
+                int dependentes =  Integer.parseInt(atributos2[10]) ;
+
+
+
+
+
+
+                for(String s: atributos2){
+                    System.out.println("atrubutos:\n"+s);
+                }
+
+                Cliente clienteNovo = new Cliente(cpf, nome, dia, mes, ano, rua, nrua, bairro, cidade, renda, dependentes);
+
+                listaCliente.add(clienteNovo);
+
+
+
+            }
+
+
+            myReader2.close();
+        }
+        catch (IOException e){
+            System.out.println("erro: "+e);
+        }
     }
 
-    public DefaultListModel criaModelo(){
+    public DefaultListModel criaModeloCarro(){
         DefaultListModel modelo = new DefaultListModel();
         String temp;
         for(Carro c: listaCarros){
             temp = "modelo:"+c.getModelo()+" marca:" + c.getMarca() +" numero:"+ Integer.toString(c.getNumeroDoChassi());
+            modelo.addElement(temp);
+
+        }
+
+        return modelo;
+    }
+    public DefaultListModel criaModeloCliente(){
+        DefaultListModel modelo = new DefaultListModel();
+        String temp;
+        for(Cliente c: listaCliente){
+            temp = "nome:"+c.getNome()+" cpf:" + c.getCpf();
             modelo.addElement(temp);
 
         }

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ec128bb-b4dc-4fbe-baa4-1fb051094707" name="Changes" comment="adiciona tela de adicionar vendedor">
+    <list default="true" id="1ec128bb-b4dc-4fbe-baa4-1fb051094707" name="Changes" comment="bugs corrigidos e coisinhas adicionadas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/menuGerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/menuGerente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/menuVendedor.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/menuVendedor.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/menuVendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/menuVendedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/MenuVender.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuVender.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/MenuVender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuVender.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +49,20 @@
       <recent name="C:\Users\gusta\IdeaProjects\trab-2\src\trab2" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.trab2.TelaInicialGUI">
+  <component name="RunManager" selected="Application.MenuVender">
+    <configuration name="AdicionarCliente" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="trab2.AdicionarCliente" />
+      <module name="trab2matheus" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="trab2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AdicionarVendedor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="trab2.AdicionarVendedor" />
       <module name="trab2matheus" />
@@ -64,15 +76,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TelaInicialGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TelaInicialGUI" />
-      <module name="trab2matheus" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="trab2.AdicionarCarro" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="trab2.AdicionarCarro" />
+    <configuration name="MenuVender" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="trab2.MenuVender" />
       <module name="trab2matheus" />
       <extension name="coverage">
         <pattern>
@@ -112,11 +117,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MenuVender" />
+        <item itemvalue="Application.AdicionarCliente" />
         <item itemvalue="Application.trab2.TelaInicialGUI" />
         <item itemvalue="Application.AdicionarVendedor" />
         <item itemvalue="Application.trab2.AdicionarMotocicleta" />
-        <item itemvalue="Application.trab2.AdicionarCarro" />
-        <item itemvalue="Application.TelaInicialGUI" />
       </list>
     </recent_temporary>
   </component>
@@ -178,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657580415166</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="bugs corrigidos e coisinhas adicionadas">
+      <created>1657581735735</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1657581735735</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,6 +210,17 @@
     <MESSAGE value="Solução para o problema dos getText(); que não era um método seguro para comparar senhas, uma vez que as guardavam como strings&#10;&#10;Problema dos botões Gerente e Vendedor - onde Gerente abria menu Vendedor e Vendedor abria menu Gerente - resolvido." />
     <MESSAGE value="adiciona novas janelas" />
     <MESSAGE value="adiciona tela de adicionar vendedor" />
-    <option name="LAST_COMMIT_MESSAGE" value="adiciona tela de adicionar vendedor" />
+    <MESSAGE value="bugs corrigidos e coisinhas adicionadas" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugs corrigidos e coisinhas adicionadas" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NumberFormatException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
