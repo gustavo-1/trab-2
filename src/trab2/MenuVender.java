@@ -14,6 +14,14 @@ public class MenuVender extends JFrame{
     private JList list1;
     private JButton button1;
     private JList jlistaCliente;
+    private JTextField valor;
+    private JTextField hora;
+    private JTextField minutos;
+    private JTextField segundos;
+    private JTextField dia;
+    private JTextField mes;
+    private JTextField ano;
+    private JTextField id;
     static List<Carro>  listaCarros= new ArrayList<Carro>();
     static List<Cliente>  listaCliente= new ArrayList<Cliente>();
 
@@ -52,11 +60,25 @@ public class MenuVender extends JFrame{
     public void clicou(){
 
         System.out.println("escolido: "+list1.getSelectedIndex());
-        int resposta = list1.getSelectedIndex();
-        if(resposta >= 0 && resposta < listaCarros.size()){
+        int resposta1 = list1.getSelectedIndex();
+        int resposta2 = jlistaCliente.getSelectedIndex();
+        if(resposta1 >= 0 && 1 < listaCarros.size() && resposta2 >= 0 && 1 < listaCliente.size() ){
             //entrada valida
 
             //criar objeto venda inserir cliente e carro nele e salvar
+            int tid = Integer.parseInt(id.getText());
+            int tdia = Integer.parseInt(dia.getText());
+            int tmes = Integer.parseInt(mes.getText());
+            int tano = Integer.parseInt(ano.getText());
+            int thora = Integer.parseInt(hora.getText());
+            int tminutos = Integer.parseInt(minutos.getText());
+            int tsegundos = Integer.parseInt(segundos.getText());
+            double tvalor = Double.parseDouble(valor.getText());
+
+            //Vendedor vendedor =
+            Cliente cliente = listaCliente.get(resposta2);
+            Veiculo veiculo = listaCarros.get(resposta1);
+            Venda venda = new Venda(tid,vendedor,cliente,veiculo,tvalor,tdia,tmes,tano,thora,tminutos,tsegundos);
         }
         else{
             //talvez colocar um aviso na tela depois
