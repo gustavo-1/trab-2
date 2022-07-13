@@ -37,7 +37,7 @@ public class AdicionarVeiculo extends JFrame {
         close.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                menuGerente f = new menuGerente();
+                MenuGerente f = new MenuGerente();
                 close();
             }
         });

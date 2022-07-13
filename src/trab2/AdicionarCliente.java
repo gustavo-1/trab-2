@@ -34,8 +34,11 @@ public class AdicionarCliente extends JFrame {
     private JTextField anotextfield;
     private JTextField rendatextfield;
     private JButton adicionarClienteButton;
+    private int retornar;
+    private Vendedor vendedor;
 
-    public AdicionarCliente() {
+    //construtor se vier de funcionario
+    public AdicionarCliente(int retornar,Vendedor v) {
         super("Menu - Gerente");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(PainelAddCliente);
@@ -43,14 +46,49 @@ public class AdicionarCliente extends JFrame {
         this.setLocationRelativeTo(null);
         this.setVisible(true);
 
+        this.retornar = retornar;
+        this.vendedor=v;
 
 
         close.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                menuGerente f = new menuGerente();
-                close();
 
+                    MenuVendedor ven = new MenuVendedor(v);
+
+                close();
+            }
+        });
+
+        adicionarClienteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    adicionar();
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
+            }
+        });
+    }
+// se vier do menu gerente
+    public AdicionarCliente(int retornar) {
+        super("Menu - Gerente");
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setContentPane(PainelAddCliente);
+        this.pack();
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
+
+        this.retornar = retornar;
+
+
+        close.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                MenuGerente mg = new MenuGerente();
+                close();
             }
         });
 
@@ -66,9 +104,9 @@ public class AdicionarCliente extends JFrame {
         });
     }
 
-    public static void main(String[] args) {
-        AdicionarCliente f = new AdicionarCliente();
-    }
+   // public static void main(String[] args) {
+       // AdicionarCliente f = new AdicionarCliente();
+  // }
 
     public void close() {
         setVisible(false);
@@ -112,5 +150,15 @@ public class AdicionarCliente extends JFrame {
         } catch (IOException e) {
             System.out.println("erro: " + e);
         }
+
+        if(retornar ==1){//retorna para menu gerente
+            MenuGerente mg = new MenuGerente();
+        }
+        else{//retorna para menu vendedor
+            MenuVendedor mv = new MenuVendedor(this.vendedor);
+        }
+
+        close();
+
     }
 }

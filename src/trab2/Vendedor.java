@@ -23,5 +23,8 @@ public class Vendedor extends Funcionario {
     public void setTempoRestante(double tempoRestante) {
         this.tempoRestante = tempoRestante;
     }
-    
+
+    public String getSenha() {
+        return senha;
+    }
 }

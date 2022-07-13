@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,15 +25,18 @@ public class MenuVender extends JFrame{
     private JTextField id;
     static List<Carro>  listaCarros= new ArrayList<Carro>();
     static List<Cliente>  listaCliente= new ArrayList<Cliente>();
+    private Vendedor vendedor;
 
-    public MenuVender(){
+    public MenuVender(Vendedor v){
         ler();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(painelvender);
+        this.setLocationRelativeTo(null);
+        //this.setSize(111,111);
         this.pack();
         this.setVisible(true);
 
-
+        this.vendedor = v;
 
         DefaultListModel modeloCarros = criaModeloCarro();
         list1.setModel(modeloCarros);
@@ -45,6 +49,7 @@ public class MenuVender extends JFrame{
             public void actionPerformed(ActionEvent e) {
 
                 clicou();
+                System.out.println("clicou");
 
             }
         });
@@ -54,7 +59,7 @@ public class MenuVender extends JFrame{
 
     public static void main(String[] args) {
 
-        MenuVender m = new MenuVender();
+       // MenuVender m = new MenuVender();
 
     }
     public void clicou(){
@@ -62,8 +67,10 @@ public class MenuVender extends JFrame{
         System.out.println("escolido: "+list1.getSelectedIndex());
         int resposta1 = list1.getSelectedIndex();
         int resposta2 = jlistaCliente.getSelectedIndex();
-        if(resposta1 >= 0 && 1 < listaCarros.size() && resposta2 >= 0 && 1 < listaCliente.size() ){
+        //if(resposta1 >= 0 && 1 < listaCarros.size() && resposta2 >= 0 && 1 < listaCliente.size() ){
+        if(resposta1 >= 0 && 0< listaCarros.size() && resposta2 >= 0 && 0 < listaCliente.size() ){
             //entrada valida
+            System.out.println("entrada valida ");
 
             //criar objeto venda inserir cliente e carro nele e salvar
             int tid = Integer.parseInt(id.getText());
@@ -72,13 +79,37 @@ public class MenuVender extends JFrame{
             int tano = Integer.parseInt(ano.getText());
             int thora = Integer.parseInt(hora.getText());
             int tminutos = Integer.parseInt(minutos.getText());
-            int tsegundos = Integer.parseInt(segundos.getText());
+           // int tsegundos = Integer.parseInt(segundos.getText());
             double tvalor = Double.parseDouble(valor.getText());
 
-            //Vendedor vendedor =
+            Vendedor vendedor = this.vendedor;
             Cliente cliente = listaCliente.get(resposta2);
             Veiculo veiculo = listaCarros.get(resposta1);
-            Venda venda = new Venda(tid,vendedor,cliente,veiculo,tvalor,tdia,tmes,tano,thora,tminutos,tsegundos);
+            Venda venda = new Venda(tid,vendedor,cliente,veiculo,tvalor,tdia,tmes,tano,thora,tminutos);
+            /////escrever venda;
+
+            try {
+                //BufferedWriter saida = new BufferedWriter(new FileWriter("clientes.txt"));
+
+                File arq = new File("vendas.txt");
+                FileWriter saida = new FileWriter(arq, true);
+
+
+                String textoSaida = tid + "~"+ vendedor.getRg()+ "~"+cliente.getCpf()+ "~"+veiculo.getNumeroDoChassi()  +"~"    +tvalor +tdia+ "~" +tmes+ "~"+tano + "~"+thora + "~"+tminutos+  "\n" ;
+
+                saida.write(textoSaida);
+
+
+                saida.close();
+
+
+            } catch (IOException e) {
+                System.out.println("erro: " + e);
+            }
+            MenuVendedor m = new MenuVendedor(this.vendedor);
+
+            close();
+
         }
         else{
             //talvez colocar um aviso na tela depois
@@ -227,5 +258,10 @@ public class MenuVender extends JFrame{
         }
 
         return modelo;
+    }
+
+    private void close(){
+        setVisible(false);
+        dispose();
     }
 }

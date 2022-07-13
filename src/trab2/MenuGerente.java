@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class menuGerente extends JFrame{
+public class MenuGerente extends JFrame{
 
     private JPanel painelGerente;
     private JButton veiculoButton;
@@ -15,7 +15,7 @@ public class menuGerente extends JFrame{
     private JTextField desempenhoseller;
     private JButton pesquisarsellerButton;
 
-    public menuGerente(){
+    public MenuGerente(){
         super("Menu - Gerente");
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -107,7 +107,7 @@ public class menuGerente extends JFrame{
 
     public void irParaAdicionarCliente(){
 
-        AdicionarCliente f = new AdicionarCliente();
+        AdicionarCliente f = new AdicionarCliente(1);
     }
     public void irParaAlterarCliente(){
         //AlterarCliente f = new AlterarCliente();
@@ -116,7 +116,7 @@ public class menuGerente extends JFrame{
         //ExcluirCliente f = ExcluirCliente();
     }
     public void irParaAdicionarFuncionario(){
-        // AdicionarVendedor f = new AdicionarVendedor();
+         AdicionarVendedor f = new AdicionarVendedor();
     }
     public void irParaAlterarFuncionario(){
         //AlterarFuncionario f = new AlterarFuncionario();
