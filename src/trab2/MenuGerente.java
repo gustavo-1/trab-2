@@ -14,6 +14,7 @@ public class MenuGerente extends JFrame{
     private JComboBox opcoes; // Alterar, cadastrar, excluir
     private JTextField desempenhoseller;
     private JButton pesquisarsellerButton;
+    private JButton gerenteButton;
 
     public MenuGerente(){
         super("Menu - Gerente");
@@ -89,6 +90,21 @@ public class MenuGerente extends JFrame{
         if(opcoes.getSelectedIndex() == 0) { // Cadastrar
             System.out.println("ta selecionada a opcao 1");
         }
+        gerenteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(opcoes.getSelectedIndex() == 0) { // Cadastrar gerente
+                    irParaAdicionarGerente();
+                    close();
+                } else if (opcoes.getSelectedIndex() == 1) { // Alterar gerente
+                    irParaAlterarGerente();
+                    close();
+                } else if (opcoes.getSelectedIndex() == 2) { // Excluir gerente
+                    irParaExcluirGerente();
+                    close();
+                }
+            }
+        });
     }
 
     private void close(){
@@ -123,5 +139,14 @@ public class MenuGerente extends JFrame{
     }
     public void irParaExcluirFuncionario(){
         //ExcluirFuncionario f = ExcluirFuncionario();
+    }
+    public void irParaAdicionarGerente(){
+        AdicionarGerente a = new AdicionarGerente();
+    }
+    public void irParaAlterarGerente(){
+
+    }
+    public void irParaExcluirGerente(){
+
     }
 }

@@ -26,8 +26,10 @@ public class TelaInicialGUI extends JFrame {
     private JPasswordField SenhaDoGerente;
     JTextField logingerente;
     static List<Vendedor> listaVendedores = new ArrayList<Vendedor>();
+    static List<Gerente> listaGerentes = new ArrayList<Gerente>();
     private JTextField loginvendedor;
     private int vendedorEscolhido;
+    private int gerenteEscolhido;
     private static final String NOME_MESTRE_GERENTE = "admin";
     private static final String SENHA_MESTRE_GERENTE = "senha";
     private static final String SENHA_MESTRE_FUNCIONARIO = "senha";
@@ -58,12 +60,23 @@ public class TelaInicialGUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 JPasswordField senhacripto = new JPasswordField(SENHA_MESTRE_GERENTE);
                 System.out.println("aqui");
+
+                //Senha Mestre Pre iniciada
                 if(Arrays.equals(SenhaDoGerente.getPassword(), senhacripto.getPassword())){
                     System.out.println("Senha Correta");
                     //apagar();
                     JFrame menuGerente = new MenuGerente();
                     close();
                 }
+                else if(verificarNomeESenhaGerente()){
+                    MenuGerente menuGerente= new MenuGerente();
+                    close();
+
+                }
+
+
+
+
             }
         });
         close.addActionListener(new ActionListener() {
@@ -145,7 +158,7 @@ public class TelaInicialGUI extends JFrame {
                 }
 
                 //depois arrumar uma forma de passar o gerente correto, talvez buscar ele por rg
-                Gerente gerenteGenerico= new Gerente("4325432-x","anderson",1,1,1,2,2,2,1000,0);
+                Gerente gerenteGenerico= new Gerente("4325432-x","anderson",1,1,1,2,2,2,1000,0,"senhaGenerica");
                tempVendedor = new Vendedor(trg,tnome,tdiaNasc,tdmesNasc,tanoNasc,tdiaAd,tdmesAd,tdanoAd,tsalario,ttrestante,gerenteGenerico,tsenha);
                listaVendedores.add(tempVendedor);
 
@@ -160,6 +173,67 @@ public class TelaInicialGUI extends JFrame {
             System.out.println("erro: "+e);
         }
 
+        //ler gerentes
+
+
+        try{
+
+
+            File arq = new File("gerentes.txt");
+            Scanner myReader = new Scanner(arq);
+
+
+
+            Vendedor tempVendedor;
+
+            while(myReader.hasNextLine()){
+
+
+
+                String leitura = myReader.nextLine();
+                System.out.println("leitura:\n"+leitura);
+
+                String[] atributos = leitura.split("~");
+
+
+
+
+                String trg  = atributos[0];
+                String tnome  = atributos[1];
+                int tdiaNasc = Integer.parseInt(atributos[2]) ;
+                int tdmesNasc = Integer.parseInt(atributos[3]) ;
+                int tanoNasc = Integer.parseInt(atributos[4]) ;
+                int tdiaAd= Integer.parseInt(atributos[5]) ;
+                int tdmesAd = Integer.parseInt(atributos[6]) ;
+                int tdanoAd = Integer.parseInt(atributos[7]) ;
+                double tsalario = Double.parseDouble(atributos[8]);
+                int tanosExp =  Integer.parseInt(atributos[9]);
+
+                String tsenha  = atributos[10];
+
+
+
+                int index3=0;
+                for(String s: atributos){
+                    System.out.println("atrubutos["+ index3+ "]:\n"+s);
+                    index3++;
+                }
+
+                //depois arrumar uma forma de passar o gerente correto, talvez buscar ele por rg
+               // Gerente gerenteGenerico= new Gerente("4325432-x","anderson",1,1,1,2,2,2,1000,0,"senhaGenerica");
+                Gerente gerenteGenerico = new Gerente(trg,tnome,tdiaNasc,tdmesNasc,tanoNasc,tdiaAd,tdmesAd,tdanoAd,tsalario,tanosExp,tsenha);
+                listaGerentes.add(gerenteGenerico);
+
+
+
+            }
+
+
+            myReader.close();
+        }
+        catch (IOException e){
+            System.out.println("erro: "+e);
+        }
     }
 
     public boolean verificarNomeESenha(){
@@ -172,6 +246,24 @@ public class TelaInicialGUI extends JFrame {
             if(Objects.equals(v.getNome(), loginvendedor.getText()) && Objects.equals(v.getSenha(), senhaVendedor.getText())){
                vendedorEscolhido = index;
                 resposta = true;
+            }
+            index++;
+        }
+        return resposta;
+    }
+    public boolean verificarNomeESenhaGerente(){
+        System.out.println("aqui2");
+        boolean resposta = false;
+        int index=0;
+        for(Gerente v:listaGerentes){
+            //  if(String.equals(v.getNome(), loginvendedor.getText() ) && Arrays.equals(v.getSenha(), senhaVendedor.getText() ) ){
+            //      resposta = true;
+            //}
+            if(Objects.equals(v.getNome(), logingerente.getText()) && Objects.equals(v.getSenha(), SenhaDoGerente.getText())){
+                System.out.println("aqui3");
+                gerenteEscolhido = index;
+                resposta = true;
+                System.out.println("gerente encontrado");
             }
             index++;
         }

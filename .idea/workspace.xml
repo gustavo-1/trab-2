@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ec128bb-b4dc-4fbe-baa4-1fb051094707" name="Changes" comment="Centralizei as UIs&#10;&#10;Criei um menu para Moto, assim o Menu para adicionar veículo leva a um Menu que te faz escolher entre adicionar carros e motos&#10;&#10;Adicionei um botão de &quot;fechar a janela&quot; que basicamente volta pra janela anterior, e também toda vez que você clica em um botão que entra em outro menu, o menu anterior fecha">
+      <change afterPath="$PROJECT_DIR$/src/trab2/AdicionarGerente.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/trab2/AdicionarGerente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarVeiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarVeiculo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/MenuVender.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuVender.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/MenuVender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuVender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/TelaInicialGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/TelaInicialGUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/Gerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/Gerente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/MenuGerente.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuGerente.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/MenuGerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuGerente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/trab2/TelaInicialGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/TelaInicialGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/Vendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/Vendedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/menuGerente.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuGerente.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/menuGerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuGerente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/menuVendedor.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuVendedor.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/menuVendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuVendedor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,16 +39,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "227",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "360",
-    "last_opened_file_path": "/home/brnuo/Documentos/lpoo/trab-2/src/trab2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;227&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;360&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/brnuo/Documentos/lpoo/trab-2/src/trab2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/trab2" />
@@ -63,7 +58,7 @@
       <recent name="C:\Users\gusta\IdeaProjects\trab-2\src\trab2" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.trab2.Main">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="AdicionarCarro" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="trab2.AdicionarCarro" />
       <module name="trab2matheus" />
@@ -131,11 +126,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.trab2.Main" />
-        <item itemvalue="Application.trab2.MenuVender" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.AdicionarCarro" />
         <item itemvalue="Application.trab2.TelaInicialGUI" />
-        <item itemvalue="Application.trab2.AdicionarCliente" />
-        <item itemvalue="Application.trab2.AdicionarCarro" />
       </list>
     </recent_temporary>
   </component>
