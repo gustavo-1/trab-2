@@ -180,17 +180,17 @@ public class TelaInicialGUI extends JFrame {
 
 
             File arq = new File("gerentes.txt");
-            Scanner myReader = new Scanner(arq);
+            Scanner myReader2 = new Scanner(arq);
 
 
 
             Vendedor tempVendedor;
 
-            while(myReader.hasNextLine()){
+            while(myReader2.hasNextLine()){
 
 
 
-                String leitura = myReader.nextLine();
+                String leitura = myReader2.nextLine();
                 System.out.println("leitura:\n"+leitura);
 
                 String[] atributos = leitura.split("~");
@@ -229,7 +229,7 @@ public class TelaInicialGUI extends JFrame {
             }
 
 
-            myReader.close();
+            myReader2.close();
         }
         catch (IOException e){
             System.out.println("erro: "+e);
@@ -259,6 +259,7 @@ public class TelaInicialGUI extends JFrame {
             //  if(String.equals(v.getNome(), loginvendedor.getText() ) && Arrays.equals(v.getSenha(), senhaVendedor.getText() ) ){
             //      resposta = true;
             //}
+            System.out.println("v: nome: "+ v.getNome()+ "  senha: "+v.getSenha());
             if(Objects.equals(v.getNome(), logingerente.getText()) && Objects.equals(v.getSenha(), SenhaDoGerente.getText())){
                 System.out.println("aqui3");
                 gerenteEscolhido = index;
