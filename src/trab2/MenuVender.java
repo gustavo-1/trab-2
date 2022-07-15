@@ -235,6 +235,10 @@ public class MenuVender extends JFrame{
         catch (IOException e){
             System.out.println("erro: "+e);
         }
+
+
+
+
     }
 
     public DefaultListModel criaModeloCarro(){

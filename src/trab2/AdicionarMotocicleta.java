@@ -101,7 +101,7 @@ public class AdicionarMotocicleta extends JFrame {
             FileWriter saida = new FileWriter(arq,true);
 
 
-            String textoSaida = "\n" + nchaci + "~"+ tmarca+ "~" + tmodelo + "~"+ tano + "~"+ tquilometragem + "~"+tTipoDeCombustivel+ "~" + tPeso + "~"+ tVendido  +"~"+tcilindradas + "~"+ ttipo;
+            String textoSaida =  nchaci + "~"+ tmarca+ "~" + tmodelo + "~"+ tano + "~"+ tquilometragem + "~"+tTipoDeCombustivel+ "~" + tPeso + "~"+ tVendido  +"~"+tcilindradas + "~"+ ttipo+"\n";
             saida.write(textoSaida);
 
 

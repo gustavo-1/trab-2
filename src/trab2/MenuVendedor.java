@@ -33,8 +33,32 @@ public class MenuVendedor extends JFrame {
         clienteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                AdicionarCliente ad = new AdicionarCliente(2,v);
-                close();
+                if(opcoes.getSelectedIndex() == 0) { // Cadastrar cliente
+                    irParaAdicionarCliente();
+                    close();
+                } else if (opcoes.getSelectedIndex() == 1) { // Alterar cliente
+                    irParaAlterarCliente();
+                    close();
+                } else if (opcoes.getSelectedIndex() == 2) { // Excluir cliente
+                    irParaExcluirCliente();
+                    close();
+                }
+            }
+        });
+
+        veiculoButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(opcoes.getSelectedIndex() == 0) { // Cadastrar gerente
+                    irParaAdicionarGerente();
+                    close();
+                } else if (opcoes.getSelectedIndex() == 1) { // Alterar gerente
+                    irParaAlterarGerente();
+                    close();
+                } else if (opcoes.getSelectedIndex() == 2) { // Excluir gerente
+                    irParaExcluirGerente();
+                    close();
+                }
             }
         });
     }
@@ -48,5 +72,43 @@ public class MenuVendedor extends JFrame {
     private void close(){
         setVisible(false);
         dispose();
+    }
+    public void irParaAdicionarVeiculo(){
+        AdicionarVeiculo f = new AdicionarVeiculo();
+    }
+    public void irParaAlterarVeiculo(){
+        //AlterarVeiculo f = new AlterarVeiculo();
+    }
+    public void irParaExcluirVeiculo(){
+        ExcluirVeiculo rc = new ExcluirVeiculo();
+    }
+
+    public void irParaAdicionarCliente(){
+
+        AdicionarCliente f = new AdicionarCliente(1);
+    }
+    public void irParaAlterarCliente(){
+        //AlterarCliente f = new AlterarCliente();
+    }
+    public void irParaExcluirCliente(){
+        ExcluirCliente f = new ExcluirCliente();
+    }
+    public void irParaAdicionarFuncionario(){
+        AdicionarVendedor f = new AdicionarVendedor();
+    }
+    public void irParaAlterarFuncionario(){
+        //AlterarFuncionario f = new AlterarFuncionario();
+    }
+    public void irParaExcluirFuncionario(){
+        //ExcluirFuncionario f = ExcluirFuncionario();
+    }
+    public void irParaAdicionarGerente(){
+        AdicionarGerente a = new AdicionarGerente();
+    }
+    public void irParaAlterarGerente(){
+
+    }
+    public void irParaExcluirGerente(){
+
     }
 }
