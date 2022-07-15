@@ -42,9 +42,12 @@ public class AdicionarCarro extends JFrame {
     private JLabel númeroDeCilindrosLabel;
     private JLabel potenciaLabel;
     private JLabel statusLabel;
+    private Vendedor vendedor;
+    private int retornar;
 
     public AdicionarCarro(){
         super("Menu - Gerente");
+        this.retornar =2;
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(PainelAddCarro);
@@ -67,6 +70,38 @@ public class AdicionarCarro extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 AdicionarVeiculo f = new AdicionarVeiculo();
+                close();
+            }
+        });
+    }
+
+    //veio do vendedor
+    public AdicionarCarro(int retornar,Vendedor v){
+        super("Adicionar carro - Menu vendedor");
+        this.retornar = retornar;
+        this.vendedor = v;
+
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setContentPane(PainelAddCarro);
+        this.pack();
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
+
+        AddCarro.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    adicionar();
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
+            }
+        });
+
+        close.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AdicionarVeiculo f = new AdicionarVeiculo(1,v);
                 close();
             }
         });
@@ -117,7 +152,19 @@ public class AdicionarCarro extends JFrame {
 
 
 
+
+
             saida.close();
+
+
+            if(this.retornar ==2){
+
+                MenuGerente mg = new MenuGerente();
+                close();
+            }else{
+                MenuVendedor mv = new MenuVendedor(vendedor);
+                close();
+            }
         }
         catch (IOException e){
             System.out.println("erro: "+e);

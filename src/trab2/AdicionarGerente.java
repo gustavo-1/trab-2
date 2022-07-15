@@ -37,6 +37,13 @@ public class AdicionarGerente extends JFrame {
                 adicionar();
             }
         });
+        close.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MenuGerente mg = new MenuGerente();
+                close();
+            }
+        });
     }
 
 

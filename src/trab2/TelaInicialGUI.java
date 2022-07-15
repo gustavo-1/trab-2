@@ -28,6 +28,7 @@ public class TelaInicialGUI extends JFrame {
     static List<Vendedor> listaVendedores = new ArrayList<Vendedor>();
     static List<Gerente> listaGerentes = new ArrayList<Gerente>();
     private JTextField loginvendedor;
+    private JLabel LoginErrado;
     private int vendedorEscolhido;
     private int gerenteEscolhido;
     private static final String NOME_MESTRE_GERENTE = "admin";
@@ -73,6 +74,9 @@ public class TelaInicialGUI extends JFrame {
                     close();
 
                 }
+                else{
+                    LoginErrado.setVisible(true);
+                }
 
 
 
@@ -92,6 +96,9 @@ public class TelaInicialGUI extends JFrame {
                     MenuVendedor menuVendedor = new MenuVendedor(listaVendedores.get(vendedorEscolhido));
                     close();
 
+                }
+                else{
+                    LoginErrado.setVisible(true);
                 }
             }
         });

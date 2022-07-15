@@ -67,6 +67,7 @@ public abstract class Veiculo{
         return tipoCombustivel;
     }
 
-
-
+    public boolean getVendido() {
+        return vendido;
+    }
 }

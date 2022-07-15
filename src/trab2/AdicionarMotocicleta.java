@@ -32,9 +32,13 @@ public class AdicionarMotocicleta extends JFrame {
     private JLabel JLabelNchassi;
     private JLabel cinlindradasLabel;
     private JLabel tipoLabel;
+    private  Vendedor vendedor;
+    private  int retornar;
 
-    public AdicionarMotocicleta(){
-        super("Menu - Gerente");
+    public AdicionarMotocicleta() {
+        super("Adicionar moto -gerente");
+        this.retornar=2;
+
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(PainelAddMoto);
@@ -52,11 +56,36 @@ public class AdicionarMotocicleta extends JFrame {
                 }
             }
         });
+    }
+        //vendedor
+        //
+        public AdicionarMotocicleta(int retornar,Vendedor v){
+            super("Adicionar moto -vendedor");
+            this.retornar=retornar;
+            this.vendedor =v;
+
+
+            this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            this.setContentPane(PainelAddMoto);
+            this.pack();
+            this.setLocationRelativeTo(null);
+            this.setVisible(true);
+
+            adicionarMotoButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    try {
+                        adicionar();
+                    } catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                }
+            });
 
         close.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                AdicionarVeiculo f = new AdicionarVeiculo();
+                MenuVendedor mv = new MenuVendedor(vendedor);
                 close();
             }
         });
@@ -107,10 +136,25 @@ public class AdicionarMotocicleta extends JFrame {
 
 
             saida.close();
+
+
+
+            if(this.retornar ==2){
+                MenuVendedor mv = new MenuVendedor(vendedor);
+                close();
+            }else{
+                MenuGerente mg = new MenuGerente();
+                close();
+            }
+
+
         }
         catch (IOException e){
             System.out.println("erro: "+e);
         }
+
+
+
 
     }
 

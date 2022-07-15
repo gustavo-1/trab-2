@@ -10,9 +10,12 @@ public class AdicionarVeiculo extends JFrame {
     private JButton close;
     private JButton carroButton;
     private JButton motoButton;
+    private Vendedor vendedor;
+    private int retornar;
 
     public AdicionarVeiculo(){
         super("Selecionar o tipo de veículo");
+        this.retornar = 2;
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(painelVeiculos);
@@ -23,14 +26,14 @@ public class AdicionarVeiculo extends JFrame {
         carroButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                irParaAdicionarCarro();
+                AdicionarCarro f = new AdicionarCarro();
                 close();
             }
         });
         motoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                irParaAdicionarMoto();
+                AdicionarMotocicleta f = new AdicionarMotocicleta();
                 close();
             }
         });
@@ -42,15 +45,43 @@ public class AdicionarVeiculo extends JFrame {
             }
         });
     }
+    ///veio do vendedor
+    public AdicionarVeiculo(int retornar, Vendedor v){
+        super("Selecionar o tipo de veículo");
+        this.vendedor = v;
+
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setContentPane(painelVeiculos);
+        this.pack();
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
+
+        carroButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AdicionarCarro f = new AdicionarCarro(1,vendedor);
+                close();
+            }
+        });
+        motoButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AdicionarMotocicleta f = new AdicionarMotocicleta(1,vendedor);
+                close();
+            }
+        });
+        close.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MenuVendedor f = new MenuVendedor(v);
+                close();
+            }
+        });
+    }
 
     public void close(){
         setVisible(false);
         dispose();
     }
-    public void irParaAdicionarCarro(){
-        AdicionarCarro f = new AdicionarCarro();
-    }
-    public void irParaAdicionarMoto(){
-        AdicionarMotocicleta f = new AdicionarMotocicleta();
-    }
+
 }

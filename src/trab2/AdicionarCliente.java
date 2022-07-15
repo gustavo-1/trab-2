@@ -39,7 +39,7 @@ public class AdicionarCliente extends JFrame {
 
     //construtor se vier de funcionario
     public AdicionarCliente(int retornar,Vendedor v) {
-        super("Menu - Gerente");
+        super("Adicionar cliente - vendedor");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(PainelAddCliente);
         this.pack();

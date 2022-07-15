@@ -12,6 +12,7 @@ public class MenuVendedor extends JFrame {
     private JButton veiculoButton;
     private JButton clienteButton;
     private JButton venderButton;
+    private JLabel NomeVendedor;
     private Vendedor vendedor;
 
     public MenuVendedor(Vendedor v){
@@ -24,6 +25,9 @@ public class MenuVendedor extends JFrame {
         this.setVisible(true);
 
         this.vendedor = v;
+
+        NomeVendedor.setText(v.getNome());
+
         venderButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -50,15 +54,22 @@ public class MenuVendedor extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(opcoes.getSelectedIndex() == 0) { // Cadastrar gerente
-                    irParaAdicionarGerente();
+                    irParaAdicionarVeiculo();
                     close();
                 } else if (opcoes.getSelectedIndex() == 1) { // Alterar gerente
-                    irParaAlterarGerente();
+                    irParaAlterarVeiculo();
                     close();
                 } else if (opcoes.getSelectedIndex() == 2) { // Excluir gerente
-                    irParaExcluirGerente();
+                    irParaExcluirVeiculo();
                     close();
                 }
+            }
+        });
+        close.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                TelaInicialGUI ti = new TelaInicialGUI("jose motors");
+                close();
             }
         });
     }
@@ -74,7 +85,7 @@ public class MenuVendedor extends JFrame {
         dispose();
     }
     public void irParaAdicionarVeiculo(){
-        AdicionarVeiculo f = new AdicionarVeiculo();
+        AdicionarVeiculo f = new AdicionarVeiculo(1,this.vendedor);
     }
     public void irParaAlterarVeiculo(){
         //AlterarVeiculo f = new AlterarVeiculo();
@@ -85,7 +96,7 @@ public class MenuVendedor extends JFrame {
 
     public void irParaAdicionarCliente(){
 
-        AdicionarCliente f = new AdicionarCliente(1);
+        AdicionarCliente f = new AdicionarCliente(1,vendedor);
     }
     public void irParaAlterarCliente(){
         //AlterarCliente f = new AlterarCliente();

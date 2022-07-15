@@ -138,7 +138,7 @@ public class MenuGerente extends JFrame{
         //AlterarFuncionario f = new AlterarFuncionario();
     }
     public void irParaExcluirFuncionario(){
-        //ExcluirFuncionario f = ExcluirFuncionario();
+        ExcluirVendedor f = new ExcluirVendedor();
     }
     public void irParaAdicionarGerente(){
         AdicionarGerente a = new AdicionarGerente();
