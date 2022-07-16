@@ -6,6 +6,9 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class AdicionarVendedor extends JFrame{
     private JPanel painelAddVendedor;
@@ -22,15 +25,33 @@ public class AdicionarVendedor extends JFrame{
     private JTextField diaAd;
     private JTextField anoAd;
     private JTextField senha;
+    static List<Gerente> listaGerentes = new ArrayList<Gerente>();
+
     private JButton close;
+    private JComboBox listGerente;
 
     public AdicionarVendedor(){
         super("Adicionar Funcionario");
+        ler();
+
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(painelAddVendedor);
         this.pack();
         this.setLocationRelativeTo(null);
         this.setVisible(true);
+
+
+        //DefaultListModel modeloGerente = criaModeloGerente();
+        String temp;
+        for(Gerente c: listaGerentes){
+            temp = "nome:"+c.getNome()+" cpf:" + c.getRg();
+            listGerente.addItem(temp);
+
+        }
+
+
+        //listGerente.setModel((ComboBoxModel) modeloGerente);
+
 
         button1.addActionListener(new ActionListener() {
             @Override
@@ -50,7 +71,73 @@ public class AdicionarVendedor extends JFrame{
 
     }
 
-   // public static void main(String[] args) {
+    public static void main(String[] args) {
+        AdicionarVendedor ad = new AdicionarVendedor();
+    }
+
+    private void ler() {
+
+        try{
+
+
+            File arq = new File("gerentes.txt");
+            Scanner myReader2 = new Scanner(arq);
+
+
+
+            Vendedor tempVendedor;
+
+            while(myReader2.hasNextLine()){
+
+
+
+                String leitura = myReader2.nextLine();
+                System.out.println("leitura:\n"+leitura);
+
+                String[] atributos = leitura.split("~");
+
+
+
+
+                String trg  = atributos[0];
+                String tnome  = atributos[1];
+                int tdiaNasc = Integer.parseInt(atributos[2]) ;
+                int tdmesNasc = Integer.parseInt(atributos[3]) ;
+                int tanoNasc = Integer.parseInt(atributos[4]) ;
+                int tdiaAd= Integer.parseInt(atributos[5]) ;
+                int tdmesAd = Integer.parseInt(atributos[6]) ;
+                int tdanoAd = Integer.parseInt(atributos[7]) ;
+                double tsalario = Double.parseDouble(atributos[8]);
+                int tanosExp =  Integer.parseInt(atributos[9]);
+
+                String tsenha  = atributos[10];
+
+
+
+                int index3=0;
+                for(String s: atributos){
+                    System.out.println("atrubutos["+ index3+ "]:\n"+s);
+                    index3++;
+                }
+
+                //depois arrumar uma forma de passar o gerente correto, talvez buscar ele por rg
+                // Gerente gerenteGenerico= new Gerente("4325432-x","anderson",1,1,1,2,2,2,1000,0,"senhaGenerica");
+                Gerente gerenteGenerico = new Gerente(trg,tnome,tdiaNasc,tdmesNasc,tanoNasc,tdiaAd,tdmesAd,tdanoAd,tsalario,tanosExp,tsenha);
+                listaGerentes.add(gerenteGenerico);
+
+
+
+            }
+
+
+            myReader2.close();
+        }
+        catch (IOException e){
+            System.out.println("erro: "+e);
+        }
+    }
+
+    // public static void main(String[] args) {
       //  AdicionarVendedor a = new AdicionarVendedor();
    // }
     public void adicionarVendedor(){
@@ -68,7 +155,10 @@ public class AdicionarVendedor extends JFrame{
         //Gerente gerente = gerente.get
 
         //o gernte é temporario pq ainda não foi criado area de adicionar gerente, uma vez que tenha sido adicionado ao adicionar deve-se ser possivel escolher ele aqui
-        Gerente gerenteTemp = new Gerente("4325432-x","anderson",1,1,1,2,2,2,1000,0,"senhaTemp");
+
+
+        //Gerente gerenteTemp = new Gerente("4325432-x","anderson",1,1,1,2,2,2,1000,0,"senhaTemp");
+        Gerente gerenteTemp = listaGerentes.get(listGerente.getSelectedIndex());
         Vendedor novoVendedor = new Vendedor(trg,tnome,tdiaNasc,tdmesNasc,tanoNasc,tdiaAd,tdmesAd,tdanoAd,tsalario,ttrestante,gerenteTemp,tsenha);
 
 
@@ -95,6 +185,18 @@ public class AdicionarVendedor extends JFrame{
 
 
 
+    }
+
+    public DefaultListModel criaModeloGerente(){
+        DefaultListModel modelo = new DefaultListModel();
+        String temp;
+        for(Gerente c: listaGerentes){
+            temp = "nome:"+c.getNome()+" cpf:" + c.getRg();
+            modelo.addElement(temp);
+
+        }
+
+        return modelo;
     }
     private void close(){
         setVisible(false);

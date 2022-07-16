@@ -1,6 +1,7 @@
 package trab2;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import java.util.ArrayList;
@@ -171,8 +172,8 @@ public class AlterarCliente extends JFrame {
 
 
         System.out.println("terminou de ler");
-        System.out.println("dia1"+listaCliente.get(0).getNascimento().getDia());
-        System.out.println("dia2"+listaCliente.get(1).getNascimento().getDia());
+        //System.out.println("dia1"+listaCliente.get(0).getNascimento().getDia());
+        //System.out.println("dia2"+listaCliente.get(1).getNascimento().getDia());
     }
 
     public void clicou()  {
@@ -194,13 +195,15 @@ public class AlterarCliente extends JFrame {
 
         String textoSaida = cpf + "~" + nome + "~" + dia + "~" + mes + "~" + ano + "~" + rua + "~" + nrua + "~" + bairro + "~" + cidade + "~" + renda + "~" + dependentes;//+"\n";
 
+        System.out.println(textoSaida);
 
-
+        String textoCompleto="";
 
         //Reescreve clientes com a linha alterada no lugar da antiga
         try {
             File inputFile = new File("clientes.txt");
             File tempFile = new File("clientes2.txt");
+
 
             BufferedReader reader = new BufferedReader(new FileReader(inputFile));
             BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
@@ -217,10 +220,12 @@ public class AlterarCliente extends JFrame {
 
                     writer.write(currentLine+"\n");
 
+
                 }
                 else{
-
+                    //writer.newLine();
                     writer.write(textoSaida);
+                    writer.newLine();
 
                 }
 
@@ -230,10 +235,36 @@ public class AlterarCliente extends JFrame {
             reader.close();
             writer.close();
 
-            tempFile.renameTo(inputFile);
-            //inputFile.renameTo(tempFile);
 
-          //  java.io.FileWriter out= new java.io.FileWriter(tempFile, true );
+            //le clientes2 de novo e salva tudo na string
+            File clientes2 = new File("clientes2.txt");
+            Scanner myReader2 = new Scanner(clientes2);
+
+
+
+            while (myReader2.hasNextLine())
+            {
+                textoCompleto += myReader2.nextLine()+"\n";
+            }
+            myReader2.close();
+
+
+
+            //apagar cliente
+
+            inputFile.delete();
+
+           // recria clientes.txt
+            File novoCliente = new File("clientes.txt");
+            BufferedWriter escritor = new BufferedWriter(new FileWriter( novoCliente));
+            System.out.println("++++++++\n\n"+textoCompleto+"++++++++\n\n");
+            escritor.write(textoCompleto);
+
+            escritor.close();
+
+            //apaga cliente2.txt
+            clientes2.delete();
+
 
         }
         catch (IOException e){
@@ -241,6 +272,10 @@ public class AlterarCliente extends JFrame {
         }
 
         ///////////////////
+
+        //volta para menu gerente apenas por enquanto
+        MenuGerente mg = new MenuGerente();
+        close();
 
     }
     public DefaultListModel criaModeloCliente(){
