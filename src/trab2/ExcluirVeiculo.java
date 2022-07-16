@@ -22,7 +22,10 @@ public class ExcluirVeiculo extends JFrame {
     private Vendedor vendedor;
 
     public ExcluirVeiculo(int retornar, Vendedor v){
+        listaMotos.clear();
+        listaCarros.clear();
         ler();
+
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(PainelApagarCarro);
         this.pack();
@@ -56,6 +59,8 @@ public class ExcluirVeiculo extends JFrame {
     }
 
     public ExcluirVeiculo(){
+        listaMotos.clear();
+        listaCarros.clear();
         ler();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(PainelApagarCarro);
@@ -94,14 +99,18 @@ public class ExcluirVeiculo extends JFrame {
    // }
 
 
-    public void clicouCarro(){
-        System.out.println("escolido: "+list1.getSelectedIndex());
-        int resposta1 = list1.getSelectedIndex();
 
-        //agora deve se remover a linha selecionada
+
+
+    public void clicouCarro(){
+
+
+
+        //Reescreve clientes com a linha alterada no lugar da antiga
         try {
             File inputFile = new File("carros.txt");
-            File tempFile = new File("carros.txt");
+            File tempFile = new File("carros2.txt");
+
 
             BufferedReader reader = new BufferedReader(new FileReader(inputFile));
             BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
@@ -114,14 +123,51 @@ public class ExcluirVeiculo extends JFrame {
                 currentLine = reader.readLine();
 
 
-                if(i != resposta1){
-                    writer.write(currentLine);
+                if(i != this.list1.getSelectedIndex()){
+
+                    writer.write(currentLine+"\n");
+
+
                 }
+
 
             }
 
-            writer.close();
+
             reader.close();
+            writer.close();
+
+
+            //le clientes2 de novo e salva tudo na string
+            File clientes2 = new File("carros2.txt");
+            Scanner myReader2 = new Scanner(clientes2);
+
+
+            String textoCompleto="";
+            while (myReader2.hasNextLine())
+            {
+                textoCompleto += myReader2.nextLine()+"\n";
+            }
+            myReader2.close();
+
+
+
+            //apagar cliente
+
+            inputFile.delete();
+
+            // recria clientes.txt
+            File novoCliente = new File("carros.txt");
+            BufferedWriter escritor = new BufferedWriter(new FileWriter( novoCliente));
+            System.out.println("++++++++\n\n"+textoCompleto+"++++++++\n\n");
+            escritor.write(textoCompleto);
+
+            escritor.close();
+
+            //apaga cliente2.txt
+            clientes2.delete();
+
+
         }
         catch (IOException e){
             System.out.println("erro: "+e);
@@ -129,18 +175,23 @@ public class ExcluirVeiculo extends JFrame {
 
         ///////////////////
 
+        //volta para menu gerente apenas por enquanto
+        MenuGerente mg = new MenuGerente();
+        close();
 
 
     }
 
-    public void clicouMoto(){
-        System.out.println("escolido: "+list1.getSelectedIndex());
-        int resposta1 = list1.getSelectedIndex();
 
-        //agora deve se remover a linha selecionada
+    public void clicouMoto(){
+
+
+
+        //Reescreve clientes com a linha alterada no lugar da antiga
         try {
             File inputFile = new File("motos.txt");
-            File tempFile = new File("motos.txt");
+            File tempFile = new File("motos2.txt");
+
 
             BufferedReader reader = new BufferedReader(new FileReader(inputFile));
             BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
@@ -153,14 +204,51 @@ public class ExcluirVeiculo extends JFrame {
                 currentLine = reader.readLine();
 
 
-                if(i != resposta1){
-                    writer.write(currentLine);
+                if(i != this.list2.getSelectedIndex()){
+
+                    writer.write(currentLine+"\n");
+
+
                 }
+
 
             }
 
-            writer.close();
+
             reader.close();
+            writer.close();
+
+
+            //le clientes2 de novo e salva tudo na string
+            File clientes2 = new File("motos2.txt");
+            Scanner myReader2 = new Scanner(clientes2);
+
+
+            String textoCompleto="";
+            while (myReader2.hasNextLine())
+            {
+                textoCompleto += myReader2.nextLine()+"\n";
+            }
+            myReader2.close();
+
+
+
+            //apagar cliente
+
+            inputFile.delete();
+
+            // recria clientes.txt
+            File novoCliente = new File("motos.txt");
+            BufferedWriter escritor = new BufferedWriter(new FileWriter( novoCliente));
+            System.out.println("++++++++\n\n"+textoCompleto+"++++++++\n\n");
+            escritor.write(textoCompleto);
+
+            escritor.close();
+
+            //apaga cliente2.txt
+            clientes2.delete();
+
+
         }
         catch (IOException e){
             System.out.println("erro: "+e);
@@ -168,9 +256,14 @@ public class ExcluirVeiculo extends JFrame {
 
         ///////////////////
 
+        //volta para menu gerente apenas por enquanto
+        MenuGerente mg = new MenuGerente();
+        close();
 
 
     }
+
+
 
 
 

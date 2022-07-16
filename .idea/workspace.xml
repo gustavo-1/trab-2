@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ec128bb-b4dc-4fbe-baa4-1fb051094707" name="Changes" comment="acho que arrumei excluiCliente">
+    <list default="true" id="1ec128bb-b4dc-4fbe-baa4-1fb051094707" name="Changes" comment="Alterar veiculo adicionado">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carros.txt" beforeDir="false" afterPath="$PROJECT_DIR$/carros.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/motos.txt" beforeDir="false" afterPath="$PROJECT_DIR$/motos.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AlterarVeiculo.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AlterarVeiculo.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AlterarVeiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AlterarVeiculo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AlterarVendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AlterarVendedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirVeiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirVeiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirVendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirVendedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendedores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendedores.txt" afterDir="false" />
     </list>
     <list id="bd9ad54b-a450-4241-9f83-e8636646a099" name="Changes by brnuo" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +61,7 @@
       <recent name="C:\Users\gusta\IdeaProjects\trab-2\src\trab2" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AlterarVeiculo">
+  <component name="RunManager" selected="Application.trab2.Main">
     <configuration name="AlterarVeiculo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="AlterarVeiculo" />
       <module name="trab2matheus" />
@@ -123,8 +123,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AlterarVeiculo" />
         <item itemvalue="Application.trab2.Main" />
+        <item itemvalue="Application.AlterarVeiculo" />
         <item itemvalue="Application.ExcluirCliente" />
         <item itemvalue="Application.AlterarVendedor" />
         <item itemvalue="Application.trab2.AdicionarVendedor" />
@@ -224,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657996653264</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Alterar veiculo adicionado">
+      <created>1657999388040</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1657999388040</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -250,7 +257,8 @@
     <MESSAGE value="Adicionae opção de editar cliente e vendedor" />
     <MESSAGE value="push que o bruno pediu, nao arrumei ainda o ExcluirCliente" />
     <MESSAGE value="acho que arrumei excluiCliente" />
-    <option name="LAST_COMMIT_MESSAGE" value="acho que arrumei excluiCliente" />
+    <MESSAGE value="Alterar veiculo adicionado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alterar veiculo adicionado" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
