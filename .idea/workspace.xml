@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ec128bb-b4dc-4fbe-baa4-1fb051094707" name="Changes" comment="push que o bruno pediu, nao arrumei ainda o ExcluirCliente">
-      <change beforePath="$PROJECT_DIR$/clientes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/clientes.txt" afterDir="false" />
+    <list default="true" id="1ec128bb-b4dc-4fbe-baa4-1fb051094707" name="Changes" comment="adicionei coisa pra caralho&#10;&#10;Uma UI pra cadastro de clientes onde ce bota as informacoes e ele cria um arquivo pra isso&#10;&#10;Adicionei uns botao a mais&#10;&#10;Uma funcionalidade q chama combobox, ai tem 3 opções cadastrar alterar excluir, e acho que é isso é, é sobre isso e n ta tudo bem&#10;&#10;vou deixar as arraylist pro gustavo por motivos de eu n saber fazer (eu sei q isso é motivo pr a eu aprender mas aaaaaaaaaaaaaaaaaaaa)">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_07_2022_18_47__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_07_2022_18_47__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_07_2022_19_41__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_07_2022_19_41__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_07_2022_20_14__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_07_2022_20_14__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_07_2022_08_57__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_07_2022_08_57__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_07_2022_15_06__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_07_2022_15_06__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_07_2022_15_06__Changes_by_brnuo_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_16_07_2022_15_06__Changes_by_brnuo_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carros.txt" beforeDir="false" afterPath="$PROJECT_DIR$/carros.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerentes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gerentes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirCliente.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirCliente.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirVeiculo.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirVeiculo.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirVeiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirVeiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirVendedor.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirVendedor.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirVendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirVendedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendedores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendedores.txt" afterDir="false" />
     </list>
-    <list id="bd9ad54b-a450-4241-9f83-e8636646a099" name="Changes by brnuo" comment="" />
+    <list id="42338cdf-8fe2-4f96-a1c0-6474d47f9094" name="Changes by gusta" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +74,7 @@
       <recent name="C:\Users\gusta\IdeaProjects\trab-2\src\trab2" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ExcluirCliente">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="AlterarVeiculo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="AlterarVeiculo" />
       <module name="trab2matheus" />
@@ -119,8 +136,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.ExcluirCliente" />
-        <item itemvalue="Application.trab2.Main" />
         <item itemvalue="Application.AlterarVeiculo" />
         <item itemvalue="Application.AlterarVendedor" />
         <item itemvalue="Application.trab2.AdicionarVendedor" />
@@ -247,6 +264,11 @@
           <properties class="java.lang.NumberFormatException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/trab2/Main.java</url>
+          <line>3</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

@@ -18,6 +18,7 @@ public class ExcluirVeiculo extends JFrame {
     private JLabel labelMoti;
     private JList list2;
     private JButton removerButton1;
+    private JButton close;
     private int retornar;
     private Vendedor vendedor;
 
@@ -83,6 +84,13 @@ public class ExcluirVeiculo extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 clicouMoto();
+                MenuGerente mg = new MenuGerente();
+                close();
+            }
+        });
+        close.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
                 MenuGerente mg = new MenuGerente();
                 close();
             }

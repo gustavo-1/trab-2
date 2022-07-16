@@ -12,6 +12,7 @@ public class ExcluirVendedor extends JFrame{
     private JPanel PainelApagarVendedor;
     private JButton removerClienteButton;
     private JList list1;
+    private JButton close;
     static List <Vendedor> listaVendedores = new ArrayList<Vendedor>();
 
     public ExcluirVendedor(){
@@ -30,6 +31,13 @@ public class ExcluirVendedor extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 clicou();
+            }
+        });
+        close.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MenuGerente mg = new MenuGerente();
+                close();
             }
         });
     }
