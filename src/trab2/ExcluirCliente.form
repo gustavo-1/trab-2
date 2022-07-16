@@ -45,6 +45,19 @@
             </constraints>
             <properties/>
           </component>
+          <component id="f4a0b" class="javax.swing.JButton" binding="close">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="5" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="10" height="10"/>
+                <preferred-size width="25" height="25"/>
+                <maximum-size width="50" height="50"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-1618884"/>
+              <text value="x"/>
+            </properties>
+          </component>
         </children>
       </grid>
     </children>

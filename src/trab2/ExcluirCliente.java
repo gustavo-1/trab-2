@@ -1,6 +1,7 @@
 package trab2;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
@@ -13,6 +14,7 @@ public class ExcluirCliente extends JFrame {
     private JPanel PainelApagarCliente;
     private JButton removerClienteButton;
     private JList list1;
+    private JButton close;
     private JPanel painelrr;
     public static List<Cliente> listaCliente = new ArrayList<Cliente>();
     public ExcluirCliente(){
@@ -37,6 +39,13 @@ public class ExcluirCliente extends JFrame {
 
                 MenuGerente mg = new MenuGerente();
 
+                close();
+            }
+        });
+        close.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MenuGerente mg = new MenuGerente();
                 close();
             }
         });
