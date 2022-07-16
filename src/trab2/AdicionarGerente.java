@@ -89,7 +89,7 @@ public class AdicionarGerente extends JFrame {
 
             saida.close();
         } catch (IOException e) {
-            System.out.println("erro: " + e);
+            System.out.println("Erro: " + e);
         }
 
         MenuGerente mg = new MenuGerente();

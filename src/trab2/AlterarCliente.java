@@ -52,8 +52,6 @@ public class AlterarCliente extends JFrame {
 
         DefaultListModel modeloCliente = criaModeloCliente();
         jlistaCliente.setModel(modeloCliente);
-        System.out.println("criou modelo");
-
 
         jlistaCliente.addComponentListener(new ComponentAdapter() {
             @Override
@@ -84,7 +82,7 @@ public class AlterarCliente extends JFrame {
     public void escolherCliente(){
         int escolha = jlistaCliente.getSelectedIndex();
         this.escolha = escolha;
-        System.out.println("escolheu "+escolha);
+        System.out.println("Escolheu: " + escolha);
 
         Cliente clienteEscolhido = listaCliente.get(escolha);
 
@@ -126,7 +124,7 @@ public class AlterarCliente extends JFrame {
 
 
                 String leitura = myReader2.nextLine();
-                System.out.println("leitura:\n"+leitura);
+                System.out.println("Leitura: \n" + leitura);
 
                 String[] atributos2 = leitura.split("~");
 
@@ -152,7 +150,7 @@ public class AlterarCliente extends JFrame {
 
 
                 for(String s: atributos2){
-                    System.out.println("atrubutos:\n"+s);
+                    System.out.println("Atributos: \n" + s);
                 }
 
                 Cliente clienteNovo = new Cliente(cpf, nome, dia, mes, ano, rua, nrua, bairro, cidade, renda, dependentes);
@@ -167,11 +165,9 @@ public class AlterarCliente extends JFrame {
             myReader2.close();
         }
         catch (IOException e){
-            System.out.println("erro: "+e);
+            System.out.println("Erro: " + e);
         }
 
-
-        System.out.println("terminou de ler");
         //System.out.println("dia1"+listaCliente.get(0).getNascimento().getDia());
         //System.out.println("dia2"+listaCliente.get(1).getNascimento().getDia());
     }
@@ -208,47 +204,32 @@ public class AlterarCliente extends JFrame {
             BufferedReader reader = new BufferedReader(new FileReader(inputFile));
             BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
 
-
             String currentLine;
-
 
             for(int i=0;i< listaCliente.size();i++){
                 currentLine = reader.readLine();
 
-
                 if(i != this.escolha){
-
                     writer.write(currentLine+"\n");
-
-
                 }
                 else{
                     //writer.newLine();
                     writer.write(textoSaida);
                     writer.newLine();
-
                 }
-
             }
-
-
             reader.close();
             writer.close();
-
 
             //le clientes2 de novo e salva tudo na string
             File clientes2 = new File("clientes2.txt");
             Scanner myReader2 = new Scanner(clientes2);
-
-
 
             while (myReader2.hasNextLine())
             {
                 textoCompleto += myReader2.nextLine()+"\n";
             }
             myReader2.close();
-
-
 
             //apagar cliente
 
@@ -265,10 +246,9 @@ public class AlterarCliente extends JFrame {
             //apaga cliente2.txt
             clientes2.delete();
 
-
         }
         catch (IOException e){
-            System.out.println("erro: "+e);
+            System.out.println("Erro: " + e);
         }
 
         ///////////////////
@@ -282,7 +262,7 @@ public class AlterarCliente extends JFrame {
         DefaultListModel modelo = new DefaultListModel();
         String temp;
         for(Cliente c: listaCliente){
-            temp = "nome:"+c.getNome()+" cpf:" + c.getCpf();
+            temp = "Nome: " + c.getNome() + " CPF:" + c.getCpf();
             modelo.addElement(temp);
 
         }

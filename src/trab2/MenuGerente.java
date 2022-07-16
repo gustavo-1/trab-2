@@ -82,14 +82,11 @@ public class MenuGerente extends JFrame{
         close.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame frame = new TelaInicialGUI("Concessionária Jose");
+                JFrame frame = new TelaInicialGUI("Concessionária José");
                 close();
             }
         });
 
-        if(opcoes.getSelectedIndex() == 0) { // Cadastrar
-            System.out.println("ta selecionada a opcao 1");
-        }
         gerenteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

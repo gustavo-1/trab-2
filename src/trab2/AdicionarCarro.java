@@ -46,7 +46,7 @@ public class AdicionarCarro extends JFrame {
     private int retornar;
 
     public AdicionarCarro(){
-        super("Menu - Gerente");
+        super("Adicionar Carro - Gerente");
         this.retornar =2;
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -77,7 +77,7 @@ public class AdicionarCarro extends JFrame {
 
     //veio do vendedor
     public AdicionarCarro(int retornar,Vendedor v){
-        super("Adicionar carro - Menu vendedor");
+        super("Adicionar Carro - Vendedor");
         this.retornar = retornar;
         this.vendedor = v;
 
@@ -167,7 +167,7 @@ public class AdicionarCarro extends JFrame {
             }
         }
         catch (IOException e){
-            System.out.println("erro: "+e);
+            System.out.println("Erro: " + e);
         }
 
     }

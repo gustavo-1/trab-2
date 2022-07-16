@@ -48,7 +48,7 @@ public class AlterarVendedor extends JFrame{
 
         String temp;
         for(Gerente c: listaGerentes){
-            temp = "nome:"+c.getNome()+" cpf:" + c.getRg();
+            temp = "Nome: " + c.getNome()+" CPF: " + c.getRg();
             listGerente.addItem(temp);
 
         }
@@ -75,11 +75,7 @@ public class AlterarVendedor extends JFrame{
     public void escolherVendedor(){
         int escolha = list1.getSelectedIndex();
         this.escolha = escolha;
-        System.out.println("escolheu "+escolha);
-
-
-
-
+        System.out.println("Escolheu: " + escolha);
 
         //////////////
 
@@ -98,37 +94,21 @@ public class AlterarVendedor extends JFrame{
         trestante.setText(String.valueOf(vendedorEscolhido.getTempoRestante()));
         senha.setText(String.valueOf(vendedorEscolhido.getSenha()));
 
-
-
     }
-
-
-
     private void ler() {
-
-
-
         try{
-
 
             File arq = new File("gerentes.txt");
             Scanner myReader2 = new Scanner(arq);
-
-
 
             Vendedor tempVendedor;
 
             while(myReader2.hasNextLine()){
 
-
-
                 String leitura = myReader2.nextLine();
-                System.out.println("leitura:\n"+leitura);
+                System.out.println("Leitura: \n" + leitura);
 
                 String[] atributos = leitura.split("~");
-
-
-
 
                 String trg  = atributos[0];
                 String tnome  = atributos[1];
@@ -143,11 +123,9 @@ public class AlterarVendedor extends JFrame{
 
                 String tsenha  = atributos[10];
 
-
-
                 int index3=0;
                 for(String s: atributos){
-                    System.out.println("atrubutos["+ index3+ "]:\n"+s);
+                    System.out.println("Atributos[" + index3 + "]:\n" + s);
                     index3++;
                 }
 
@@ -155,39 +133,26 @@ public class AlterarVendedor extends JFrame{
                 // Gerente gerenteGenerico= new Gerente("4325432-x","anderson",1,1,1,2,2,2,1000,0,"senhaGenerica");
                 Gerente gerenteGenerico = new Gerente(trg,tnome,tdiaNasc,tdmesNasc,tanoNasc,tdiaAd,tdmesAd,tdanoAd,tsalario,tanosExp,tsenha);
                 listaGerentes.add(gerenteGenerico);
-
-
-
             }
-
-
             myReader2.close();
         }
         catch (IOException e){
-            System.out.println("erro: "+e);
+            System.out.println("Erro: " + e);
         }
 
         try{
 
-
             File arq = new File("vendedores.txt");
             Scanner myReader2 = new Scanner(arq);
-
-
 
             Vendedor tempVendedor;
 
             while(myReader2.hasNextLine()){
 
-
-
                 String leitura = myReader2.nextLine();
-                System.out.println("leitura:\n"+leitura);
+                System.out.println("Leitura: \n" + leitura);
 
                 String[] atributos = leitura.split("~");
-
-
-
 
                 String trg  = atributos[0];
                 String tnome  = atributos[1];
@@ -203,11 +168,9 @@ public class AlterarVendedor extends JFrame{
                 String nomeGerente= atributos[10];
                 String tsenha  = atributos[11];
 
-
-
                 int index3=0;
                 for(String s: atributos){
-                    System.out.println("atrubutos["+ index3+ "]:\n"+s);
+                    System.out.println("Atributos[" + index3+ "]:\n" + s);
                     index3++;
                 }
 
@@ -217,22 +180,18 @@ public class AlterarVendedor extends JFrame{
                 Vendedor vendedortemp= new Vendedor(trg,tnome,tdiaNasc,tdmesNasc,tanoNasc,tdiaAd,tdmesAd,tdanoAd,tsalario,ttrestante,gerenteVazio,tsenha);
                 listaVendedores.add(vendedortemp);
 
-
-
             }
-
 
             myReader2.close();
         }
         catch (IOException e){
-            System.out.println("erro: "+e);
+            System.out.println("Erro: " + e);
         }
     }
 
     // public static void main(String[] args) {
     //  AdicionarVendedor a = new AdicionarVendedor();
     // }
-
 
 
     public void clicou()  {
@@ -323,7 +282,7 @@ public class AlterarVendedor extends JFrame{
 
         }
         catch (IOException e){
-            System.out.println("erro: "+e);
+            System.out.println("Erro: " + e);
         }
 
         ///////////////////
@@ -338,7 +297,7 @@ public class AlterarVendedor extends JFrame{
         DefaultListModel modelo = new DefaultListModel();
         String temp;
         for(Vendedor c: listaVendedores){
-            temp = "nome:"+c.getNome()+" rg: " + c.getRg();
+            temp = "Nome: " + c.getNome()+" RG: " + c.getRg();
             modelo.addElement(temp);
 
         }

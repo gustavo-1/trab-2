@@ -85,8 +85,6 @@ public class AlterarVeiculo extends JFrame {
         list2.setModel(modeloMotos);
 
 
-
-
         carroButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -200,7 +198,7 @@ public class AlterarVeiculo extends JFrame {
 
 
                 String leitura = myReader.nextLine();
-                System.out.println("leitura:\n"+leitura);
+                System.out.println("Leitura: \n" + leitura);
 
                 String[] atributos = leitura.split("~");
 
@@ -220,8 +218,6 @@ public class AlterarVeiculo extends JFrame {
                 double larg= Double.parseDouble(atributos[13]);
                 double compri= Double.parseDouble(atributos[14]);
 
-
-
                 for(String s: atributos){
                     System.out.println("Atributos:\n"+s);
                 }
@@ -230,21 +226,13 @@ public class AlterarVeiculo extends JFrame {
                 tempCarro = new Carro(numeroDoChassi ,marca,modelo,ano,km,tipoCombustivel,peso,vendido,potencia,nDeCilindros,nDeOcupantes, tipo,alt,larg,compri);
                 listaCarros.add(tempCarro);
 
-
-
             }
-
 
             myReader.close();
         }
         catch (IOException e){
-            System.out.println("erro: "+e);
+            System.out.println("Erro: " + e);
         }
-
-
-
-
-
 
         //ler motos
         try{
@@ -262,7 +250,7 @@ public class AlterarVeiculo extends JFrame {
 
 
                 String leitura = myReader.nextLine();
-                System.out.println("leitura:\n"+leitura);
+                System.out.println("Leitura: \n" + leitura);
 
                 String[] atributos = leitura.split("~");
 
@@ -282,26 +270,18 @@ public class AlterarVeiculo extends JFrame {
 
 
                 for(String s: atributos){
-                    System.out.println("atrubutos:\n"+s);
+                    System.out.println("Atributos: \n" + s);
                 }
-
 
                 tempMotos = new Motocicleta(numeroDoChassi ,marca,modelo,ano,km,tipoCombustivel,peso,vendido,nDeCilindros, tipo);
                 listaMoto.add(tempMotos);
-
-
-
             }
-
 
             myReader.close();
         }
         catch (IOException e){
-            System.out.println("erro: "+e);
+            System.out.println("Erro: " + e);
         }
-
-
-
     }
 
     public void clicouCarro(){
@@ -325,9 +305,7 @@ public class AlterarVeiculo extends JFrame {
 
         String textoSaida =  nchassi + "~"+ tmarca+ "~" + tmodelo + "~"+ tano + "~"+ tquilometragem + "~"+tTipoDeCombustivel+ "~" + tPeso + "~"+ tVendido  +"~"+tpotencia +"~"+tnDeCilindros+ "~" +tnDeOcupantes +"~"+ ttipo  +"~"+talt +"~"+tlarg+ "~" + tcompri+"\n";
 
-
         Carro carroNovo = new Carro(nchassi,tmarca,tmodelo,tano,tquilometragem,tTipoDeCombustivel,tPeso,tVendido,tpotencia,tnDeCilindros,tnDeOcupantes,ttipo,talt,tlarg,tcompri);
-
 
         String textoCompleto="";
 
@@ -352,7 +330,6 @@ public class AlterarVeiculo extends JFrame {
 
                     writer.write(currentLine+"\n");
 
-
                 }
                 else{
                     //writer.newLine();
@@ -360,27 +337,20 @@ public class AlterarVeiculo extends JFrame {
                     //writer.newLine();
 
                 }
-
             }
-
 
             reader.close();
             writer.close();
 
-
             //le carros2 de novo e salva tudo na string
             File Vendedores2 = new File("carros2.txt");
             Scanner myReader2 = new Scanner(Vendedores2);
-
-
 
             while (myReader2.hasNextLine())
             {
                 textoCompleto += myReader2.nextLine()+"\n";
             }
             myReader2.close();
-
-
 
             //apagar carro
 
@@ -400,7 +370,7 @@ public class AlterarVeiculo extends JFrame {
 
         }
         catch (IOException e){
-            System.out.println("erro: "+e);
+            System.out.println("Erro: " + e);
         }
 
         ///////////////////
@@ -436,23 +406,16 @@ public class AlterarVeiculo extends JFrame {
             File inputFile = new File("motos.txt");
             File tempFile = new File("motos2.txt");
 
-
             BufferedReader reader = new BufferedReader(new FileReader(inputFile));
             BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
 
-
             String currentLine;
-
 
             for(int i=0;i< listaMoto.size();i++){
                 currentLine = reader.readLine();
 
-
                 if(i != list2.getSelectedIndex()){
-
                     writer.write(currentLine+"\n");
-
-
                 }
                 else{
                     //writer.newLine();
@@ -460,27 +423,20 @@ public class AlterarVeiculo extends JFrame {
                     //writer.newLine();
 
                 }
-
             }
-
 
             reader.close();
             writer.close();
 
-
             //le carros2 de novo e salva tudo na string
             File Vendedores2 = new File("motos2.txt");
             Scanner myReader2 = new Scanner(Vendedores2);
-
-
 
             while (myReader2.hasNextLine())
             {
                 textoCompleto += myReader2.nextLine()+"\n";
             }
             myReader2.close();
-
-
 
             //apagar carro
 
@@ -496,11 +452,9 @@ public class AlterarVeiculo extends JFrame {
 
             //apaga cliente2.txt
             Vendedores2.delete();
-
-
         }
         catch (IOException e){
-            System.out.println("erro: "+e);
+            System.out.println("Erro: " + e);
         }
 
         ///////////////////
@@ -508,8 +462,6 @@ public class AlterarVeiculo extends JFrame {
         //volta para menu gerente apenas por enquanto
         MenuGerente mg = new MenuGerente();
         close();
-
-
     }
 
 
@@ -519,9 +471,8 @@ public class AlterarVeiculo extends JFrame {
         DefaultListModel modelo = new DefaultListModel();
         String temp;
         for(Carro c: listaCarros){
-            temp = "modelo:"+c.getModelo()+" marca:" + c.getMarca() +" numero:"+ Integer.toString(c.getNumeroDoChassi()) + "vendido"+ c.getVendido();
+            temp = "Modelo: " + c.getModelo() + " Marca: " + c.getMarca() + " Número: " + Integer.toString(c.getNumeroDoChassi()) + " Status de venda: " + c.getVendido();
             modelo.addElement(temp);
-
         }
 
         return modelo;
@@ -530,7 +481,7 @@ public class AlterarVeiculo extends JFrame {
         DefaultListModel modelo = new DefaultListModel();
         String temp;
         for(Motocicleta c: listaMoto){
-            temp = "modelo:"+c.getModelo()+" marca:" + c.getMarca() +" numero:"+ Integer.toString(c.getNumeroDoChassi()) + " Vendido: "+ c.getVendido();
+            temp = "Modelo: " + c.getModelo() + " Marca: " + c.getMarca() + " Número: " + Integer.toString(c.getNumeroDoChassi()) + " Status de venda: "+ c.getVendido();
             modelo.addElement(temp);
 
         }

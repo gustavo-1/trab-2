@@ -38,7 +38,7 @@ public class AdicionarCliente extends JFrame {
 
     //construtor se vier de funcionario
     public AdicionarCliente(int retornar,Vendedor v) {
-        super("Adicionar cliente - vendedor");
+        super("Adicionar Cliente - Vendedor");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(PainelAddCliente);
         this.pack();
@@ -72,7 +72,7 @@ public class AdicionarCliente extends JFrame {
     }
 // se vier do menu gerente
     public AdicionarCliente(int retornar) {
-        super("Menu - Gerente");
+        super("Adicionar Cliente - Gerente");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(PainelAddCliente);
         this.pack();
@@ -147,13 +147,13 @@ public class AdicionarCliente extends JFrame {
 
             saida.close();
         } catch (IOException e) {
-            System.out.println("erro: " + e);
+            System.out.println("Erro: " + e);
         }
 
-        if(retornar ==1){//retorna para menu gerente
+        if(retornar ==1){ //retorna para menu gerente
             MenuGerente mg = new MenuGerente();
         }
-        else{//retorna para menu vendedor
+        else{ //retorna para menu vendedor
             MenuVendedor mv = new MenuVendedor(this.vendedor);
         }
 

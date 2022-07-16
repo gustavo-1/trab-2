@@ -12,11 +12,11 @@ import java.util.Scanner;
 public class ExcluirVeiculo extends JFrame {
     public static List<Carro> listaCarros = new ArrayList<Carro>();
     public static List<Motocicleta> listaMotos = new ArrayList<Motocicleta>();
-    private JList list1;
+    private JList listCarros;
     private JPanel PainelApagarCarro;
     private JButton removerButton;
     private JLabel labelMoti;
-    private JList list2;
+    private JList listMotos;
     private JButton removerButton1;
     private JButton close;
     private int retornar;
@@ -37,9 +37,9 @@ public class ExcluirVeiculo extends JFrame {
         this.vendedor=v;
 
         DefaultListModel modeloCarros = criaModeloCarro();
-        list1.setModel(modeloCarros);
+        listCarros.setModel(modeloCarros);
         DefaultListModel modeloMotos = criaModeloMoto();
-        list2.setModel(modeloMotos);
+        listMotos.setModel(modeloMotos);
 
         removerButton.addActionListener(new ActionListener() {
             @Override
@@ -70,9 +70,9 @@ public class ExcluirVeiculo extends JFrame {
         this.setVisible(true);
 
         DefaultListModel modeloCarros = criaModeloCarro();
-        list1.setModel(modeloCarros);
+        listCarros.setModel(modeloCarros);
         DefaultListModel modeloMotos = criaModeloMoto();
-        list2.setModel(modeloMotos);
+        listMotos.setModel(modeloMotos);
 
 
 
@@ -106,50 +106,33 @@ public class ExcluirVeiculo extends JFrame {
     //    ExcluirVeiculo rc = new ExcluirVeiculo();
    // }
 
-
-
-
-
     public void clicouCarro(){
-
-
 
         //Reescreve clientes com a linha alterada no lugar da antiga
         try {
             File inputFile = new File("carros.txt");
             File tempFile = new File("carros2.txt");
 
-
             BufferedReader reader = new BufferedReader(new FileReader(inputFile));
             BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
 
-
             String currentLine;
-
 
             for(int i=0;i< listaCarros.size();i++){
                 currentLine = reader.readLine();
 
-
-                if(i != this.list1.getSelectedIndex()){
-
+                if(i != this.listCarros.getSelectedIndex()){
                     writer.write(currentLine+"\n");
-
-
                 }
 
-
             }
-
 
             reader.close();
             writer.close();
 
-
             //le clientes2 de novo e salva tudo na string
             File clientes2 = new File("carros2.txt");
             Scanner myReader2 = new Scanner(clientes2);
-
 
             String textoCompleto="";
             while (myReader2.hasNextLine())
@@ -157,8 +140,6 @@ public class ExcluirVeiculo extends JFrame {
                 textoCompleto += myReader2.nextLine()+"\n";
             }
             myReader2.close();
-
-
 
             //apagar cliente
 
@@ -175,62 +156,39 @@ public class ExcluirVeiculo extends JFrame {
             //apaga cliente2.txt
             clientes2.delete();
 
-
         }
         catch (IOException e){
-            System.out.println("erro: "+e);
+            System.out.println("Erro: " + e);
         }
-
-        ///////////////////
-
-        //volta para menu gerente apenas por enquanto
-        MenuGerente mg = new MenuGerente();
-        close();
-
-
     }
 
 
     public void clicouMoto(){
-
-
 
         //Reescreve clientes com a linha alterada no lugar da antiga
         try {
             File inputFile = new File("motos.txt");
             File tempFile = new File("motos2.txt");
 
-
             BufferedReader reader = new BufferedReader(new FileReader(inputFile));
             BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
 
-
             String currentLine;
-
 
             for(int i=0;i< listaMotos.size();i++){
                 currentLine = reader.readLine();
 
-
-                if(i != this.list2.getSelectedIndex()){
-
+                if(i != this.listMotos.getSelectedIndex()){
                     writer.write(currentLine+"\n");
-
-
                 }
-
-
             }
-
 
             reader.close();
             writer.close();
 
-
             //le clientes2 de novo e salva tudo na string
             File clientes2 = new File("motos2.txt");
             Scanner myReader2 = new Scanner(clientes2);
-
 
             String textoCompleto="";
             while (myReader2.hasNextLine())
@@ -238,8 +196,6 @@ public class ExcluirVeiculo extends JFrame {
                 textoCompleto += myReader2.nextLine()+"\n";
             }
             myReader2.close();
-
-
 
             //apagar cliente
 
@@ -255,26 +211,11 @@ public class ExcluirVeiculo extends JFrame {
 
             //apaga cliente2.txt
             clientes2.delete();
-
-
         }
         catch (IOException e){
-            System.out.println("erro: "+e);
+            System.out.println("Erro: " + e);
         }
-
-        ///////////////////
-
-        //volta para menu gerente apenas por enquanto
-        MenuGerente mg = new MenuGerente();
-        close();
-
-
     }
-
-
-
-
-
 
     public void ler(){
 
@@ -286,15 +227,12 @@ public class ExcluirVeiculo extends JFrame {
             Scanner myReader = new Scanner(arq);
             //BufferedReader leitor = new BufferedReader(arq);
 
-
             Carro tempCarro;
 
-            while(myReader.hasNextLine()){
-
-
+            while(myReader.hasNextLine()) {
 
                 String leitura = myReader.nextLine();
-                System.out.println("leitura:\n"+leitura);
+                System.out.println("Leitura: \n" + leitura);
 
                 String[] atributos = leitura.split("~");
 
@@ -315,16 +253,12 @@ public class ExcluirVeiculo extends JFrame {
                 double compri= Double.parseDouble(atributos[14]);
 
 
-
                 for(String s: atributos){
-                    System.out.println("atrubutos:\n"+s);
+                    System.out.println("Atributos: \n" + s);
                 }
-
 
                 tempCarro = new Carro(numeroDoChassi ,marca,modelo,ano,km,tipoCombustivel,peso,vendido,potencia,nDeCilindros,nDeOcupantes, tipo,alt,larg,compri);
                 listaCarros.add(tempCarro);
-
-
 
             }
 
@@ -332,7 +266,7 @@ public class ExcluirVeiculo extends JFrame {
             myReader.close();
         }
         catch (IOException e){
-            System.out.println("erro: "+e);
+            System.out.println("Erro: " + e);
         }
         //ler motos
 
@@ -343,15 +277,12 @@ public class ExcluirVeiculo extends JFrame {
             Scanner myReader = new Scanner(arq);
             //BufferedReader leitor = new BufferedReader(arq);
 
-
             Motocicleta tempMoto;
 
             while(myReader.hasNextLine()){
 
-
-
                 String leitura = myReader.nextLine();
-                System.out.println("leitura:\n"+leitura);
+                System.out.println("Leitura: \n"+leitura);
 
                 String[] atributos = leitura.split("~");
 
@@ -368,39 +299,25 @@ public class ExcluirVeiculo extends JFrame {
                 int nDeCilindros = Integer.parseInt(atributos[8]);
                 String tipo  = atributos[9];
 
-
-
-
-
                 for(String s: atributos){
-                    System.out.println("atrubutos:\n"+s);
+                    System.out.println("Atributos: \n" + s);
                 }
-
 
                 tempMoto = new Motocicleta(numeroDoChassi ,marca,modelo,ano,km,tipoCombustivel,peso,vendido,nDeCilindros, tipo);
                 listaMotos.add(tempMoto);
-
-
-
             }
-
-
             myReader.close();
         }
         catch (IOException e){
-            System.out.println("erro: "+e);
+            System.out.println("Erro: " + e);
         }
-
-
-
-
     }
 
     public DefaultListModel criaModeloCarro(){
         DefaultListModel modelo = new DefaultListModel();
         String temp;
         for(Carro c: listaCarros){
-            temp = "modelo:"+c.getModelo()+" marca:" + c.getMarca() +" numero:"+ Integer.toString(c.getNumeroDoChassi());
+            temp = "Modelo: " + c.getModelo() + " Marca: " + c.getMarca() + " Número: " + Integer.toString(c.getNumeroDoChassi());
             modelo.addElement(temp);
 
         }
@@ -412,7 +329,7 @@ public class ExcluirVeiculo extends JFrame {
         DefaultListModel modelo = new DefaultListModel();
         String temp;
         for(Motocicleta c: listaMotos){
-            temp = "modelo:"+c.getModelo()+" marca:" + c.getMarca() +" numero:"+ Integer.toString(c.getNumeroDoChassi());
+            temp = "Modelo: " + c.getModelo()+" Marca: " + c.getMarca() + " Número: " + Integer.toString(c.getNumeroDoChassi());
             modelo.addElement(temp);
 
         }

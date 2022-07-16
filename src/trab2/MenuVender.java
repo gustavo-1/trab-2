@@ -12,8 +12,8 @@ import java.util.Scanner;
 
 public class MenuVender extends JFrame{
     private JPanel painelvender;
-    private JList list1;
-    private JButton button1;
+    private JList listCarros;
+    private JButton venderCarro;
     private JList jlistaCliente;
     private JTextField valor;
     private JTextField hora;
@@ -46,7 +46,7 @@ public class MenuVender extends JFrame{
         NomeVendedor.setText(v.getNome());
 
         DefaultListModel modeloCarros = criaModeloCarro();
-        list1.setModel(modeloCarros);
+        listCarros.setModel(modeloCarros);
 
         DefaultListModel modeloMotos = criaModeloMotos();
         listMotos.setModel(modeloMotos);
@@ -54,13 +54,11 @@ public class MenuVender extends JFrame{
         DefaultListModel modeloCliente = criaModeloCliente();
         jlistaCliente.setModel(modeloCliente);
 
-        button1.addActionListener(new ActionListener() {
+        venderCarro.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
                 clicou();
-                System.out.println("clicou");
-
             }
         });
 
@@ -87,13 +85,13 @@ public class MenuVender extends JFrame{
     }
     public void clicou(){
 
-        System.out.println("escolido: "+list1.getSelectedIndex());
-        int resposta1 = list1.getSelectedIndex();
+        System.out.println("Escolhido: "+ listCarros.getSelectedIndex());
+        int resposta1 = listCarros.getSelectedIndex();
         int resposta2 = jlistaCliente.getSelectedIndex();
         //if(resposta1 >= 0 && 1 < listaCarros.size() && resposta2 >= 0 && 1 < listaCliente.size() ){
         if(resposta1 >= 0 && 0< listaCarros.size() && resposta2 >= 0 && 0 < listaCliente.size() ){
             //entrada valida
-            System.out.println("entrada valida ");
+            System.out.println("Entrada válida");
 
             //criar objeto venda inserir cliente e carro nele e salvar
             int tid = Integer.parseInt(id.getText());
@@ -110,7 +108,7 @@ public class MenuVender extends JFrame{
             Veiculo veiculo = listaCarros.get(resposta1);
 
             if(veiculo.getVendido() == false){
-                System.out.println("ja esta vendido");
+                System.out.println("Já está vendido!");
                 ////colocar na tela
                 return;
             }
@@ -134,7 +132,7 @@ public class MenuVender extends JFrame{
 
 
             } catch (IOException e) {
-                System.out.println("erro: " + e);
+                System.out.println("Erro: " + e);
             }
             MenuVendedor m = new MenuVendedor(this.vendedor);
 
@@ -143,19 +141,19 @@ public class MenuVender extends JFrame{
         }
         else{
             //talvez colocar um aviso na tela depois
-            System.out.println("entrada invalida");
+            System.out.println("Entrada inválida!");
         }
 
     }
     public void venderMoto(){
 
-        System.out.println("escolido: "+list1.getSelectedIndex());
+        System.out.println("Escolhido: " + listCarros.getSelectedIndex());
         int resposta1 = listMotos.getSelectedIndex();
         int resposta2 = jlistaCliente.getSelectedIndex();
         //if(resposta1 >= 0 && 1 < listaCarros.size() && resposta2 >= 0 && 1 < listaCliente.size() ){
         if(resposta1 >= 0 && 0< listaCarros.size() && resposta2 >= 0 && 0 < listaCliente.size() ){
             //entrada valida
-            System.out.println("entrada valida ");
+            System.out.println("Entrada válida");
 
             //criar objeto venda inserir cliente e carro nele e salvar
             int tid = Integer.parseInt(id.getText());
@@ -172,7 +170,7 @@ public class MenuVender extends JFrame{
             Veiculo veiculo = listaMotos.get(resposta1);
 
             if(veiculo.getVendido() == false){
-                System.out.println("ja esta vendido");
+                System.out.println("Já está vendido!");
                 ////colocar na tela
                 return;
             }
@@ -196,7 +194,7 @@ public class MenuVender extends JFrame{
 
 
             } catch (IOException e) {
-                System.out.println("erro: " + e);
+                System.out.println("Erro: " + e);
             }
             MenuVendedor m = new MenuVendedor(this.vendedor);
 
@@ -205,7 +203,7 @@ public class MenuVender extends JFrame{
         }
         else{
             //talvez colocar um aviso na tela depois
-            System.out.println("entrada invalida");
+            System.out.println("Entrada inválida!");
         }
     }
     public void ler(){
@@ -226,7 +224,7 @@ public class MenuVender extends JFrame{
 
 
                 String leitura = myReader.nextLine();
-                System.out.println("leitura:\n"+leitura);
+                System.out.println("Leitura: \n" + leitura);
 
                 String[] atributos = leitura.split("~");
 
@@ -246,44 +244,28 @@ public class MenuVender extends JFrame{
                 double larg= Double.parseDouble(atributos[13]);
                 double compri= Double.parseDouble(atributos[14]);
 
-
-
                 for(String s: atributos){
-                    System.out.println("Atributos:\n"+s);
+                    System.out.println("Atributos: \n" + s);
                 }
-
 
                 tempCarro = new Carro(numeroDoChassi ,marca,modelo,ano,km,tipoCombustivel,peso,vendido,potencia,nDeCilindros,nDeOcupantes, tipo,alt,larg,compri);
                 listaCarros.add(tempCarro);
-
-
-
             }
-
 
             myReader.close();
         }
         catch (IOException e){
-            System.out.println("erro: "+e);
+            System.out.println("Erro: " + e);
         }
-
-
 
         //ler clientes
         try{
-
-
             File arq2= new File("clientes.txt");
             Scanner myReader2 = new Scanner(arq2);
 
-
-
             while(myReader2.hasNextLine()){
-
-
-
                 String leitura = myReader2.nextLine();
-                System.out.println("leitura:\n"+leitura);
+                System.out.println("Leitura: \n"+leitura);
 
                 String[] atributos2 = leitura.split("~");
 
@@ -303,30 +285,21 @@ public class MenuVender extends JFrame{
                 int renda =  Integer.parseInt(atributos2[9]) ;
                 int dependentes =  Integer.parseInt(atributos2[10]) ;
 
-
-
-
-
-
                 for(String s: atributos2){
-                    System.out.println("atrubutos:\n"+s);
+                    System.out.println("Atributos:\n"+s);
                 }
 
                 Cliente clienteNovo = new Cliente(cpf, nome, dia, mes, ano, rua, nrua, bairro, cidade, renda, dependentes);
 
                 listaCliente.add(clienteNovo);
 
-
-
             }
-
 
             myReader2.close();
         }
         catch (IOException e){
-            System.out.println("erro: "+e);
+            System.out.println("Erro: "+e);
         }
-
 
         //ler motos
         try{
@@ -336,15 +309,12 @@ public class MenuVender extends JFrame{
             Scanner myReader = new Scanner(arq);
             //BufferedReader leitor = new BufferedReader(arq);
 
-
             Motocicleta tempMotos;
 
             while(myReader.hasNextLine()){
 
-
-
                 String leitura = myReader.nextLine();
-                System.out.println("leitura:\n"+leitura);
+                System.out.println("Leitura: \n"+leitura);
 
                 String[] atributos = leitura.split("~");
 
@@ -360,37 +330,25 @@ public class MenuVender extends JFrame{
                 int nDeCilindros = Integer.parseInt(atributos[8]);
                 String tipo  = atributos[9];
 
-
-
-
                 for(String s: atributos){
-                    System.out.println("atrubutos:\n"+s);
+                    System.out.println("Atributos: \n" + s);
                 }
-
 
                 tempMotos = new Motocicleta(numeroDoChassi ,marca,modelo,ano,km,tipoCombustivel,peso,vendido,nDeCilindros, tipo);
                 listaMotos.add(tempMotos);
-
-
-
             }
-
-
             myReader.close();
         }
         catch (IOException e){
-            System.out.println("erro: "+e);
+            System.out.println("Erro: " + e);
         }
-
-
-
     }
 
     public DefaultListModel criaModeloCarro(){
         DefaultListModel modelo = new DefaultListModel();
         String temp;
         for(Carro c: listaCarros){
-            temp = "modelo:"+c.getModelo()+" marca:" + c.getMarca() +" numero:"+ Integer.toString(c.getNumeroDoChassi()) + "vendido"+ c.getVendido();
+            temp = "Modelo: " + c.getModelo() + " Marca: " + c.getMarca() +" Número: "+ Integer.toString(c.getNumeroDoChassi()) + " Status de venda: " + c.getVendido();
             modelo.addElement(temp);
 
         }
@@ -401,7 +359,7 @@ public class MenuVender extends JFrame{
         DefaultListModel modelo = new DefaultListModel();
         String temp;
         for(Motocicleta c: listaMotos){
-            temp = "modelo:"+c.getModelo()+" marca:" + c.getMarca() +" numero:"+ Integer.toString(c.getNumeroDoChassi()) + " Vendido: "+ c.getVendido();
+            temp = "Modelo: " + c.getModelo()+" Marca: " + c.getMarca() +" Número: " + Integer.toString(c.getNumeroDoChassi()) + " Vendido: "+ c.getVendido();
             modelo.addElement(temp);
 
         }
@@ -412,7 +370,7 @@ public class MenuVender extends JFrame{
         DefaultListModel modelo = new DefaultListModel();
         String temp;
         for(Cliente c: listaCliente){
-            temp = "nome:"+c.getNome()+" cpf:" + c.getCpf();
+            temp = "Nome: " + c.getNome()+" CPF: " + c.getCpf();
             modelo.addElement(temp);
 
         }

@@ -149,28 +149,14 @@ public class ExcluirCliente extends JFrame {
 
         }
         catch (IOException e){
-            System.out.println("erro: "+e);
+            System.out.println("Erro: " + e);
         }
-
-        ///////////////////
-
-        //volta para menu gerente apenas por enquanto
-        MenuGerente mg = new MenuGerente();
-        close();
-
-
     }
-
-
-
-
-
 
     public void ler(){
 
         //ler cliente
         try{
-
 
             File arq2= new File("clientes.txt");
             Scanner myReader2 = new Scanner(arq2);
@@ -180,9 +166,8 @@ public class ExcluirCliente extends JFrame {
             while(myReader2.hasNextLine()){
 
 
-
                 String leitura = myReader2.nextLine();
-                System.out.println("leitura:\n"+leitura);
+                System.out.println("Leitura: \n" + leitura);
 
                 String[] atributos2 = leitura.split("~");
 
@@ -202,53 +187,33 @@ public class ExcluirCliente extends JFrame {
                 Double renda =  Double.parseDouble(atributos2[9]) ;
                 int dependentes =  Integer.parseInt(atributos2[10]) ;
 
-
-
-
-
-
                 for(String s: atributos2){
-                    System.out.println("atrubutos:\n"+s);
+                    System.out.println("Atributos: \n" + s);
                 }
 
                 Cliente clienteNovo = new Cliente(cpf, nome, dia, mes, ano, rua, nrua, bairro, cidade, renda, dependentes);
 
                 listaCliente.add(clienteNovo);
 
-
-
             }
-
-
             myReader2.close();
         }
-        catch (IOException e){
-            System.out.println("erro: "+e);
+        catch (IOException e) {
+            System.out.println("Erro: " + e);
         }
-
-
-
-
-
-
-
-
     }
-
 
     public DefaultListModel criaModeloCliente(){
         DefaultListModel modelo = new DefaultListModel();
         String temp;
         for(Cliente c: listaCliente){
-            temp = "nome:"+c.getNome()+" cpf:" + c.getCpf();
+            temp = "Nome: " + c.getNome() + " CPF: " + c.getCpf();
             modelo.addElement(temp);
 
         }
 
         return modelo;
     }
-
-
 
     private void createUIComponents() {
         // TODO: place custom component creation code here

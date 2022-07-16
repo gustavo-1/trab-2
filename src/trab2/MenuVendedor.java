@@ -68,7 +68,7 @@ public class MenuVendedor extends JFrame {
         close.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                TelaInicialGUI ti = new TelaInicialGUI("jose motors");
+                TelaInicialGUI ti = new TelaInicialGUI("José Motors");
                 close();
             }
         });

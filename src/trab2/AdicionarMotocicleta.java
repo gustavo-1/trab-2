@@ -36,7 +36,7 @@ public class AdicionarMotocicleta extends JFrame {
     private  int retornar;
 
     public AdicionarMotocicleta() {
-        super("Adicionar moto -gerente");
+        super("Adicionar Moto - Gerente");
         this.retornar=2;
 
 
@@ -60,7 +60,7 @@ public class AdicionarMotocicleta extends JFrame {
         //vendedor
         //
         public AdicionarMotocicleta(int retornar,Vendedor v){
-            super("Adicionar moto -vendedor");
+            super("Adicionar Moto - Vendedor");
             this.retornar=retornar;
             this.vendedor =v;
 
@@ -115,13 +115,6 @@ public class AdicionarMotocicleta extends JFrame {
         //informações especificas sobre carro ou moto ainda não foram adicionadas pra eu poder comecar a testar
         Motocicleta motoNova = new Motocicleta(nchaci,tmarca,tmodelo,tano,tquilometragem,tTipoDeCombustivel,tPeso,tVendido, tcilindradas,ttipo);
 
-
-
-
-
-
-
-
         //escreve em arquivo veiculo criado
         try{
             //BufferedWriter saida = new BufferedWriter(new FileWriter("carros.txt"));
@@ -139,7 +132,7 @@ public class AdicionarMotocicleta extends JFrame {
 
 
 
-            if(this.retornar ==2){
+            if(this.retornar == 2){
                 MenuVendedor mv = new MenuVendedor(vendedor);
                 close();
             }else{
@@ -150,10 +143,8 @@ public class AdicionarMotocicleta extends JFrame {
 
         }
         catch (IOException e){
-            System.out.println("erro: "+e);
+            System.out.println("Erro: " + e);
         }
-
-
 
 
     }

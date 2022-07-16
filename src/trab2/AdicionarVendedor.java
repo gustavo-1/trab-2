@@ -31,7 +31,7 @@ public class AdicionarVendedor extends JFrame{
     private JComboBox listGerente;
 
     public AdicionarVendedor(){
-        super("Adicionar Funcionario");
+        super("Adicionar Funcionário");
         ler();
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -44,7 +44,7 @@ public class AdicionarVendedor extends JFrame{
         //DefaultListModel modeloGerente = criaModeloGerente();
         String temp;
         for(Gerente c: listaGerentes){
-            temp = "nome:"+c.getNome()+" cpf:" + c.getRg();
+            temp = "Nome: " + c.getNome() + " CPF: " + c.getRg();
             listGerente.addItem(temp);
 
         }
@@ -92,7 +92,7 @@ public class AdicionarVendedor extends JFrame{
 
 
                 String leitura = myReader2.nextLine();
-                System.out.println("leitura:\n"+leitura);
+                System.out.println("Leitura: \n" + leitura);
 
                 String[] atributos = leitura.split("~");
 
@@ -116,12 +116,12 @@ public class AdicionarVendedor extends JFrame{
 
                 int index3=0;
                 for(String s: atributos){
-                    System.out.println("atrubutos["+ index3+ "]:\n"+s);
+                    System.out.println("Atributos["+ index3 + "]: \n" + s);
                     index3++;
                 }
 
                 //depois arrumar uma forma de passar o gerente correto, talvez buscar ele por rg
-                // Gerente gerenteGenerico= new Gerente("4325432-x","anderson",1,1,1,2,2,2,1000,0,"senhaGenerica");
+                //Gerente gerenteGenerico= new Gerente("4325432-x","anderson",1,1,1,2,2,2,1000,0,"senhaGenerica");
                 Gerente gerenteGenerico = new Gerente(trg,tnome,tdiaNasc,tdmesNasc,tanoNasc,tdiaAd,tdmesAd,tdanoAd,tsalario,tanosExp,tsenha);
                 listaGerentes.add(gerenteGenerico);
 
@@ -133,7 +133,7 @@ public class AdicionarVendedor extends JFrame{
             myReader2.close();
         }
         catch (IOException e){
-            System.out.println("erro: "+e);
+            System.out.println("Erro: " + e);
         }
     }
 
@@ -177,7 +177,7 @@ public class AdicionarVendedor extends JFrame{
 
             saida.close();
         } catch (IOException e) {
-            System.out.println("erro: " + e);
+            System.out.println("Erro: " + e);
         }
 
         MenuGerente menuGerente = new MenuGerente();
@@ -191,7 +191,7 @@ public class AdicionarVendedor extends JFrame{
         DefaultListModel modelo = new DefaultListModel();
         String temp;
         for(Gerente c: listaGerentes){
-            temp = "nome:"+c.getNome()+" cpf:" + c.getRg();
+            temp = "Nome: " + c.getNome() + " CPF:" + c.getRg();
             modelo.addElement(temp);
 
         }

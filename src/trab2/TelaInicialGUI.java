@@ -31,9 +31,7 @@ public class TelaInicialGUI extends JFrame {
     private JLabel LoginErrado;
     private int vendedorEscolhido;
     private int gerenteEscolhido;
-    private static final String NOME_MESTRE_GERENTE = "admin";
     private static final String SENHA_MESTRE_GERENTE = "senha";
-    private static final String SENHA_MESTRE_FUNCIONARIO = "senha";
 
     private static final String IMG_PATH = "src/Desktop.jpg";
 
@@ -53,14 +51,10 @@ public class TelaInicialGUI extends JFrame {
 
         ler();
 
-
-
-
         menuGerenteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JPasswordField senhacripto = new JPasswordField(SENHA_MESTRE_GERENTE);
-                System.out.println("aqui");
 
                 //Senha Mestre Pre iniciada
                 if(Arrays.equals(SenhaDoGerente.getPassword(), senhacripto.getPassword())){
@@ -77,10 +71,6 @@ public class TelaInicialGUI extends JFrame {
                 else{
                     LoginErrado.setVisible(true);
                 }
-
-
-
-
             }
         });
         close.addActionListener(new ActionListener() {
@@ -114,7 +104,7 @@ public class TelaInicialGUI extends JFrame {
 
     public static void main(String[] args) throws IOException {
 
-        JFrame frame = new TelaInicialGUI("Concessionária Jose");
+        JFrame frame = new TelaInicialGUI("Concessionária José");
 
     }
 
@@ -123,7 +113,6 @@ public class TelaInicialGUI extends JFrame {
 
         //ler vendedores
         try{
-
 
             File arq = new File("vendedores.txt");
             Scanner myReader = new Scanner(arq);
@@ -137,12 +126,9 @@ public class TelaInicialGUI extends JFrame {
 
 
                 String leitura = myReader.nextLine();
-                System.out.println("leitura:\n"+leitura);
+                System.out.println("Leitura: \n" + leitura);
 
                 String[] atributos = leitura.split("~");
-
-
-
 
                 String trg  = atributos[0];
                 String tnome  = atributos[1];
@@ -157,11 +143,8 @@ public class TelaInicialGUI extends JFrame {
                 //Gerente gerente = atributos[10]
                 String tsenha  = atributos[11];
 
-
-
-
                 for(String s: atributos){
-                    System.out.println("atrubutos:\n"+s);
+                    System.out.println("Atributos: \n" + s);
                 }
 
                 //depois arrumar uma forma de passar o gerente correto, talvez buscar ele por rg
@@ -169,41 +152,29 @@ public class TelaInicialGUI extends JFrame {
                tempVendedor = new Vendedor(trg,tnome,tdiaNasc,tdmesNasc,tanoNasc,tdiaAd,tdmesAd,tdanoAd,tsalario,ttrestante,gerenteGenerico,tsenha);
                listaVendedores.add(tempVendedor);
 
-
-
             }
-
 
             myReader.close();
         }
         catch (IOException e){
-            System.out.println("erro: "+e);
+            System.out.println("Erro: " + e);
         }
 
         //ler gerentes
 
-
         try{
-
 
             File arq = new File("gerentes.txt");
             Scanner myReader2 = new Scanner(arq);
-
-
 
             Vendedor tempVendedor;
 
             while(myReader2.hasNextLine()){
 
-
-
                 String leitura = myReader2.nextLine();
-                System.out.println("leitura:\n"+leitura);
+                System.out.println("Leitura: \n" + leitura);
 
                 String[] atributos = leitura.split("~");
-
-
-
 
                 String trg  = atributos[0];
                 String tnome  = atributos[1];
@@ -218,11 +189,9 @@ public class TelaInicialGUI extends JFrame {
 
                 String tsenha  = atributos[10];
 
-
-
                 int index3=0;
                 for(String s: atributos){
-                    System.out.println("atrubutos["+ index3+ "]:\n"+s);
+                    System.out.println("Atributos[" + index3+ "]:\n" + s);
                     index3++;
                 }
 
@@ -231,15 +200,11 @@ public class TelaInicialGUI extends JFrame {
                 Gerente gerenteGenerico = new Gerente(trg,tnome,tdiaNasc,tdmesNasc,tanoNasc,tdiaAd,tdmesAd,tdanoAd,tsalario,tanosExp,tsenha);
                 listaGerentes.add(gerenteGenerico);
 
-
-
             }
-
-
             myReader2.close();
         }
         catch (IOException e){
-            System.out.println("erro: "+e);
+            System.out.println("Erro: " + e);
         }
     }
 
@@ -259,19 +224,17 @@ public class TelaInicialGUI extends JFrame {
         return resposta;
     }
     public boolean verificarNomeESenhaGerente(){
-        System.out.println("aqui2");
         boolean resposta = false;
         int index=0;
         for(Gerente v:listaGerentes){
             //  if(String.equals(v.getNome(), loginvendedor.getText() ) && Arrays.equals(v.getSenha(), senhaVendedor.getText() ) ){
             //      resposta = true;
             //}
-            System.out.println("v: nome: "+ v.getNome()+ "  senha: "+v.getSenha());
+            System.out.println("v: Nome: "+ v.getNome()+ "  Senha: "+v.getSenha());
             if(Objects.equals(v.getNome(), logingerente.getText()) && Objects.equals(v.getSenha(), SenhaDoGerente.getText())){
-                System.out.println("aqui3");
                 gerenteEscolhido = index;
                 resposta = true;
-                System.out.println("gerente encontrado");
+                System.out.println("Gerente encontrado");
             }
             index++;
         }
