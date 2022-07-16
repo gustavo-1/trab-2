@@ -76,7 +76,7 @@ public class ExcluirCliente extends JFrame {
         //agora deve se remover a linha selecionada
         try {
             File inputFile = new File("clientes.txt");
-            File tempFile =  new File("clientes2.txt");
+            File tempFile =  new File("clientes.txt");
 
 
             BufferedReader reader = new BufferedReader(new FileReader(inputFile));
@@ -147,7 +147,7 @@ public class ExcluirCliente extends JFrame {
                 String cidade= atributos2[8];
                 // fim
 
-                int renda =  Integer.parseInt(atributos2[9]) ;
+                Double renda =  Double.parseDouble(atributos2[9]) ;
                 int dependentes =  Integer.parseInt(atributos2[10]) ;
 
 

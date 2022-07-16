@@ -1,0 +1,77 @@
+Index: src/trab2/MenuGerente.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package trab2;\r\n\r\nimport javax.swing.*;\r\nimport java.awt.event.ActionEvent;\r\nimport java.awt.event.ActionListener;\r\n\r\npublic class MenuGerente extends JFrame{\r\n\r\n    private JPanel painelGerente;\r\n    private JButton veiculoButton;\r\n    private JButton clienteButton;\r\n    private JButton funcionarioButton;\r\n    private JButton close;\r\n    private JComboBox opcoes; // Alterar, cadastrar, excluir\r\n    private JTextField desempenhoseller;\r\n    private JButton pesquisarsellerButton;\r\n    private JButton gerenteButton;\r\n\r\n    public MenuGerente(){\r\n        super(\"Menu - Gerente\");\r\n\r\n        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);\r\n        this.setContentPane(painelGerente);\r\n        this.pack();\r\n        this.setLocationRelativeTo(null);\r\n        this.setVisible(true);\r\n\r\n        veiculoButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                if(opcoes.getSelectedIndex() == 0) { // Cadastrar veiculo\r\n                    irParaAdicionarVeiculo();\r\n                    close();\r\n                } else if(opcoes.getSelectedIndex() == 1) { // Alterar veiculo\r\n                    irParaAlterarVeiculo();\r\n                    close();\r\n                } else if(opcoes.getSelectedIndex() == 2) { // Excluir veiculo\r\n                    irParaExcluirVeiculo();\r\n                    close();\r\n                }\r\n            }\r\n        });\r\n        clienteButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                if(opcoes.getSelectedIndex() == 0) { // Cadastrar cliente\r\n                    irParaAdicionarCliente();\r\n                    close();\r\n                } else if (opcoes.getSelectedIndex() == 1) { // Alterar cliente\r\n                    irParaAlterarCliente();\r\n                    close();\r\n                } else if (opcoes.getSelectedIndex() == 2) { // Excluir cliente\r\n                    irParaExcluirCliente();\r\n                    close();\r\n                }\r\n            }\r\n        });\r\n\r\n        funcionarioButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                if(opcoes.getSelectedIndex() == 0) { // Cadastrar funcionario\r\n                    irParaAdicionarFuncionario();\r\n                    close();\r\n                } else if (opcoes.getSelectedIndex() == 1) { // Alterar funcionario\r\n                    irParaAlterarFuncionario();\r\n                    close();\r\n                } else if (opcoes.getSelectedIndex() == 2) { // Excluir funcionario\r\n                    irParaExcluirFuncionario();\r\n                    close();\r\n                }\r\n            }\r\n        });\r\n\r\n        pesquisarsellerButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n\r\n            }\r\n        });\r\n\r\n        close.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                JFrame frame = new TelaInicialGUI(\"Concessionária Jose\");\r\n                close();\r\n            }\r\n        });\r\n\r\n        if(opcoes.getSelectedIndex() == 0) { // Cadastrar\r\n            System.out.println(\"ta selecionada a opcao 1\");\r\n        }\r\n        gerenteButton.addActionListener(new ActionListener() {\r\n            @Override\r\n            public void actionPerformed(ActionEvent e) {\r\n                if(opcoes.getSelectedIndex() == 0) { // Cadastrar gerente\r\n                    irParaAdicionarGerente();\r\n                    close();\r\n                } else if (opcoes.getSelectedIndex() == 1) { // Alterar gerente\r\n                    irParaAlterarGerente();\r\n                    close();\r\n                } else if (opcoes.getSelectedIndex() == 2) { // Excluir gerente\r\n                    irParaExcluirGerente();\r\n                    close();\r\n                }\r\n            }\r\n        });\r\n    }\r\n\r\n    private void close(){\r\n        setVisible(false);\r\n        dispose();\r\n    }\r\n    public void irParaAdicionarVeiculo(){\r\n        AdicionarVeiculo f = new AdicionarVeiculo();\r\n    }\r\n    public void irParaAlterarVeiculo(){\r\n        //AlterarVeiculo f = new AlterarVeiculo();\r\n    }\r\n    public void irParaExcluirVeiculo(){\r\n        ExcluirVeiculo rc = new ExcluirVeiculo();\r\n    }\r\n\r\n    public void irParaAdicionarCliente(){\r\n\r\n        AdicionarCliente f = new AdicionarCliente(1);\r\n    }\r\n    public void irParaAlterarCliente(){\r\n        //AlterarCliente f = new AlterarCliente();\r\n    }\r\n    public void irParaExcluirCliente(){\r\n        ExcluirCliente f = new ExcluirCliente();\r\n    }\r\n    public void irParaAdicionarFuncionario(){\r\n         AdicionarVendedor f = new AdicionarVendedor();\r\n    }\r\n    public void irParaAlterarFuncionario(){\r\n        //AlterarFuncionario f = new AlterarFuncionario();\r\n    }\r\n    public void irParaExcluirFuncionario(){\r\n        ExcluirVendedor f = new ExcluirVendedor();\r\n    }\r\n    public void irParaAdicionarGerente(){\r\n        AdicionarGerente a = new AdicionarGerente();\r\n    }\r\n    public void irParaAlterarGerente(){\r\n\r\n    }\r\n    public void irParaExcluirGerente(){\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/trab2/MenuGerente.java b/src/trab2/MenuGerente.java
+--- a/src/trab2/MenuGerente.java	(revision f22a8c274c222893dc4055ce4eab40904fb52fe5)
++++ b/src/trab2/MenuGerente.java	(date 1657986104914)
+@@ -9,7 +9,7 @@
+     private JPanel painelGerente;
+     private JButton veiculoButton;
+     private JButton clienteButton;
+-    private JButton funcionarioButton;
++    private JButton vendedorButton;
+     private JButton close;
+     private JComboBox opcoes; // Alterar, cadastrar, excluir
+     private JTextField desempenhoseller;
+@@ -56,17 +56,17 @@
+             }
+         });
+ 
+-        funcionarioButton.addActionListener(new ActionListener() {
++        vendedorButton.addActionListener(new ActionListener() {
+             @Override
+             public void actionPerformed(ActionEvent e) {
+                 if(opcoes.getSelectedIndex() == 0) { // Cadastrar funcionario
+-                    irParaAdicionarFuncionario();
++                    irParaAdicionarVendedor();
+                     close();
+                 } else if (opcoes.getSelectedIndex() == 1) { // Alterar funcionario
+-                    irParaAlterarFuncionario();
++                    irParaAlterarVendedor();
+                     close();
+                 } else if (opcoes.getSelectedIndex() == 2) { // Excluir funcionario
+-                    irParaExcluirFuncionario();
++                    irParaExcluirVendedor();
+                     close();
+                 }
+             }
+@@ -131,13 +131,13 @@
+     public void irParaExcluirCliente(){
+         ExcluirCliente f = new ExcluirCliente();
+     }
+-    public void irParaAdicionarFuncionario(){
++    public void irParaAdicionarVendedor(){
+          AdicionarVendedor f = new AdicionarVendedor();
+     }
+-    public void irParaAlterarFuncionario(){
++    public void irParaAlterarVendedor(){
+         //AlterarFuncionario f = new AlterarFuncionario();
+     }
+-    public void irParaExcluirFuncionario(){
++    public void irParaExcluirVendedor(){
+         ExcluirVendedor f = new ExcluirVendedor();
+     }
+     public void irParaAdicionarGerente(){
+Index: src/trab2/MenuGerente.form
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<form xmlns=\"http://www.intellij.com/uidesigner/form/\" version=\"1\" bind-to-class=\"trab2.MenuGerente\">\r\n  <grid id=\"27dc6\" binding=\"painelGerente\" layout-manager=\"GridLayoutManager\" row-count=\"8\" column-count=\"3\" same-size-horizontally=\"false\" same-size-vertically=\"false\" hgap=\"-1\" vgap=\"-1\">\r\n    <margin top=\"0\" left=\"0\" bottom=\"0\" right=\"0\"/>\r\n    <constraints>\r\n      <xy x=\"20\" y=\"20\" width=\"500\" height=\"400\"/>\r\n    </constraints>\r\n    <properties/>\r\n    <border type=\"none\"/>\r\n    <children>\r\n      <vspacer id=\"d5ed2\">\r\n        <constraints>\r\n          <grid row=\"5\" column=\"0\" row-span=\"1\" col-span=\"1\" vsize-policy=\"6\" hsize-policy=\"1\" anchor=\"0\" fill=\"2\" indent=\"0\" use-parent-layout=\"false\"/>\r\n        </constraints>\r\n      </vspacer>\r\n      <component id=\"3d776\" class=\"javax.swing.JLabel\">\r\n        <constraints>\r\n          <grid row=\"6\" column=\"1\" row-span=\"1\" col-span=\"1\" vsize-policy=\"0\" hsize-policy=\"0\" anchor=\"0\" fill=\"0\" indent=\"0\" use-parent-layout=\"false\"/>\r\n        </constraints>\r\n        <properties>\r\n          <text value=\"Desempenho\"/>\r\n        </properties>\r\n      </component>\r\n      <component id=\"9fd81\" class=\"javax.swing.JButton\" binding=\"close\">\r\n        <constraints>\r\n          <grid row=\"0\" column=\"2\" row-span=\"1\" col-span=\"1\" vsize-policy=\"0\" hsize-policy=\"3\" anchor=\"4\" fill=\"0\" indent=\"0\" use-parent-layout=\"false\">\r\n            <minimum-size width=\"10\" height=\"10\"/>\r\n            <preferred-size width=\"25\" height=\"25\"/>\r\n            <maximum-size width=\"50\" height=\"50\"/>\r\n          </grid>\r\n        </constraints>\r\n        <properties>\r\n          <background color=\"-1618884\"/>\r\n          <horizontalAlignment value=\"0\"/>\r\n          <text value=\"X\"/>\r\n        </properties>\r\n      </component>\r\n      <component id=\"4d109\" class=\"javax.swing.JTextField\" binding=\"desempenhoseller\">\r\n        <constraints>\r\n          <grid row=\"7\" column=\"1\" row-span=\"1\" col-span=\"1\" vsize-policy=\"0\" hsize-policy=\"6\" anchor=\"8\" fill=\"1\" indent=\"0\" use-parent-layout=\"false\">\r\n            <preferred-size width=\"150\" height=\"-1\"/>\r\n          </grid>\r\n        </constraints>\r\n        <properties/>\r\n      </component>\r\n      <component id=\"96dd0\" class=\"javax.swing.JLabel\">\r\n        <constraints>\r\n          <grid row=\"7\" column=\"0\" row-span=\"1\" col-span=\"1\" vsize-policy=\"0\" hsize-policy=\"0\" anchor=\"8\" fill=\"0\" indent=\"0\" use-parent-layout=\"false\"/>\r\n        </constraints>\r\n        <properties>\r\n          <text value=\"Nome do vendedor:\"/>\r\n        </properties>\r\n      </component>\r\n      <component id=\"c9494\" class=\"javax.swing.JButton\" binding=\"pesquisarsellerButton\">\r\n        <constraints>\r\n          <grid row=\"7\" column=\"2\" row-span=\"1\" col-span=\"1\" vsize-policy=\"0\" hsize-policy=\"3\" anchor=\"0\" fill=\"1\" indent=\"0\" use-parent-layout=\"false\"/>\r\n        </constraints>\r\n        <properties>\r\n          <text value=\"Pesquisar\"/>\r\n        </properties>\r\n      </component>\r\n      <component id=\"3609a\" class=\"javax.swing.JComboBox\" binding=\"opcoes\">\r\n        <constraints>\r\n          <grid row=\"0\" column=\"1\" row-span=\"1\" col-span=\"1\" vsize-policy=\"0\" hsize-policy=\"2\" anchor=\"8\" fill=\"1\" indent=\"0\" use-parent-layout=\"false\"/>\r\n        </constraints>\r\n        <properties>\r\n          <model>\r\n            <item value=\"Cadastrar\"/>\r\n            <item value=\"Alterar\"/>\r\n            <item value=\"Excluir\"/>\r\n          </model>\r\n        </properties>\r\n      </component>\r\n      <component id=\"74a62\" class=\"javax.swing.JButton\" binding=\"veiculoButton\" default-binding=\"true\">\r\n        <constraints>\r\n          <grid row=\"1\" column=\"1\" row-span=\"1\" col-span=\"1\" vsize-policy=\"0\" hsize-policy=\"3\" anchor=\"0\" fill=\"1\" indent=\"0\" use-parent-layout=\"false\"/>\r\n        </constraints>\r\n        <properties>\r\n          <text value=\"Veículo\"/>\r\n        </properties>\r\n      </component>\r\n      <component id=\"672c4\" class=\"javax.swing.JButton\" binding=\"clienteButton\" default-binding=\"true\">\r\n        <constraints>\r\n          <grid row=\"2\" column=\"1\" row-span=\"1\" col-span=\"1\" vsize-policy=\"0\" hsize-policy=\"3\" anchor=\"0\" fill=\"1\" indent=\"0\" use-parent-layout=\"false\"/>\r\n        </constraints>\r\n        <properties>\r\n          <text value=\"Cliente\"/>\r\n        </properties>\r\n      </component>\r\n      <component id=\"559c2\" class=\"javax.swing.JButton\" binding=\"funcionarioButton\">\r\n        <constraints>\r\n          <grid row=\"3\" column=\"1\" row-span=\"1\" col-span=\"1\" vsize-policy=\"0\" hsize-policy=\"3\" anchor=\"0\" fill=\"1\" indent=\"0\" use-parent-layout=\"false\"/>\r\n        </constraints>\r\n        <properties>\r\n          <text value=\"Funcionário\"/>\r\n        </properties>\r\n      </component>\r\n      <component id=\"cb1e0\" class=\"javax.swing.JButton\" binding=\"gerenteButton\" default-binding=\"true\">\r\n        <constraints>\r\n          <grid row=\"4\" column=\"1\" row-span=\"1\" col-span=\"1\" vsize-policy=\"0\" hsize-policy=\"3\" anchor=\"0\" fill=\"1\" indent=\"0\" use-parent-layout=\"false\"/>\r\n        </constraints>\r\n        <properties>\r\n          <text value=\"Gerente\"/>\r\n        </properties>\r\n      </component>\r\n    </children>\r\n  </grid>\r\n</form>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/trab2/MenuGerente.form b/src/trab2/MenuGerente.form
+--- a/src/trab2/MenuGerente.form	(revision f22a8c274c222893dc4055ce4eab40904fb52fe5)
++++ b/src/trab2/MenuGerente.form	(date 1657986149782)
+@@ -87,7 +87,7 @@
+           <text value="Cliente"/>
+         </properties>
+       </component>
+-      <component id="559c2" class="javax.swing.JButton" binding="funcionarioButton">
++      <component id="559c2" class="javax.swing.JButton" binding="vendedorButton">
+         <constraints>
+           <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+         </constraints>
