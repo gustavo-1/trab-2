@@ -1,12 +1,13 @@
 import trab2.Carro;
-import trab2.Cliente;
+import trab2.MenuGerente;
 import trab2.Motocicleta;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.IOException;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -47,15 +48,23 @@ public class AlterarVeiculo extends JFrame {
     private JButton AddCarro;
     private JLabel tipoDeCombustívelLabel;
     private JTextField tipoCombustivel;
-    private JButton close;
     private JPanel PainelAddMoto;
+    private JList list1;
+    private JList list2;
     private JLabel JLabelNchassi;
     private JLabel JLabelStatus;
     private JLabel cinlindradasLabel;
-    private JTextField cilindradas;
+    private JTextField cilindradasMoto;
     private JButton adicionarMotoButton;
-    private JList list1;
-    private JList list2;
+    private JTextField NchassiMoto;
+    private JTextField marcaMoto;
+    private JTextField modeloMoto;
+    private JTextField anoMoto;
+    private JTextField quilometragemMoto;
+    private JTextField tipoMoto;
+    private JTextField pesoMoto;
+    private JCheckBox vendidoMoto;
+    private JTextField tipoMoto2;
     private List<Carro> listaCarros = new ArrayList<Carro>();
     private List<Motocicleta> listaMoto = new ArrayList<Motocicleta>();
 
@@ -66,7 +75,7 @@ public class AlterarVeiculo extends JFrame {
         this.pack();
         //this.setLocationRelativeTo(null);
         this.setVisible(true);
-        this.setSize(500,600);
+        this.setSize(600,600);
 
 
         DefaultListModel modeloCarros = criaModeloCarro();
@@ -97,12 +106,81 @@ public class AlterarVeiculo extends JFrame {
 
             }
         });
+        list1.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                escolheuCarro();
+            }
+        });
+        list2.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                escolheuMoto();
+            }
+        });
+        AddCarro.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                clicouCarro();
+            }
+        });
+        adicionarMotoButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                clicouMoto();
+            }
+        });
     }
 
 
     public static void main(String[] args) {
         AlterarVeiculo av = new AlterarVeiculo();
     }
+
+    public void escolheuCarro(){
+        Carro carroEscolhido = listaCarros.get(list1.getSelectedIndex());
+
+        Nchassi.setText(String.valueOf(carroEscolhido.getNumeroDoChassi()));
+        marca.setText(String.valueOf(carroEscolhido.getMarca()));
+        modelo.setText(String.valueOf(carroEscolhido.getModelo()));
+        ano.setText(String.valueOf(carroEscolhido.getAno()));
+        quilometragem.setText(String.valueOf(carroEscolhido.getKm()));
+        tipoCombustivel.setText(String.valueOf(carroEscolhido.getTipoCombustivel()));
+        peso.setText(String.valueOf(carroEscolhido.getPeso()));
+        vendidoCheckBox.setText(String.valueOf(carroEscolhido.getVendido()));
+
+        potencia.setText(String.valueOf(carroEscolhido.getPotencia()));
+        nCilindros.setText(String.valueOf(carroEscolhido.getnDeCilindros()));
+        nOcupantes.setText(String.valueOf(carroEscolhido.getnDeOcupantes()));
+        tipo.setText(String.valueOf(carroEscolhido.getTipo()));
+        altura.setText(String.valueOf(carroEscolhido.getDimensoes().getAltura()));
+        largura.setText(String.valueOf(carroEscolhido.getDimensoes().getLargura()));
+        comprimento.setText(String.valueOf(carroEscolhido.getDimensoes().getComprimento()));
+
+
+    }
+    public void escolheuMoto(){
+        Motocicleta motoEscolhido = listaMoto.get(list2.getSelectedIndex());
+
+        NchassiMoto.setText(String.valueOf(motoEscolhido.getNumeroDoChassi()));
+        marcaMoto.setText(String.valueOf(motoEscolhido.getMarca()));
+        modeloMoto.setText(String.valueOf(motoEscolhido.getModelo()));
+        anoMoto.setText(String.valueOf(motoEscolhido.getAno()));
+        quilometragemMoto.setText(String.valueOf(motoEscolhido.getKm()));
+        tipoMoto.setText(String.valueOf(motoEscolhido.getTipoCombustivel()));
+        pesoMoto.setText(String.valueOf(motoEscolhido.getPeso()));
+        vendidoMoto.setText(String.valueOf(motoEscolhido.getVendido()));
+
+
+        cilindradasMoto.setText(String.valueOf(motoEscolhido.getCilindradas()));
+
+        tipoMoto2.setText(String.valueOf(motoEscolhido.getTipo()));
+
+
+    }
+
 
     public void ler(){
 
@@ -222,6 +300,214 @@ public class AlterarVeiculo extends JFrame {
             System.out.println("erro: "+e);
         }
 
+
+
+    }
+
+    public void clicouCarro(){
+
+        int nchassi = Integer.parseInt(Nchassi.getText());
+        String tmarca = marca.getText();
+        String tmodelo = modelo.getText();
+        int tano = Integer.parseInt(ano.getText());
+        double tquilometragem = Double.parseDouble(quilometragem.getText());
+        String tTipoDeCombustivel = tipoCombustivel.getText();
+        double tPeso = Double.parseDouble(peso.getText());
+        boolean tVendido = vendidoCheckBox.isSelected();
+
+        int tpotencia = Integer.parseInt(potencia.getText());
+        int tnDeCilindros = Integer.parseInt(nCilindros.getText());
+        int tnDeOcupantes = Integer.parseInt(nOcupantes.getText());
+        String ttipo  = tipo.getText();
+        double talt= Double.parseDouble(altura.getText());
+        double tlarg= Double.parseDouble(largura.getText());
+        double tcompri= Double.parseDouble(comprimento.getText());
+
+        String textoSaida =  nchassi + "~"+ tmarca+ "~" + tmodelo + "~"+ tano + "~"+ tquilometragem + "~"+tTipoDeCombustivel+ "~" + tPeso + "~"+ tVendido  +"~"+tpotencia +"~"+tnDeCilindros+ "~" +tnDeOcupantes +"~"+ ttipo  +"~"+talt +"~"+tlarg+ "~" + tcompri+"\n";
+
+
+        Carro carroNovo = new Carro(nchassi,tmarca,tmodelo,tano,tquilometragem,tTipoDeCombustivel,tPeso,tVendido,tpotencia,tnDeCilindros,tnDeOcupantes,ttipo,talt,tlarg,tcompri);
+
+
+        String textoCompleto="";
+
+        //Reescreve clientes com a linha alterada no lugar da antiga
+        try {
+            File inputFile = new File("carros.txt");
+            File tempFile = new File("carros2.txt");
+
+
+            BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+
+
+            String currentLine;
+
+
+            for(int i=0;i< listaCarros.size();i++){
+                currentLine = reader.readLine();
+
+
+                if(i != list1.getSelectedIndex()){
+
+                    writer.write(currentLine+"\n");
+
+
+                }
+                else{
+                    //writer.newLine();
+                    writer.write(textoSaida);
+                    //writer.newLine();
+
+                }
+
+            }
+
+
+            reader.close();
+            writer.close();
+
+
+            //le carros2 de novo e salva tudo na string
+            File Vendedores2 = new File("carros2.txt");
+            Scanner myReader2 = new Scanner(Vendedores2);
+
+
+
+            while (myReader2.hasNextLine())
+            {
+                textoCompleto += myReader2.nextLine()+"\n";
+            }
+            myReader2.close();
+
+
+
+            //apagar carro
+
+            inputFile.delete();
+
+            // recria clientes.txt
+            File novoCliente = new File("carros.txt");
+            BufferedWriter escritor = new BufferedWriter(new FileWriter( novoCliente));
+            System.out.println("++++++++\n\n"+textoCompleto+"++++++++\n\n");
+            escritor.write(textoCompleto);
+
+            escritor.close();
+
+            //apaga cliente2.txt
+            Vendedores2.delete();
+
+
+        }
+        catch (IOException e){
+            System.out.println("erro: "+e);
+        }
+
+        ///////////////////
+
+        //volta para menu gerente apenas por enquanto
+        MenuGerente mg = new MenuGerente();
+        close();
+
+    }
+
+    public void clicouMoto(){
+
+
+        int nchaci = Integer.parseInt(NchassiMoto.getText());
+        String tmarca = marcaMoto.getText();
+        String tmodelo = modeloMoto.getText();
+        int tano= Integer.parseInt(anoMoto.getText());
+        double tquilometragem = Double.parseDouble(quilometragemMoto.getText());
+        String tTipoDeCombustivel = tipoMoto.getText();
+        double tPeso = Double.parseDouble(pesoMoto.getText());
+        boolean tVendido = vendidoMoto.isSelected();
+
+        int tcilindradas = Integer.parseInt(cilindradasMoto.getText());
+        String ttipo  = tipoMoto2.getText();
+
+        //informações especificas sobre carro ou moto ainda não foram adicionadas pra eu poder comecar a testar
+        Motocicleta motoNova = new Motocicleta(nchaci,tmarca,tmodelo,tano,tquilometragem,tTipoDeCombustivel,tPeso,tVendido, tcilindradas,ttipo);
+        String textoCompleto="";
+        String textoSaida =  nchaci + "~"+ tmarca+ "~" + tmodelo + "~"+ tano + "~"+ tquilometragem + "~"+tTipoDeCombustivel+ "~" + tPeso + "~"+ tVendido  +"~"+tcilindradas + "~"+ ttipo+"\n";
+
+        //Reescreve clientes com a linha alterada no lugar da antiga
+        try {
+            File inputFile = new File("motos.txt");
+            File tempFile = new File("motos2.txt");
+
+
+            BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+
+
+            String currentLine;
+
+
+            for(int i=0;i< listaMoto.size();i++){
+                currentLine = reader.readLine();
+
+
+                if(i != list2.getSelectedIndex()){
+
+                    writer.write(currentLine+"\n");
+
+
+                }
+                else{
+                    //writer.newLine();
+                    writer.write(textoSaida);
+                    //writer.newLine();
+
+                }
+
+            }
+
+
+            reader.close();
+            writer.close();
+
+
+            //le carros2 de novo e salva tudo na string
+            File Vendedores2 = new File("motos2.txt");
+            Scanner myReader2 = new Scanner(Vendedores2);
+
+
+
+            while (myReader2.hasNextLine())
+            {
+                textoCompleto += myReader2.nextLine()+"\n";
+            }
+            myReader2.close();
+
+
+
+            //apagar carro
+
+            inputFile.delete();
+
+            // recria clientes.txt
+            File novoCliente = new File("motos.txt");
+            BufferedWriter escritor = new BufferedWriter(new FileWriter( novoCliente));
+            System.out.println("++++++++\n\n"+textoCompleto+"++++++++\n\n");
+            escritor.write(textoCompleto);
+
+            escritor.close();
+
+            //apaga cliente2.txt
+            Vendedores2.delete();
+
+
+        }
+        catch (IOException e){
+            System.out.println("erro: "+e);
+        }
+
+        ///////////////////
+
+        //volta para menu gerente apenas por enquanto
+        MenuGerente mg = new MenuGerente();
+        close();
 
 
     }
