@@ -1,0 +1,2 @@
+1234~marca4~modelo4~2009~6.0~gasosa~555.0~false~55~esporte
+1234~marca4~modelo4~2009~6.0~~555.0~false~55~casual

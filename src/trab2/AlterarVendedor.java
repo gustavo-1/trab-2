@@ -34,6 +34,7 @@ public class AlterarVendedor extends JFrame{
 
 
     public AlterarVendedor(){
+        listaVendedores.clear();
         ler();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(PainelEdtVendedor);
