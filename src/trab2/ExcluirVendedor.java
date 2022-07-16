@@ -10,11 +10,10 @@ import java.util.Scanner;
 
 public class ExcluirVendedor extends JFrame{
     private JPanel PainelApagarVendedor;
-    private JButton removerClienteButton;
-    private JList listFuncionario;
+    private JButton removerFuncionarioButton;
+    private JList list1;
     private JButton close;
     static List <Vendedor> listaVendedores = new ArrayList<Vendedor>();
-
     public ExcluirVendedor(){
         listaVendedores.clear();
         ler();
@@ -24,14 +23,16 @@ public class ExcluirVendedor extends JFrame{
         this.setLocationRelativeTo(null);
         this.setVisible(true);
 
-        DefaultListModel modeloCliente = criaModeloVendedor();
-        listFuncionario.setModel(modeloCliente);
+        DefaultListModel modeloVendedor = criaModeloVendedor();
+        list1.setModel(modeloVendedor);
 
 
-        removerClienteButton.addActionListener(new ActionListener() {
+        removerFuncionarioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 clicou();
+                //MenuGerente mg = new MenuGerente();
+                close();
             }
         });
         close.addActionListener(new ActionListener() {
@@ -43,13 +44,41 @@ public class ExcluirVendedor extends JFrame{
         });
     }
 
+    public ExcluirVendedor(int retornar, Vendedor v){
+        ler();
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setContentPane(PainelApagarVendedor);
+        this.pack();
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
+
+
+        DefaultListModel modeloVendedor = criaModeloVendedor();
+        list1.setModel(modeloVendedor);
+
+
+        removerFuncionarioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                clicou();
+
+                MenuVendedor mv = new MenuVendedor(v);
+
+                close();
+            }
+        });
+    }
+
+    public static void main(String[] args) {
+        ExcluirVendedor ex = new ExcluirVendedor();
+    }
+
     public void clicou(){
 
-        System.out.println("Escolhido: " + listFuncionario.getSelectedIndex());
-        int resposta1 = listFuncionario.getSelectedIndex();
+        System.out.println("escolido: "+list1.getSelectedIndex());
+        int resposta1 = list1.getSelectedIndex();
 
-
-        //Reescreve clientes com a linha alterada no lugar da antiga
+        //agora deve se remover a linha selecionada
         try {
             File inputFile = new File("vendedores.txt");
             File tempFile = new File("vendedores2.txt");
@@ -57,23 +86,26 @@ public class ExcluirVendedor extends JFrame{
             BufferedReader reader = new BufferedReader(new FileReader(inputFile));
             BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
 
+
             String currentLine;
+
 
             for(int i=0;i< listaVendedores.size();i++){
                 currentLine = reader.readLine();
 
-                if(i != resposta1){
-                    writer.write(currentLine + "\n");
+
+                if(i != this.list1.getSelectedIndex()){
+                    writer.write(currentLine);
                 }
+
             }
 
-
-            reader.close();
             writer.close();
+            reader.close();
 
             //le clientes2 de novo e salva tudo na string
-            File clientes2 = new File("vendedores2.txt");
-            Scanner myReader2 = new Scanner(clientes2);
+            File vendedores2 = new File("vendedores2.txt");
+            Scanner myReader2 = new Scanner(vendedores2);
 
 
             String textoCompleto="";
@@ -83,32 +115,32 @@ public class ExcluirVendedor extends JFrame{
             }
             myReader2.close();
 
+
+
             //apagar cliente
 
             inputFile.delete();
 
             // recria clientes.txt
-            File novoCliente = new File("vendedores.txt");
-            BufferedWriter escritor = new BufferedWriter(new FileWriter( novoCliente));
+            File novoVendedor = new File("vendedores.txt");
+            BufferedWriter escritor = new BufferedWriter(new FileWriter( novoVendedor));
             System.out.println("++++++++\n\n"+textoCompleto+"++++++++\n\n");
             escritor.write(textoCompleto);
 
             escritor.close();
 
             //apaga cliente2.txt
-            clientes2.delete();
-
+            vendedores2.delete();
 
         }
         catch (IOException e){
-            System.out.println("Erro: "+e);
+            System.out.println("erro: "+e);
         }
 
         ///////////////////
-
-        //volta para menu gerente apenas por enquanto
         MenuGerente mg = new MenuGerente();
         close();
+
 
     }
 
@@ -122,14 +154,21 @@ public class ExcluirVendedor extends JFrame{
             File arq = new File("vendedores.txt");
             Scanner myReader = new Scanner(arq);
 
+
+
             Vendedor tempVendedor;
 
             while(myReader.hasNextLine()){
 
+
+
                 String leitura = myReader.nextLine();
-                System.out.println("Leitura: \n" + leitura);
+                System.out.println("leitura:\n"+leitura);
 
                 String[] atributos = leitura.split("~");
+
+
+
 
                 String trg  = atributos[0];
                 String tnome  = atributos[1];
@@ -145,8 +184,10 @@ public class ExcluirVendedor extends JFrame{
                 String tsenha  = atributos[11];
 
 
+
+
                 for(String s: atributos){
-                    System.out.println("Atributos: \n" + s);
+                    System.out.println("atrubutos:\n"+s);
                 }
 
                 //depois arrumar uma forma de passar o gerente correto, talvez buscar ele por rg
@@ -162,7 +203,7 @@ public class ExcluirVendedor extends JFrame{
             myReader.close();
         }
         catch (IOException e){
-            System.out.println("Erro: " + e);
+            System.out.println("erro: "+e);
         }
 
 
@@ -178,7 +219,7 @@ public class ExcluirVendedor extends JFrame{
         DefaultListModel modelo = new DefaultListModel();
         String temp;
         for(Vendedor c: listaVendedores){
-            temp = "Nome: " + c.getNome() + " CPF:" + c.getRg();
+            temp = "nome:"+c.getNome()+" cpf:" + c.getRg();
             modelo.addElement(temp);
 
         }

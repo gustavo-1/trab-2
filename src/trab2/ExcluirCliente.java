@@ -37,7 +37,7 @@ public class ExcluirCliente extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 clicou();
 
-                MenuGerente mg = new MenuGerente();
+                //MenuGerente mg = new MenuGerente();
 
                 close();
             }
