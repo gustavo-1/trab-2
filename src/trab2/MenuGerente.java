@@ -9,7 +9,7 @@ public class MenuGerente extends JFrame{
     private JPanel painelGerente;
     private JButton veiculoButton;
     private JButton clienteButton;
-    private JButton funcionarioButton;
+    private JButton vendedorButton;
     private JButton close;
     private JComboBox opcoes; // Alterar, cadastrar, excluir
     private JTextField desempenhoseller;
@@ -56,17 +56,17 @@ public class MenuGerente extends JFrame{
             }
         });
 
-        funcionarioButton.addActionListener(new ActionListener() {
+        vendedorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(opcoes.getSelectedIndex() == 0) { // Cadastrar funcionario
-                    irParaAdicionarFuncionario();
+                    irParaAdicionarVendedor();
                     close();
                 } else if (opcoes.getSelectedIndex() == 1) { // Alterar funcionario
-                    irParaAlterarFuncionario();
+                    irParaAlterarVendedor();
                     close();
                 } else if (opcoes.getSelectedIndex() == 2) { // Excluir funcionario
-                    irParaExcluirFuncionario();
+                    irParaExcluirVendedor();
                     close();
                 }
             }
@@ -131,13 +131,13 @@ public class MenuGerente extends JFrame{
     public void irParaExcluirCliente(){
         ExcluirCliente f = new ExcluirCliente();
     }
-    public void irParaAdicionarFuncionario(){
+    public void irParaAdicionarVendedor(){
          AdicionarVendedor f = new AdicionarVendedor();
     }
-    public void irParaAlterarFuncionario(){
-        //AlterarFuncionario f = new AlterarFuncionario();
+    public void irParaAlterarVendedor(){
+        //AlterarVendedor f = new AlterarVendedor();
     }
-    public void irParaExcluirFuncionario(){
+    public void irParaExcluirVendedor(){
         ExcluirVendedor f = new ExcluirVendedor();
     }
     public void irParaAdicionarGerente(){

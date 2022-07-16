@@ -31,6 +31,14 @@ public class AdicionarGerente extends JFrame {
         this.pack();
         this.setLocationRelativeTo(null);
         this.setVisible(true);
+
+        close.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MenuGerente mg = new MenuGerente();
+                close();
+            }
+        });
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -45,7 +53,10 @@ public class AdicionarGerente extends JFrame {
             }
         });
     }
-
+    private void closewindow(){
+        setVisible(false);
+        dispose();
+    }
 
     public void adicionar(){
 

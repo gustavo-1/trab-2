@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ec128bb-b4dc-4fbe-baa4-1fb051094707" name="Changes" comment="Adicionando botao AlterarCliente">
-      <change afterPath="$PROJECT_DIR$/clientes.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/trab2/AlterarVendedor.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/trab2/AlterarVendedor.java" afterDir="false" />
+    <list default="true" id="1ec128bb-b4dc-4fbe-baa4-1fb051094707" name="Changes" comment="Adiciona adicionar vendedor">
+      <change afterPath="$PROJECT_DIR$/src/trab2/AlterarCliente.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/trab2/AlterarCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarVendedor.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarVendedor.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarVendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarVendedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AlterarCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AlterarCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/Data.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirCliente.java" afterDir="false" />
-    </list>
-    <list id="bd9ad54b-a450-4241-9f83-e8636646a099" name="Changes by brnuo" comment="">
-      <change beforePath="$PROJECT_DIR$/src/trab2/MenuGerente.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuGerente.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/MenuGerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuGerente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/MenuVendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuVendedor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,10 +47,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "227",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "278",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "last_opened_file_path": "C:/Users/gusta/IdeaProjects/trab-2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "200",
+    "last_opened_file_path": "/home/brnuo/Documentos/lpoo/trab-2/src/trab2"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -62,52 +56,12 @@
       <recent name="$PROJECT_DIR$/src/trab2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\gusta\IdeaProjects\trab-2\" />
       <recent name="C:\Users\gusta\IdeaProjects\trab-2\src" />
       <recent name="C:\Users\gusta\IdeaProjects\trab-2\src\trab2" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AlterarVendedor">
-    <configuration name="AlterarVendedor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="trab2.AlterarVendedor" />
-      <module name="trab2matheus" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="trab2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="trab2.Main" />
-      <module name="trab2matheus" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="trab2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="trab2.AdicionarVendedor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="trab2.AdicionarVendedor" />
-      <module name="trab2matheus" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="trab2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="trab2.AlterarCliente" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.AlterarCliente">
+    <configuration name="AlterarCliente" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="trab2.AlterarCliente" />
       <module name="trab2matheus" />
       <extension name="coverage">
@@ -120,8 +74,47 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="trab2.ExcluirCliente" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="ExcluirCliente" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="trab2.ExcluirCliente" />
+      <module name="trab2matheus" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="trab2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExcluirVeiculo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="trab2.ExcluirVeiculo" />
+      <module name="trab2matheus" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="trab2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="trab2.AdicionarCarro" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="trab2.AdicionarCarro" />
+      <module name="trab2matheus" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="trab2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="trab2.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="trab2.Main" />
       <module name="trab2matheus" />
       <extension name="coverage">
         <pattern>
@@ -135,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AlterarVendedor" />
-        <item itemvalue="Application.trab2.AdicionarVendedor" />
+        <item itemvalue="Application.AlterarCliente" />
         <item itemvalue="Application.trab2.Main" />
-        <item itemvalue="Application.trab2.AlterarCliente" />
-        <item itemvalue="Application.trab2.ExcluirCliente" />
+        <item itemvalue="Application.ExcluirCliente" />
+        <item itemvalue="Application.ExcluirVeiculo" />
+        <item itemvalue="Application.trab2.AdicionarCarro" />
       </list>
     </recent_temporary>
   </component>
@@ -208,14 +201,7 @@
       <option name="project" value="LOCAL" />
       <updated>1657757713347</updated>
     </task>
-    <task id="LOCAL-00009" summary="Adicionando botao AlterarCliente">
-      <created>1657981752488</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1657981752488</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -237,8 +223,7 @@
     <MESSAGE value="Centralizei as UIs&#10;&#10;Criei um menu para Moto, assim o Menu para adicionar veículo leva a um Menu que te faz escolher entre adicionar carros e motos&#10;&#10;Adicionei um botão de &quot;fechar a janela&quot; que basicamente volta pra janela anterior, e também toda vez que você clica em um botão que entra em outro menu, o menu anterior fecha" />
     <MESSAGE value="coisas adicionadas" />
     <MESSAGE value="Adiciona adicionar vendedor" />
-    <MESSAGE value="Adicionando botao AlterarCliente" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionando botao AlterarCliente" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adiciona adicionar vendedor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -247,6 +232,11 @@
           <properties class="java.lang.NumberFormatException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/trab2/AlterarCliente.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
