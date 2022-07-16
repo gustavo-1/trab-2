@@ -142,7 +142,7 @@ public class ExcluirVeiculo extends JFrame {
     }
 
     public void clicouMoto(){
-        System.out.println("escolido: "+list1.getSelectedIndex());
+        System.out.println("escolhido: "+list1.getSelectedIndex());
         int resposta1 = list1.getSelectedIndex();
 
         //agora deve se remover a linha selecionada
@@ -224,7 +224,7 @@ public class ExcluirVeiculo extends JFrame {
 
 
                 for(String s: atributos){
-                    System.out.println("atrubutos:\n"+s);
+                    System.out.println("atributos:\n"+s);
                 }
 
 
@@ -280,7 +280,7 @@ public class ExcluirVeiculo extends JFrame {
 
 
                 for(String s: atributos){
-                    System.out.println("atrubutos:\n"+s);
+                    System.out.println("atributos:\n"+s);
                 }
 
 

@@ -10,12 +10,12 @@ import java.util.Scanner;
 
 public class ExcluirVendedor extends JFrame{
     private JPanel PainelApagarVendedor;
-    private JButton removerClienteButton;
+    private JButton removerFuncionarioButton;
     private JList list1;
     private JButton close;
     static List <Vendedor> listaVendedores = new ArrayList<Vendedor>();
-
     public ExcluirVendedor(){
+        listaVendedores.clear();
         ler();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(PainelApagarVendedor);
@@ -23,14 +23,16 @@ public class ExcluirVendedor extends JFrame{
         this.setLocationRelativeTo(null);
         this.setVisible(true);
 
-        DefaultListModel modeloCliente = criaModeloVendedor();
-        list1.setModel(modeloCliente);
+        DefaultListModel modeloVendedor = criaModeloVendedor();
+        list1.setModel(modeloVendedor);
 
 
-        removerClienteButton.addActionListener(new ActionListener() {
+        removerFuncionarioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 clicou();
+                //MenuGerente mg = new MenuGerente();
+                close();
             }
         });
         close.addActionListener(new ActionListener() {
@@ -42,6 +44,35 @@ public class ExcluirVendedor extends JFrame{
         });
     }
 
+    public ExcluirVendedor(int retornar, Vendedor v){
+        ler();
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setContentPane(PainelApagarVendedor);
+        this.pack();
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
+
+
+        DefaultListModel modeloVendedor = criaModeloVendedor();
+        list1.setModel(modeloVendedor);
+
+
+        removerFuncionarioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                clicou();
+
+                MenuVendedor mv = new MenuVendedor(v);
+
+                close();
+            }
+        });
+    }
+
+    public static void main(String[] args) {
+        ExcluirVendedor ex = new ExcluirVendedor();
+    }
+
     public void clicou(){
 
         System.out.println("escolido: "+list1.getSelectedIndex());
@@ -50,7 +81,7 @@ public class ExcluirVendedor extends JFrame{
         //agora deve se remover a linha selecionada
         try {
             File inputFile = new File("vendedores.txt");
-            File tempFile = new File("vendedores.txt");
+            File tempFile = new File("vendedores2.txt");
 
             BufferedReader reader = new BufferedReader(new FileReader(inputFile));
             BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
@@ -63,7 +94,7 @@ public class ExcluirVendedor extends JFrame{
                 currentLine = reader.readLine();
 
 
-                if(i != resposta1){
+                if(i != this.list1.getSelectedIndex()){
                     writer.write(currentLine);
                 }
 
@@ -71,6 +102,36 @@ public class ExcluirVendedor extends JFrame{
 
             writer.close();
             reader.close();
+
+            //le clientes2 de novo e salva tudo na string
+            File vendedores2 = new File("vendedores2.txt");
+            Scanner myReader2 = new Scanner(vendedores2);
+
+
+            String textoCompleto="";
+            while (myReader2.hasNextLine())
+            {
+                textoCompleto += myReader2.nextLine()+"\n";
+            }
+            myReader2.close();
+
+
+
+            //apagar cliente
+
+            inputFile.delete();
+
+            // recria clientes.txt
+            File novoVendedor = new File("vendedor.txt");
+            BufferedWriter escritor = new BufferedWriter(new FileWriter( novoVendedor));
+            System.out.println("++++++++\n\n"+textoCompleto+"++++++++\n\n");
+            escritor.write(textoCompleto);
+
+            escritor.close();
+
+            //apaga cliente2.txt
+            vendedores2.delete();
+
         }
         catch (IOException e){
             System.out.println("erro: "+e);
