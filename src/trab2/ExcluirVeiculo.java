@@ -23,6 +23,8 @@ public class ExcluirVeiculo extends JFrame {
     private Vendedor vendedor;
 
     public ExcluirVeiculo(int retornar, Vendedor v){
+        listaMotos.clear();
+        listaMotos.clear();
         ler();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(PainelApagarCarro);
@@ -57,6 +59,9 @@ public class ExcluirVeiculo extends JFrame {
     }
 
     public ExcluirVeiculo(){
+        listaMotos.clear();
+        listaMotos.clear();
+
         ler();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(PainelApagarCarro);

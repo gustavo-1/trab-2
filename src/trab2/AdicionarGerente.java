@@ -10,7 +10,7 @@ import java.io.IOException;
 public class AdicionarGerente extends JFrame {
 
     private JPanel painelAdicionarGerente;
-    private JPanel painelAddVendedor;
+    private JPanel painelAddGerente;
     private JTextField rg;
     private JTextField nome;
     private JTextField anoNasc;

@@ -1,6 +1,4 @@
-import trab2.Carro;
-import trab2.MenuGerente;
-import trab2.Motocicleta;
+package trab2;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -72,10 +70,12 @@ public class AlterarVeiculo extends JFrame {
         ler();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(PainelEdtCarro);
+
         this.pack();
         //this.setLocationRelativeTo(null);
         this.setVisible(true);
         this.setSize(600,600);
+
 
 
         DefaultListModel modeloCarros = criaModeloCarro();

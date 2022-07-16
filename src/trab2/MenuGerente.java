@@ -112,7 +112,7 @@ public class MenuGerente extends JFrame{
         AdicionarVeiculo f = new AdicionarVeiculo();
     }
     public void irParaAlterarVeiculo(){
-        //AlterarVeiculo f = new AlterarVeiculo();
+        AlterarVeiculo f = new AlterarVeiculo();
     }
     public void irParaExcluirVeiculo(){
         ExcluirVeiculo rc = new ExcluirVeiculo();
@@ -123,7 +123,7 @@ public class MenuGerente extends JFrame{
         AdicionarCliente f = new AdicionarCliente(1);
     }
     public void irParaAlterarCliente(){
-        //AlterarCliente f = new AlterarCliente();
+        AlterarCliente f = new AlterarCliente();
     }
     public void irParaExcluirCliente(){
         ExcluirCliente f = new ExcluirCliente();
@@ -132,7 +132,7 @@ public class MenuGerente extends JFrame{
          AdicionarVendedor f = new AdicionarVendedor();
     }
     public void irParaAlterarVendedor(){
-        //AlterarVendedor f = new AlterarVendedor();
+        AlterarVendedor f = new AlterarVendedor();
     }
     public void irParaExcluirVendedor(){
         ExcluirVendedor f = new ExcluirVendedor();
@@ -141,9 +141,9 @@ public class MenuGerente extends JFrame{
         AdicionarGerente a = new AdicionarGerente();
     }
     public void irParaAlterarGerente(){
-
+        AlterarGerente ag = new AlterarGerente();
     }
     public void irParaExcluirGerente(){
-
+            ExcluirGerente eg = new ExcluirGerente();
     }
 }
