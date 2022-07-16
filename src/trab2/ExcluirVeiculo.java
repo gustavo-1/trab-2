@@ -12,11 +12,11 @@ import java.util.Scanner;
 public class ExcluirVeiculo extends JFrame {
     public static List<Carro> listaCarros = new ArrayList<Carro>();
     public static List<Motocicleta> listaMotos = new ArrayList<Motocicleta>();
-    private JList list1;
+    private JList listCarros;
     private JPanel PainelApagarCarro;
     private JButton removerButton;
     private JLabel labelMoti;
-    private JList list2;
+    private JList listMotos;
     private JButton removerButton1;
     private JButton close;
     private int retornar;
@@ -34,9 +34,9 @@ public class ExcluirVeiculo extends JFrame {
         this.vendedor=v;
 
         DefaultListModel modeloCarros = criaModeloCarro();
-        list1.setModel(modeloCarros);
+        listCarros.setModel(modeloCarros);
         DefaultListModel modeloMotos = criaModeloMoto();
-        list2.setModel(modeloMotos);
+        listMotos.setModel(modeloMotos);
 
         removerButton.addActionListener(new ActionListener() {
             @Override
@@ -65,9 +65,9 @@ public class ExcluirVeiculo extends JFrame {
         this.setVisible(true);
 
         DefaultListModel modeloCarros = criaModeloCarro();
-        list1.setModel(modeloCarros);
+        listCarros.setModel(modeloCarros);
         DefaultListModel modeloMotos = criaModeloMoto();
-        list2.setModel(modeloMotos);
+        listMotos.setModel(modeloMotos);
 
 
 
@@ -103,8 +103,8 @@ public class ExcluirVeiculo extends JFrame {
 
 
     public void clicouCarro(){
-        System.out.println("escolido: "+list1.getSelectedIndex());
-        int resposta1 = list1.getSelectedIndex();
+        System.out.println("escolido: "+listCarros.getSelectedIndex());
+        int resposta1 = listCarros.getSelectedIndex();
 
         //agora deve se remover a linha selecionada
         try {
@@ -142,8 +142,8 @@ public class ExcluirVeiculo extends JFrame {
     }
 
     public void clicouMoto(){
-        System.out.println("escolhido: "+list1.getSelectedIndex());
-        int resposta1 = list1.getSelectedIndex();
+        System.out.println("escolhido: "+listMotos.getSelectedIndex());
+        int resposta1 = listMotos.getSelectedIndex();
 
         //agora deve se remover a linha selecionada
         try {

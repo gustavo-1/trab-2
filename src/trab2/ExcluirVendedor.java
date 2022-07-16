@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class ExcluirVendedor extends JFrame{
     private JPanel PainelApagarVendedor;
     private JButton removerFuncionarioButton;
-    private JList list1;
+    private JList listfuncionario;
     private JButton close;
     static List <Vendedor> listaVendedores = new ArrayList<Vendedor>();
     public ExcluirVendedor(){
@@ -24,7 +24,7 @@ public class ExcluirVendedor extends JFrame{
         this.setVisible(true);
 
         DefaultListModel modeloVendedor = criaModeloVendedor();
-        list1.setModel(modeloVendedor);
+        listfuncionario.setModel(modeloVendedor);
 
 
         removerFuncionarioButton.addActionListener(new ActionListener() {
@@ -54,7 +54,7 @@ public class ExcluirVendedor extends JFrame{
 
 
         DefaultListModel modeloVendedor = criaModeloVendedor();
-        list1.setModel(modeloVendedor);
+        listfuncionario.setModel(modeloVendedor);
 
 
         removerFuncionarioButton.addActionListener(new ActionListener() {
@@ -75,8 +75,8 @@ public class ExcluirVendedor extends JFrame{
 
     public void clicou(){
 
-        System.out.println("Escolhido: " + list1.getSelectedIndex());
-        int resposta1 = list1.getSelectedIndex();
+        System.out.println("Escolhido: " + listfuncionario.getSelectedIndex());
+        int resposta1 = listfuncionario.getSelectedIndex();
 
         //agora deve se remover a linha selecionada
         try {
@@ -94,7 +94,7 @@ public class ExcluirVendedor extends JFrame{
                 currentLine = reader.readLine();
 
 
-                if(i != this.list1.getSelectedIndex()){
+                if(i != this.listfuncionario.getSelectedIndex()){
                     writer.write(currentLine);
                 }
 
