@@ -75,7 +75,7 @@ public class ExcluirVendedor extends JFrame{
 
     public void clicou(){
 
-        System.out.println("escolido: "+list1.getSelectedIndex());
+        System.out.println("Escolhido: " + list1.getSelectedIndex());
         int resposta1 = list1.getSelectedIndex();
 
         //agora deve se remover a linha selecionada
@@ -134,27 +134,22 @@ public class ExcluirVendedor extends JFrame{
 
         }
         catch (IOException e){
-            System.out.println("erro: "+e);
+            System.out.println("Erro: " + e);
         }
 
         ///////////////////
         MenuGerente mg = new MenuGerente();
         close();
 
-
     }
 
     public void ler(){
 
-
         //ler vendedores
         try{
 
-
             File arq = new File("vendedores.txt");
             Scanner myReader = new Scanner(arq);
-
-
 
             Vendedor tempVendedor;
 
@@ -163,12 +158,9 @@ public class ExcluirVendedor extends JFrame{
 
 
                 String leitura = myReader.nextLine();
-                System.out.println("leitura:\n"+leitura);
+                System.out.println("Leitura: \n" + leitura);
 
                 String[] atributos = leitura.split("~");
-
-
-
 
                 String trg  = atributos[0];
                 String tnome  = atributos[1];
@@ -184,10 +176,8 @@ public class ExcluirVendedor extends JFrame{
                 String tsenha  = atributos[11];
 
 
-
-
                 for(String s: atributos){
-                    System.out.println("atrubutos:\n"+s);
+                    System.out.println("Atributos: \n" + s);
                 }
 
                 //depois arrumar uma forma de passar o gerente correto, talvez buscar ele por rg
@@ -195,23 +185,13 @@ public class ExcluirVendedor extends JFrame{
                 tempVendedor = new Vendedor(trg,tnome,tdiaNasc,tdmesNasc,tanoNasc,tdiaAd,tdmesAd,tdanoAd,tsalario,ttrestante,gerenteGenerico,tsenha);
                 listaVendedores.add(tempVendedor);
 
-
-
             }
-
 
             myReader.close();
         }
         catch (IOException e){
-            System.out.println("erro: "+e);
+            System.out.println("Erro: " + e);
         }
-
-
-
-
-
-
-
 
     }
 
@@ -219,15 +199,13 @@ public class ExcluirVendedor extends JFrame{
         DefaultListModel modelo = new DefaultListModel();
         String temp;
         for(Vendedor c: listaVendedores){
-            temp = "nome:"+c.getNome()+" cpf:" + c.getRg();
+            temp = "Nome: " + c.getNome() + " CPF: " + c.getRg();
             modelo.addElement(temp);
 
         }
 
         return modelo;
     }
-
-
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
