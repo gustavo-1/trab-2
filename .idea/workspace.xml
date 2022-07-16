@@ -1,27 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ec128bb-b4dc-4fbe-baa4-1fb051094707" name="Changes" comment="Adiciona Remover Carros">
-      <change afterPath="$PROJECT_DIR$/src/trab2/EditarCarro.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/trab2/EditarCarro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/trab2/ExcluirVendedor.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/trab2/ExcluirVendedor.java" afterDir="false" />
+    <list default="true" id="1ec128bb-b4dc-4fbe-baa4-1fb051094707" name="Changes" comment="Adiciona adicionar vendedor">
+      <change afterPath="$PROJECT_DIR$/src/trab2/AlterarCliente.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/trab2/AlterarCliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarCarro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarCarro.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarGerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarGerente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarMotocicleta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarMotocicleta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarVeiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarVeiculo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarVendedor.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarVendedor.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/MenuGerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuGerente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/MenuVendedor.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuVendedor.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirCliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/trab2/MenuVendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuVendedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/MenuVender.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuVender.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/MenuVender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuVender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/TelaInicialGUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/TelaInicialGUI.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/TelaInicialGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/TelaInicialGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/Veiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/Veiculo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,8 +46,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "123",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "384",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "227",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "200",
     "last_opened_file_path": "/home/brnuo/Documentos/lpoo/trab-2/src/trab2"
   }
 }]]></component>
@@ -71,8 +60,47 @@
       <recent name="C:\Users\gusta\IdeaProjects\trab-2\src\trab2" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="AdicionarCarro" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.AlterarCliente">
+    <configuration name="AlterarCliente" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="trab2.AlterarCliente" />
+      <module name="trab2matheus" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="trab2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExcluirCliente" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="trab2.ExcluirCliente" />
+      <module name="trab2matheus" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="trab2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExcluirVeiculo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="trab2.ExcluirVeiculo" />
+      <module name="trab2matheus" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="trab2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="trab2.AdicionarCarro" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="trab2.AdicionarCarro" />
       <module name="trab2matheus" />
       <extension name="coverage">
@@ -85,47 +113,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="trab2.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="trab2.Main" />
-      <module name="trab2matheus" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="trab2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MenuVender" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="trab2.MenuVender" />
-      <module name="trab2matheus" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="trab2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RemoverCarro" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="trab2.RemoverCarro" />
-      <module name="trab2matheus" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="trab2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="trab2.TelaInicialGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="trab2.TelaInicialGUI" />
       <module name="trab2matheus" />
       <extension name="coverage">
         <pattern>
@@ -139,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.MenuVender" />
-        <item itemvalue="Application.RemoverCarro" />
-        <item itemvalue="Application.AdicionarCarro" />
-        <item itemvalue="Application.trab2.TelaInicialGUI" />
+        <item itemvalue="Application.AlterarCliente" />
+        <item itemvalue="Application.trab2.Main" />
+        <item itemvalue="Application.ExcluirCliente" />
+        <item itemvalue="Application.ExcluirVeiculo" />
+        <item itemvalue="Application.trab2.AdicionarCarro" />
       </list>
     </recent_temporary>
   </component>
@@ -233,7 +222,23 @@
     <MESSAGE value="Solução para o problema dos getText(); que não era um método seguro para comparar senhas, uma vez que as guardavam como strings&#10;&#10;Problema dos botões Gerente e Vendedor - onde Gerente abria menu Vendedor e Vendedor abria menu Gerente - resolvido." />
     <MESSAGE value="Centralizei as UIs&#10;&#10;Criei um menu para Moto, assim o Menu para adicionar veículo leva a um Menu que te faz escolher entre adicionar carros e motos&#10;&#10;Adicionei um botão de &quot;fechar a janela&quot; que basicamente volta pra janela anterior, e também toda vez que você clica em um botão que entra em outro menu, o menu anterior fecha" />
     <MESSAGE value="coisas adicionadas" />
-    <option name="LAST_COMMIT_MESSAGE" value="coisas adicionadas" />
+    <MESSAGE value="Adiciona adicionar vendedor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adiciona adicionar vendedor" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NumberFormatException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/trab2/AlterarCliente.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/trabalho2poo$AdicionarVeiculo.ic" NAME="AdicionarVeiculo Coverage Results" MODIFIED="1657251603957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

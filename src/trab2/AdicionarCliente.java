@@ -116,7 +116,7 @@ public class AdicionarCliente extends JFrame {
     public void adicionar() throws IOException {
         int cpf = Integer.parseInt(CPFtextfield.getText());
         String nome = nometextfield.getText();
-        int dia = Integer.parseInt(mestextfield.getText());
+        int dia = Integer.parseInt(diatextfield.getText());
         int mes = Integer.parseInt(mestextfield.getText());
         int ano = Integer.parseInt(anotextfield.getText());
 

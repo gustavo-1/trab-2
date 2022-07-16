@@ -91,7 +91,7 @@ public class MenuVendedor extends JFrame {
         //AlterarVeiculo f = new AlterarVeiculo();
     }
     public void irParaExcluirVeiculo(){
-        ExcluirVeiculo rc = new ExcluirVeiculo();
+        ExcluirVeiculo rc = new ExcluirVeiculo(1,vendedor);
     }
 
     public void irParaAdicionarCliente(){
@@ -102,10 +102,10 @@ public class MenuVendedor extends JFrame {
         //AlterarCliente f = new AlterarCliente();
     }
     public void irParaExcluirCliente(){
-        ExcluirCliente f = new ExcluirCliente();
+        ExcluirCliente f = new ExcluirCliente(1,vendedor);
     }
     public void irParaAdicionarFuncionario(){
-        AdicionarVendedor f = new AdicionarVendedor();
+        //AdicionarVendedor f = new AdicionarVendedor();
     }
     public void irParaAlterarFuncionario(){
         //AlterarFuncionario f = new AlterarFuncionario();
@@ -114,7 +114,7 @@ public class MenuVendedor extends JFrame {
         //ExcluirFuncionario f = ExcluirFuncionario();
     }
     public void irParaAdicionarGerente(){
-        AdicionarGerente a = new AdicionarGerente();
+        //AdicionarGerente a = new AdicionarGerente();
     }
     public void irParaAlterarGerente(){
 

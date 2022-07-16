@@ -6,7 +6,7 @@ public class Data {
 
     Data(int dia, int mes, int ano)
     {
-        this.ano = ano;
+        this.dia = dia;
         this.mes = mes;
         this.ano = ano;
     }
