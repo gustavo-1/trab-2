@@ -37,7 +37,7 @@
               <text value="Remover Funcionario"/>
             </properties>
           </component>
-          <component id="19bf7" class="javax.swing.JList" binding="list1">
+          <component id="19bf7" class="javax.swing.JList" binding="listFuncionario">
             <constraints>
               <grid row="1" column="1" row-span="1" col-span="2" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="50"/>

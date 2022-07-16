@@ -136,9 +136,6 @@ public class AdicionarCarro extends JFrame {
         //informações especificas sobre carro ou moto ainda não foram adicionadas pra eu poder comecar a testar
         Carro carroNovo = new Carro(nchassi,tmarca,tmodelo,tano,tquilometragem,tTipoDeCombustivel,tPeso,tVendido,tpotencia,tnDeCilindros,tnDeOcupantes,ttipo,talt,tlarg,tcompri);
 
-
-
-
         //escreve em arquivo veiculo criado
         try{
             //BufferedWriter saida = new BufferedWriter(new FileWriter("carros.txt"));
@@ -150,12 +147,7 @@ public class AdicionarCarro extends JFrame {
             String textoSaida =  nchassi + "~"+ tmarca+ "~" + tmodelo + "~"+ tano + "~"+ tquilometragem + "~"+tTipoDeCombustivel+ "~" + tPeso + "~"+ tVendido  +"~"+tpotencia +"~"+tnDeCilindros+ "~" +tnDeOcupantes +"~"+ ttipo  +"~"+talt +"~"+tlarg+ "~" + tcompri+"\n";
             saida.write(textoSaida);
 
-
-
-
-
             saida.close();
-
 
             if(this.retornar ==2){
 
@@ -169,7 +161,6 @@ public class AdicionarCarro extends JFrame {
         catch (IOException e){
             System.out.println("Erro: " + e);
         }
-
     }
 
     private void createUIComponents() {
