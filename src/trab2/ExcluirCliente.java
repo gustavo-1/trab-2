@@ -16,6 +16,8 @@ public class ExcluirCliente extends JFrame {
     private JPanel painelrr;
     public static List<Cliente> listaCliente = new ArrayList<Cliente>();
     public ExcluirCliente(){
+
+        listaCliente.clear();
         ler();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(PainelApagarCliente);
@@ -69,14 +71,15 @@ public class ExcluirCliente extends JFrame {
         ExcluirCliente ex = new ExcluirCliente();
     }
 
-    public void clicou(){
-        System.out.println("escolido: "+list1.getSelectedIndex());
-        int resposta1 = list1.getSelectedIndex();
 
-        //agora deve se remover a linha selecionada
+    public void clicou(){
+
+
+
+        //Reescreve clientes com a linha alterada no lugar da antiga
         try {
             File inputFile = new File("clientes.txt");
-            File tempFile =  new File("clientes.txt");
+            File tempFile = new File("clientes2.txt");
 
 
             BufferedReader reader = new BufferedReader(new FileReader(inputFile));
@@ -90,14 +93,51 @@ public class ExcluirCliente extends JFrame {
                 currentLine = reader.readLine();
 
 
-                if(i != resposta1){
-                    writer.write(currentLine);
+                if(i != this.list1.getSelectedIndex()){
+
+                    writer.write(currentLine+"\n");
+
+
                 }
+
 
             }
 
-            writer.close();
+
             reader.close();
+            writer.close();
+
+
+            //le clientes2 de novo e salva tudo na string
+            File clientes2 = new File("clientes2.txt");
+            Scanner myReader2 = new Scanner(clientes2);
+
+
+            String textoCompleto="";
+            while (myReader2.hasNextLine())
+            {
+                textoCompleto += myReader2.nextLine()+"\n";
+            }
+            myReader2.close();
+
+
+
+            //apagar cliente
+
+            inputFile.delete();
+
+            // recria clientes.txt
+            File novoCliente = new File("clientes.txt");
+            BufferedWriter escritor = new BufferedWriter(new FileWriter( novoCliente));
+            System.out.println("++++++++\n\n"+textoCompleto+"++++++++\n\n");
+            escritor.write(textoCompleto);
+
+            escritor.close();
+
+            //apaga cliente2.txt
+            clientes2.delete();
+
+
         }
         catch (IOException e){
             System.out.println("erro: "+e);
@@ -105,6 +145,9 @@ public class ExcluirCliente extends JFrame {
 
         ///////////////////
 
+        //volta para menu gerente apenas por enquanto
+        MenuGerente mg = new MenuGerente();
+        close();
 
 
     }

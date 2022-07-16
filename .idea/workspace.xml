@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ec128bb-b4dc-4fbe-baa4-1fb051094707" name="Changes" comment="Adicionae opção de editar cliente e vendedor">
-      <change afterPath="$PROJECT_DIR$/src/AlterarVeiculo.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AlterarVeiculo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1ec128bb-b4dc-4fbe-baa4-1fb051094707" name="Changes" comment="push que o bruno pediu, nao arrumei ainda o ExcluirCliente">
       <change beforePath="$PROJECT_DIR$/clientes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/clientes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirCliente.java" afterDir="false" />
     </list>
@@ -209,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657994830926</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="push que o bruno pediu, nao arrumei ainda o ExcluirCliente">
+      <created>1657996252385</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1657996252385</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -233,7 +237,8 @@
     <MESSAGE value="Adiciona adicionar vendedor" />
     <MESSAGE value="Adicionando botao AlterarCliente" />
     <MESSAGE value="Adicionae opção de editar cliente e vendedor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionae opção de editar cliente e vendedor" />
+    <MESSAGE value="push que o bruno pediu, nao arrumei ainda o ExcluirCliente" />
+    <option name="LAST_COMMIT_MESSAGE" value="push que o bruno pediu, nao arrumei ainda o ExcluirCliente" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
