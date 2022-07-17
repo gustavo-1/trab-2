@@ -92,8 +92,6 @@ public class ExcluirCliente extends JFrame {
 
     public void clicou(){
 
-
-
         //Reescreve clientes com a linha alterada no lugar da antiga
         try {
             File inputFile = new File("clientes.txt");
@@ -112,24 +110,15 @@ public class ExcluirCliente extends JFrame {
 
 
                 if(i != this.list1.getSelectedIndex()){
-
                     writer.write(currentLine+"\n");
-
-
                 }
-
-
             }
-
-
             reader.close();
             writer.close();
-
 
             //le clientes2 de novo e salva tudo na string
             File clientes2 = new File("clientes2.txt");
             Scanner myReader2 = new Scanner(clientes2);
-
 
             String textoCompleto="";
             while (myReader2.hasNextLine())
@@ -137,8 +126,6 @@ public class ExcluirCliente extends JFrame {
                 textoCompleto += myReader2.nextLine()+"\n";
             }
             myReader2.close();
-
-
 
             //apagar cliente
 
@@ -170,10 +157,7 @@ public class ExcluirCliente extends JFrame {
             File arq2= new File("clientes.txt");
             Scanner myReader2 = new Scanner(arq2);
 
-
-
             while(myReader2.hasNextLine()){
-
 
                 String leitura = myReader2.nextLine();
                 System.out.println("Leitura: \n" + leitura);
@@ -203,7 +187,6 @@ public class ExcluirCliente extends JFrame {
                 Cliente clienteNovo = new Cliente(cpf, nome, dia, mes, ano, rua, nrua, bairro, cidade, renda, dependentes);
 
                 listaCliente.add(clienteNovo);
-
             }
             myReader2.close();
         }
@@ -218,9 +201,7 @@ public class ExcluirCliente extends JFrame {
         for(Cliente c: listaCliente){
             temp = "Nome: " + c.getNome() + " CPF: " + c.getCpf();
             modelo.addElement(temp);
-
         }
-
         return modelo;
     }
 

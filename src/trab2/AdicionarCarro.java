@@ -76,7 +76,7 @@ public class AdicionarCarro extends JFrame {
         });
     }
 
-    //veio do vendedor
+    //Veio do vendedor
     public AdicionarCarro(int retornar,Vendedor v){
         super("Adicionar Carro - Vendedor");
         this.retornar = retornar;
@@ -135,7 +135,6 @@ public class AdicionarCarro extends JFrame {
         double tlarg= Double.parseDouble(largura.getText());
         double tcompri= Double.parseDouble(comprimento.getText());
 
-        //informações especificas sobre carro ou moto ainda não foram adicionadas pra eu poder comecar a testar
         Carro carroNovo = new Carro(nchassi,tmarca,tmodelo,tano,tquilometragem,tTipoDeCombustivel,tPeso,tVendido,tpotencia,tnDeCilindros,tnDeOcupantes,ttipo,talt,tlarg,tcompri);
 
         //escreve em arquivo veiculo criado
@@ -146,7 +145,7 @@ public class AdicionarCarro extends JFrame {
             FileWriter saida = new FileWriter(arq,true);
 
 
-            String textoSaida =  nchassi + "~"+ tmarca+ "~" + tmodelo + "~"+ tano + "~"+ tquilometragem + "~"+tTipoDeCombustivel+ "~" + tPeso + "~"+ tVendido  +"~"+tpotencia +"~"+tnDeCilindros+ "~" +tnDeOcupantes +"~"+ ttipo  +"~"+talt +"~"+tlarg+ "~" + tcompri+"\n";
+            String textoSaida =  nchassi + "~"+ tmarca + "~" + tmodelo + "~"+ tano + "~"+ tquilometragem + "~"+tTipoDeCombustivel+ "~" + tPeso + "~"+ tVendido  +"~"+tpotencia +"~"+tnDeCilindros+ "~" +tnDeOcupantes +"~"+ ttipo  +"~"+talt +"~"+tlarg+ "~" + tcompri+"\n";
             saida.write(textoSaida);
 
             saida.close();

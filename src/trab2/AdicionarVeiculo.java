@@ -5,7 +5,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class AdicionarVeiculo extends JFrame {
-
     private JPanel painelVeiculos;
     private JButton close;
     private JButton carroButton;

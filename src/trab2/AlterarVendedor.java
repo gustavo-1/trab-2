@@ -32,7 +32,6 @@ public class AlterarVendedor extends JFrame{
     static List<Gerente> listaGerentes = new ArrayList<Gerente>();
     private Vendedor vendedorEscolhido;
 
-
     public AlterarVendedor(){
         listaVendedores.clear();
         ler();
@@ -44,7 +43,6 @@ public class AlterarVendedor extends JFrame{
 
         DefaultListModel modeloCliente = criaModeloGerente();
         list1.setModel(modeloCliente);
-
 
         String temp;
         for(Gerente c: listaGerentes){
@@ -178,9 +176,6 @@ public class AlterarVendedor extends JFrame{
                     System.out.println("Atributos[" + index3 + "]:\n" + s);
                     index3++;
                 }
-
-                //depois arrumar uma forma de passar o gerente correto, talvez buscar ele por rg
-                // Gerente gerenteGenerico= new Gerente("4325432-x","anderson",1,1,1,2,2,2,1000,0,"senhaGenerica");
                 Gerente gerenteGenerico = new Gerente(trg,tnome,tdiaNasc,tdmesNasc,tanoNasc,tdiaAd,tdmesAd,tdanoAd,tsalario,tanosExp,tsenha);
                 listaGerentes.add(gerenteGenerico);
             }
@@ -191,16 +186,13 @@ public class AlterarVendedor extends JFrame{
         }
 
         try{
-
             File arq = new File("vendedores.txt");
             Scanner myReader2 = new Scanner(arq);
 
             Vendedor tempVendedor;
 
             while(myReader2.hasNextLine()){
-
                 String leitura = myReader2.nextLine();
-                System.out.println("Leitura: \n" + leitura);
 
                 String[] atributos = leitura.split("~");
 
@@ -214,36 +206,20 @@ public class AlterarVendedor extends JFrame{
                 int tdanoAd = Integer.parseInt(atributos[7]) ;
                 double tsalario = Double.parseDouble(atributos[8]);
                 double ttrestante = Double.parseDouble(atributos[9]);
-              //  int tanosExp =  Integer.parseInt(atributos[9]);
                 String nomeGerente= atributos[10];
                 String tsenha  = atributos[11];
 
-                int index3=0;
-                for(String s: atributos){
-                    System.out.println("Atributos[" + index3+ "]:\n" + s);
-                    index3++;
-                }
-
-                //depois arrumar uma forma de passar o gerente correto, talvez buscar ele por rg
-                // Gerente gerenteGenerico= new Gerente("4325432-x","anderson",1,1,1,2,2,2,1000,0,"senhaGenerica");
                 Gerente gerenteVazio = new Gerente("4325432-x","Anderson",1,1,1,2,2,2,1000,0,"senhaGenerica");
                 Vendedor vendedortemp= new Vendedor(trg,tnome,tdiaNasc,tdmesNasc,tanoNasc,tdiaAd,tdmesAd,tdanoAd,tsalario,ttrestante,gerenteVazio,tsenha);
                 listaVendedores.add(vendedortemp);
 
             }
-
             myReader2.close();
         }
         catch (IOException e){
             System.out.println("Erro: " + e);
         }
     }
-
-    // public static void main(String[] args) {
-    //  AdicionarVendedor a = new AdicionarVendedor();
-    // }
-
-
     public void clicou()  {
         String trg = rg.getText();
         String tnome = nome.getText();
@@ -268,43 +244,27 @@ public class AlterarVendedor extends JFrame{
             File inputFile = new File("vendedores.txt");
             File tempFile = new File("vendedores2.txt");
 
-
             BufferedReader reader = new BufferedReader(new FileReader(inputFile));
             BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
 
-
             String currentLine;
-
 
             for(int i=0;i< listaVendedores.size();i++){
                 currentLine = reader.readLine();
 
-
                 if(i != this.escolha){
-
                     writer.write(currentLine+"\n");
-
-
                 }
                 else{
-                    //writer.newLine();
                     writer.write(textoSaida);
-                    //writer.newLine();
-
                 }
-
             }
-
-
             reader.close();
             writer.close();
-
 
             //le clientes2 de novo e salva tudo na string
             File Vendedores2 = new File("vendedores2.txt");
             Scanner myReader2 = new Scanner(Vendedores2);
-
-
 
             while (myReader2.hasNextLine())
             {
@@ -312,16 +272,12 @@ public class AlterarVendedor extends JFrame{
             }
             myReader2.close();
 
-
-
             //apagar cliente
-
             inputFile.delete();
 
             // recria clientes.txt
             File novoCliente = new File("vendedores.txt");
             BufferedWriter escritor = new BufferedWriter(new FileWriter( novoCliente));
-            System.out.println("++++++++\n\n"+textoCompleto+"++++++++\n\n");
             escritor.write(textoCompleto);
 
             escritor.close();
@@ -329,29 +285,19 @@ public class AlterarVendedor extends JFrame{
             //apaga cliente2.txt
             Vendedores2.delete();
 
-
         }
         catch (IOException e){
             System.out.println("Erro: " + e);
         }
-
-        ///////////////////
-
-        //volta para menu gerente apenas por enquanto
-        //MenuGerente mg = new MenuGerente();
         close();
-
     }
-
     public DefaultListModel criaModeloGerente(){
         DefaultListModel modelo = new DefaultListModel();
         String temp;
         for(Gerente c: listaGerentes){
             temp = "Nome: " + c.getNome()+" RG: " + c.getRg();
             modelo.addElement(temp);
-
         }
-
         return modelo;
     }
     private void close(){

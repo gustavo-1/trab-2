@@ -31,7 +31,6 @@ public class ExcluirVendedor extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 clicou();
-                //MenuGerente mg = new MenuGerente();
                 close();
             }
         });
@@ -53,10 +52,8 @@ public class ExcluirVendedor extends JFrame{
         this.setLocationRelativeTo(null);
         this.setVisible(true);
 
-
         DefaultListModel modeloVendedor = criaModeloVendedor();
         listfuncionario.setModel(modeloVendedor);
-
 
         removerFuncionarioButton.addActionListener(new ActionListener() {
             @Override
@@ -75,8 +72,6 @@ public class ExcluirVendedor extends JFrame{
     }
 
     public void clicou(){
-
-        System.out.println("Escolhido: " + listfuncionario.getSelectedIndex());
         int resposta1 = listfuncionario.getSelectedIndex();
 
         //agora deve se remover a linha selecionada
@@ -87,20 +82,15 @@ public class ExcluirVendedor extends JFrame{
             BufferedReader reader = new BufferedReader(new FileReader(inputFile));
             BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
 
-
             String currentLine;
-
 
             for(int i=0;i< listaVendedores.size();i++){
                 currentLine = reader.readLine();
 
-
                 if(i != this.listfuncionario.getSelectedIndex()){
                     writer.write(currentLine);
                 }
-
             }
-
             writer.close();
             reader.close();
 
@@ -108,15 +98,12 @@ public class ExcluirVendedor extends JFrame{
             File vendedores2 = new File("vendedores2.txt");
             Scanner myReader2 = new Scanner(vendedores2);
 
-
             String textoCompleto="";
             while (myReader2.hasNextLine())
             {
                 textoCompleto += myReader2.nextLine()+"\n";
             }
             myReader2.close();
-
-
 
             //apagar cliente
 
@@ -137,26 +124,20 @@ public class ExcluirVendedor extends JFrame{
         catch (IOException e){
             System.out.println("Erro: " + e);
         }
-
         ///////////////////
         MenuGerente mg = new MenuGerente();
         close();
-
     }
 
     public void ler(){
-
         //ler vendedores
         try{
-
             File arq = new File("vendedores.txt");
             Scanner myReader = new Scanner(arq);
 
             Vendedor tempVendedor;
 
             while(myReader.hasNextLine()){
-
-
 
                 String leitura = myReader.nextLine();
                 System.out.println("Leitura: \n" + leitura);
@@ -176,24 +157,16 @@ public class ExcluirVendedor extends JFrame{
                 //Gerente gerente = atributos[10]
                 String tsenha  = atributos[11];
 
-
-                for(String s: atributos){
-                    System.out.println("Atributos: \n" + s);
-                }
-
                 //depois arrumar uma forma de passar o gerente correto, talvez buscar ele por rg
                 Gerente gerenteGenerico= new Gerente("4325432-x","anderson",1,1,1,2,2,2,1000,0,"senhaGenerica");
                 tempVendedor = new Vendedor(trg,tnome,tdiaNasc,tdmesNasc,tanoNasc,tdiaAd,tdmesAd,tdanoAd,tsalario,ttrestante,gerenteGenerico,tsenha);
                 listaVendedores.add(tempVendedor);
-
             }
-
             myReader.close();
         }
         catch (IOException e){
             System.out.println("Erro: " + e);
         }
-
     }
 
     public DefaultListModel criaModeloVendedor(){
@@ -202,7 +175,6 @@ public class ExcluirVendedor extends JFrame{
         for(Vendedor c: listaVendedores){
             temp = "Nome: " + c.getNome() + " CPF: " + c.getRg();
             modelo.addElement(temp);
-
         }
 
         return modelo;

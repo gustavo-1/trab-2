@@ -31,7 +31,6 @@ public class ExcluirGerente extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 clicou();
-                //MenuGerente mg = new MenuGerente();
                 close();
             }
         });
@@ -43,8 +42,6 @@ public class ExcluirGerente extends JFrame {
             }
         });
     }
-
-
 
     public static void main(String[] args) {
         ExcluirGerente ex = new ExcluirGerente();
@@ -63,18 +60,14 @@ public class ExcluirGerente extends JFrame {
             BufferedReader reader = new BufferedReader(new FileReader(inputFile));
             BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
 
-
             String currentLine;
-
 
             for(int i=0;i< listaGerentes.size();i++){
                 currentLine = reader.readLine();
 
-
                 if(i != this.list1.getSelectedIndex()){
                     writer.write(currentLine);
                 }
-
             }
 
             writer.close();
@@ -84,15 +77,12 @@ public class ExcluirGerente extends JFrame {
             File vendedores2 = new File("gerentes2.txt");
             Scanner myReader2 = new Scanner(vendedores2);
 
-
             String textoCompleto="";
             while (myReader2.hasNextLine())
             {
                 textoCompleto += myReader2.nextLine()+"\n";
             }
             myReader2.close();
-
-
 
             //apagar cliente
 
@@ -101,7 +91,6 @@ public class ExcluirGerente extends JFrame {
             // recria clientes.txt
             File novoVendedor = new File("gerentes.txt");
             BufferedWriter escritor = new BufferedWriter(new FileWriter( novoVendedor));
-            System.out.println("++++++++\n\n"+textoCompleto+"++++++++\n\n");
             escritor.write(textoCompleto);
 
             escritor.close();
@@ -113,17 +102,12 @@ public class ExcluirGerente extends JFrame {
         catch (IOException e){
             System.out.println("erro: "+e);
         }
-
         ///////////////////
         MenuGerente mg = new MenuGerente();
         close();
-
-
     }
-
     private void ler() {
         try{
-
             File arq = new File("gerentes.txt");
             Scanner myReader2 = new Scanner(arq);
 
@@ -155,8 +139,6 @@ public class ExcluirGerente extends JFrame {
                     index3++;
                 }
 
-                //depois arrumar uma forma de passar o gerente correto, talvez buscar ele por rg
-                // Gerente gerenteGenerico= new Gerente("4325432-x","anderson",1,1,1,2,2,2,1000,0,"senhaGenerica");
                 Gerente gerenteGenerico = new Gerente(trg,tnome,tdiaNasc,tdmesNasc,tanoNasc,tdiaAd,tdmesAd,tdanoAd,tsalario,tanosExp,tsenha);
                 listaGerentes.add(gerenteGenerico);
             }
@@ -165,24 +147,16 @@ public class ExcluirGerente extends JFrame {
         catch (IOException e){
             System.out.println("Erro: " + e);
         }
-
-
     }
-
-
     public DefaultListModel criaModeloGerente(){
         DefaultListModel modelo = new DefaultListModel();
         String temp;
         for(Gerente c: listaGerentes){
             temp = "nome:"+c.getNome()+" cpf:" + c.getRg();
             modelo.addElement(temp);
-
         }
-
         return modelo;
     }
-
-
 
     private void createUIComponents() {
         // TODO: place custom component creation code here

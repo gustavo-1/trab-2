@@ -41,7 +41,6 @@ public class AdicionarMotocicleta extends JFrame {
         super("Adicionar Moto - Gerente");
         this.retornar=2;
 
-
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(PainelAddMoto);
         this.pack();
@@ -116,7 +115,6 @@ public class AdicionarMotocicleta extends JFrame {
         int tcilindradas = Integer.parseInt(cilindradas.getText());
         String ttipo  = Objects.toString(tipo.getSelectedItem());
 
-        //informações especificas sobre carro ou moto ainda não foram adicionadas pra eu poder comecar a testar
         Motocicleta motoNova = new Motocicleta(nchaci,tmarca,tmodelo,tano,tquilometragem,tTipoDeCombustivel,tPeso,tVendido, tcilindradas,ttipo);
 
         //escreve em arquivo veiculo criado
@@ -128,13 +126,9 @@ public class AdicionarMotocicleta extends JFrame {
 
 
             String textoSaida =  nchaci + "~"+ tmarca+ "~" + tmodelo + "~"+ tano + "~"+ tquilometragem + "~"+tTipoDeCombustivel+ "~" + tPeso + "~"+ tVendido  +"~"+tcilindradas + "~"+ ttipo+"\n";
+
             saida.write(textoSaida);
-
-
-
             saida.close();
-
-
 
             if(this.retornar == 1){
                 MenuVendedor mv = new MenuVendedor(vendedor);
@@ -143,8 +137,6 @@ public class AdicionarMotocicleta extends JFrame {
                 MenuGerente mg = new MenuGerente();
                 close();
             }
-
-
         }
         catch (IOException e){
             System.out.println("Erro: " + e);
@@ -154,8 +146,6 @@ public class AdicionarMotocicleta extends JFrame {
             erroEntrada.setVisible(true);
             System.out.println("--------------------------------erro-----------------------------"+e);
         }
-
-
     }
 
     private void createUIComponents() {

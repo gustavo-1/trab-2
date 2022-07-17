@@ -82,7 +82,6 @@ public class AdicionarCliente extends JFrame {
 
         this.retornar = retornar;
 
-
         close.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -103,10 +102,6 @@ public class AdicionarCliente extends JFrame {
             }
         });
     }
-
-   // public static void main(String[] args) {
-       // AdicionarCliente f = new AdicionarCliente();
-  // }
 
     public void close() {
         setVisible(false);
@@ -133,9 +128,7 @@ public class AdicionarCliente extends JFrame {
         int renda = Integer.parseInt(rendatextfield.getText());
         int dependentes = Integer.parseInt(dependentestextfield.getText());
 
-        //informações especificas sobre carro ou moto ainda não foram adicionadas pra eu poder comecar a testar
         Cliente clienteNovo = new Cliente(cpf, nome, dia, mes, ano, rua, nrua, bairro, cidade, renda, dependentes);
-
 
         //escreve em arquivo veiculo criado
         try {
@@ -165,8 +158,5 @@ public class AdicionarCliente extends JFrame {
             erroEntrada.setVisible(true);
             System.out.println("--------------------------------erro-----------------------------"+e);
         }
-
-
-
     }
 }

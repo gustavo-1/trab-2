@@ -3,7 +3,6 @@ public class Vendedor extends Funcionario {
     private double tempoRestante;
     private Gerente gerente;
     private String senha;
-
     public Vendedor(String r, String nome, int dia, int mes, int ano,int diae, int mese,int anoe, double s, double t, Gerente g,String senha){
         super(r, nome,dia,mes,ano,diae,mese,anoe, s);
         this.tempoRestante = t;
@@ -23,7 +22,6 @@ public class Vendedor extends Funcionario {
     public void setTempoRestante(double tempoRestante) {
         this.tempoRestante = tempoRestante;
     }
-
     public String getSenha() {
         return senha;
     }

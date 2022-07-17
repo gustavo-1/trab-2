@@ -36,8 +36,6 @@ public class MenuVender extends JFrame{
     static List <Motocicleta> listaMotos= new ArrayList<Motocicleta>();
     private Vendedor vendedor;
 
-
-
     public MenuVender(Vendedor v){
         listaCliente.clear();
         listaCarros.clear();
@@ -69,7 +67,6 @@ public class MenuVender extends JFrame{
             }
         });
 
-
         close.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -86,12 +83,8 @@ public class MenuVender extends JFrame{
     }
 
     public static void main(String[] args) {
-
-       // MenuVender m = new MenuVender();
-
     }
     public void venderCarro(){
-
         System.out.println("Escolhido: "+ listCarros.getSelectedIndex());
         int resposta1 = listCarros.getSelectedIndex();
         int resposta2 = jlistaCliente.getSelectedIndex();
@@ -147,7 +140,6 @@ public class MenuVender extends JFrame{
             //talvez colocar um aviso na tela depois
             System.out.println("Entrada inválida!");
         }
-
     }
     public void venderMoto(){
 
@@ -184,16 +176,12 @@ public class MenuVender extends JFrame{
             /////escrever venda;
 
             try {
-                //BufferedWriter saida = new BufferedWriter(new FileWriter("clientes.txt"));
-
                 File arq = new File("vendas.txt");
                 FileWriter saida = new FileWriter(arq, true);
-
 
                 String textoSaida = tid + "~" + vendedor.getNome()+ "~" + cliente.getCpf() + "~" + veiculo.getTipo() + "~" + tvalor  + " ~ " + tdia+ "~" +tmes+ "~"+tano + "~" + thora + "~" + tminutos + "~" + tipoPagamento + "\n" ;
 
                 saida.write(textoSaida);
-
                 saida.close();
 
 
@@ -201,7 +189,6 @@ public class MenuVender extends JFrame{
                 System.out.println("Erro: " + e);
             }
             MenuVendedor m = new MenuVendedor(this.vendedor);
-
             close();
 
         }
@@ -211,15 +198,10 @@ public class MenuVender extends JFrame{
         }
     }
     public void ler(){
-
         //ler carros
         try{
-            //BufferedWriter saida = new BufferedWriter(new FileWriter("carros.txt"));
-
             File arq = new File("carros.txt");
             Scanner myReader = new Scanner(arq);
-            //BufferedReader leitor = new BufferedReader(arq);
-
 
             Carro tempCarro;
 
@@ -246,14 +228,9 @@ public class MenuVender extends JFrame{
                 double larg= Double.parseDouble(atributos[13]);
                 double compri= Double.parseDouble(atributos[14]);
 
-                for(String s: atributos){
-                    System.out.println("Atributos: \n" + s);
-                }
-
                 tempCarro = new Carro(numeroDoChassi ,marca,modelo,ano,km,tipoCombustivel,peso,vendido,potencia,nDeCilindros,nDeOcupantes, tipo,alt,larg,compri);
                 listaCarros.add(tempCarro);
             }
-
             myReader.close();
         }
         catch (IOException e){
@@ -267,7 +244,6 @@ public class MenuVender extends JFrame{
 
             while(myReader2.hasNextLine()){
                 String leitura = myReader2.nextLine();
-                System.out.println("Leitura: \n"+leitura);
 
                 String[] atributos2 = leitura.split("~");
 
@@ -287,16 +263,10 @@ public class MenuVender extends JFrame{
                 Double renda =  Double.parseDouble(atributos2[9]) ;
                 int dependentes =  Integer.parseInt(atributos2[10]) ;
 
-                for(String s: atributos2){
-                    System.out.println("Atributos:\n"+s);
-                }
-
                 Cliente clienteNovo = new Cliente(cpf, nome, dia, mes, ano, rua, nrua, bairro, cidade, renda, dependentes);
 
                 listaCliente.add(clienteNovo);
-
             }
-
             myReader2.close();
         }
         catch (IOException e){
@@ -305,16 +275,12 @@ public class MenuVender extends JFrame{
 
         //ler motos
         try{
-            //BufferedWriter saida = new BufferedWriter(new FileWriter("carros.txt"));
-
             File arq = new File("motos.txt");
             Scanner myReader = new Scanner(arq);
-            //BufferedReader leitor = new BufferedReader(arq);
 
             Motocicleta tempMotos;
 
             while(myReader.hasNextLine()){
-
                 String leitura = myReader.nextLine();
                 System.out.println("Leitura: \n"+leitura);
 
@@ -331,10 +297,6 @@ public class MenuVender extends JFrame{
 
                 int nDeCilindros = Integer.parseInt(atributos[8]);
                 String tipo  = atributos[9];
-
-                for(String s: atributos){
-                    System.out.println("Atributos: \n" + s);
-                }
 
                 tempMotos = new Motocicleta(numeroDoChassi ,marca,modelo,ano,km,tipoCombustivel,peso,vendido,nDeCilindros, tipo);
                 listaMotos.add(tempMotos);
@@ -354,7 +316,6 @@ public class MenuVender extends JFrame{
             modelo.addElement(temp);
 
         }
-
         return modelo;
     }
     public DefaultListModel criaModeloMotos(){
@@ -376,7 +337,6 @@ public class MenuVender extends JFrame{
             modelo.addElement(temp);
 
         }
-
         return modelo;
     }
 

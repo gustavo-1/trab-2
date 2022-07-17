@@ -31,14 +31,6 @@ public class AlterarGerente extends JFrame {
     private Gerente gerenteEscolhido;
     private int escolha;
 
-
-
-
-
-
-
-
-
     public AlterarGerente(){
         listaGerentes.clear();
         ler();
@@ -50,8 +42,6 @@ public class AlterarGerente extends JFrame {
 
         DefaultListModel modeloCliente = criaModeloGerente();
         list1.setModel(modeloCliente);
-
-
 
         list1.addMouseListener(new MouseAdapter() {
             @Override
@@ -83,7 +73,6 @@ public class AlterarGerente extends JFrame {
     public void escolherGerente(){
         int escolha = list1.getSelectedIndex();
         this.escolha = escolha;
-        System.out.println("Escolheu: " + escolha);
 
         //////////////
 
@@ -114,7 +103,6 @@ public class AlterarGerente extends JFrame {
             while(myReader2.hasNextLine()){
 
                 String leitura = myReader2.nextLine();
-                System.out.println("Leitura: \n" + leitura);
 
                 String[] atributos = leitura.split("~");
 
@@ -136,9 +124,6 @@ public class AlterarGerente extends JFrame {
                     System.out.println("Atributos[" + index3 + "]:\n" + s);
                     index3++;
                 }
-
-                //depois arrumar uma forma de passar o gerente correto, talvez buscar ele por rg
-                // Gerente gerenteGenerico= new Gerente("4325432-x","anderson",1,1,1,2,2,2,1000,0,"senhaGenerica");
                 Gerente gerenteGenerico = new Gerente(trg,tnome,tdiaNasc,tdmesNasc,tanoNasc,tdiaAd,tdmesAd,tdanoAd,tsalario,tanosExp,tsenha);
                 listaGerentes.add(gerenteGenerico);
             }
@@ -147,15 +132,7 @@ public class AlterarGerente extends JFrame {
         catch (IOException e){
             System.out.println("Erro: " + e);
         }
-
-
     }
-
-    // public static void main(String[] args) {
-    //  AdicionarVendedor a = new AdicionarVendedor();
-    // }
-
-
     public void clicou()  {
 
         try{
@@ -182,51 +159,35 @@ public class AlterarGerente extends JFrame {
             File inputFile = new File("gerentes.txt");
             File tempFile = new File("gerentes2.txt");
 
-
             BufferedReader reader = new BufferedReader(new FileReader(inputFile));
             BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
 
-
             String currentLine;
-
 
             for(int i=0;i< listaGerentes.size();i++){
                 currentLine = reader.readLine();
 
-
                 if(i != this.escolha){
-
                     writer.write(currentLine+"\n");
-
-
                 }
                 else{
                     //writer.newLine();
                     writer.write(textoSaida);
                     //writer.newLine();
-
                 }
-
             }
-
-
             reader.close();
             writer.close();
-
 
             //le clientes2 de novo e salva tudo na string
             File Vendedores2 = new File("gerentes2.txt");
             Scanner myReader2 = new Scanner(Vendedores2);
-
-
 
             while (myReader2.hasNextLine())
             {
                 textoCompleto += myReader2.nextLine()+"\n";
             }
             myReader2.close();
-
-
 
             //apagar cliente
 
@@ -235,42 +196,29 @@ public class AlterarGerente extends JFrame {
             // recria clientes.txt
             File novoCliente = new File("gerentes.txt");
             BufferedWriter escritor = new BufferedWriter(new FileWriter( novoCliente));
-            System.out.println("++++++++\n\n"+textoCompleto+"++++++++\n\n");
             escritor.write(textoCompleto);
 
             escritor.close();
             myReader2.close();
             //apaga cliente2.txt
             Vendedores2.delete();
-
-
         }
         catch (IOException e){
             System.out.println("Erro: " + e);
         }
-
-        ///////////////////
-
-        //volta para menu gerente apenas por enquanto
-        //MenuGerente mg = new MenuGerente();
         close();
-
         }catch (Exception e){
             erroEntrada.setVisible(true);
             System.out.println("--------------------------------erro-----------------------------"+e);
         }
-
     }
-
     public DefaultListModel criaModeloGerente(){
         DefaultListModel modelo = new DefaultListModel();
         String temp;
         for(Gerente c: listaGerentes){
             temp = "Nome: " + c.getNome()+" RG: " + c.getRg();
             modelo.addElement(temp);
-
         }
-
         return modelo;
     }
     private void close(){

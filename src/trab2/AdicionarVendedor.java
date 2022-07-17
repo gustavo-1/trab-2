@@ -51,10 +51,6 @@ public class AdicionarVendedor extends JFrame{
 
         }
 
-
-        //listGerente.setModel((ComboBoxModel) modeloGerente);
-
-
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -93,9 +89,7 @@ public class AdicionarVendedor extends JFrame{
 
         }
 
-
         //listGerente.setModel((ComboBoxModel) modeloGerente);
-
 
         button1.addActionListener(new ActionListener() {
             @Override
@@ -133,15 +127,10 @@ public class AdicionarVendedor extends JFrame{
 
             while(myReader2.hasNextLine()){
 
-
-
                 String leitura = myReader2.nextLine();
                 System.out.println("Leitura: \n" + leitura);
 
                 String[] atributos = leitura.split("~");
-
-
-
 
                 String trg  = atributos[0];
                 String tnome  = atributos[1];
@@ -156,24 +145,9 @@ public class AdicionarVendedor extends JFrame{
 
                 String tsenha  = atributos[10];
 
-
-
-                int index3=0;
-                for(String s: atributos){
-                    System.out.println("Atributos["+ index3 + "]: \n" + s);
-                    index3++;
-                }
-
-                //depois arrumar uma forma de passar o gerente correto, talvez buscar ele por rg
-                //Gerente gerenteGenerico= new Gerente("4325432-x","anderson",1,1,1,2,2,2,1000,0,"senhaGenerica");
                 Gerente gerenteGenerico = new Gerente(trg,tnome,tdiaNasc,tdmesNasc,tanoNasc,tdiaAd,tdmesAd,tdanoAd,tsalario,tanosExp,tsenha);
                 listaGerentes.add(gerenteGenerico);
-
-
-
             }
-
-
             myReader2.close();
         }
         catch (IOException e){
@@ -181,9 +155,6 @@ public class AdicionarVendedor extends JFrame{
         }
     }
 
-    // public static void main(String[] args) {
-      //  AdicionarVendedor a = new AdicionarVendedor();
-   // }
     public void adicionarVendedor(){
         try{
 
@@ -198,28 +169,17 @@ public class AdicionarVendedor extends JFrame{
         double tsalario = Double.parseDouble(salario.getText());
         double ttrestante = Double.parseDouble(trestante.getText());
         String tsenha = senha.getText();
-        //Gerente gerente = gerente.get
 
-        //o gernte é temporario pq ainda não foi criado area de adicionar gerente, uma vez que tenha sido adicionado ao adicionar deve-se ser possivel escolher ele aqui
-
-
-        //Gerente gerenteTemp = new Gerente("4325432-x","anderson",1,1,1,2,2,2,1000,0,"senhaTemp");
         Gerente gerenteTemp = listaGerentes.get(listGerente.getSelectedIndex());
         Vendedor novoVendedor = new Vendedor(trg,tnome,tdiaNasc,tdmesNasc,tanoNasc,tdiaAd,tdmesAd,tdanoAd,tsalario,ttrestante,gerenteTemp,tsenha);
 
-
-
         try {
-            //BufferedWriter saida = new BufferedWriter(new FileWriter("clientes.txt"));
-
             File arq = new File("vendedores.txt");
             FileWriter saida = new FileWriter(arq, true);
-
 
             String textoSaida = trg + "~"+ tnome+ "~" +tdiaNasc+ "~"+tdmesNasc + "~"+tanoNasc + "~"+tdiaAd+ "~" + tdmesAd+ "~" + tdanoAd + "~"+tsalario + "~"+ttrestante  + "~"+gerenteTemp.getNome()+ "~"+ tsenha+"\n";
 
             saida.write(textoSaida);
-
 
             saida.close();
         } catch (IOException e) {
@@ -233,9 +193,6 @@ public class AdicionarVendedor extends JFrame{
             erroEntrada.setVisible(true);
             System.out.println("--------------------------------erro-----------------------------"+e);
         }
-
-
-
     }
 
     public DefaultListModel criaModeloGerente(){
@@ -244,7 +201,6 @@ public class AdicionarVendedor extends JFrame{
         for(Gerente c: listaGerentes){
             temp = "Nome: " + c.getNome() + " CPF:" + c.getRg();
             modelo.addElement(temp);
-
         }
 
         return modelo;

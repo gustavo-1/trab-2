@@ -10,7 +10,6 @@ public abstract class Veiculo{
     protected double peso;
     protected boolean vendido;
 
-
     public Veiculo(int n,String ma, String mo, int a, double k, String t, double p,boolean v){
        this.numeroDoChassi = n;
        this.marca = ma;

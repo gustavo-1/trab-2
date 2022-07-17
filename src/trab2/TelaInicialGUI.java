@@ -56,10 +56,7 @@ public class TelaInicialGUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 JPasswordField senhacripto = new JPasswordField(SENHA_MESTRE_GERENTE);
 
-                //Senha Mestre Pre iniciada
                 if(Arrays.equals(SenhaDoGerente.getPassword(), senhacripto.getPassword())){
-                    System.out.println("Senha Correta");
-                    //apagar();
                     JFrame menuGerente = new MenuGerente();
                     close();
                 }
@@ -103,11 +100,8 @@ public class TelaInicialGUI extends JFrame {
     }
 
     public static void main(String[] args) throws IOException {
-
         JFrame frame = new TelaInicialGUI("Concessionária José");
-
     }
-
 
     public void ler(){
 
@@ -117,13 +111,9 @@ public class TelaInicialGUI extends JFrame {
             File arq = new File("vendedores.txt");
             Scanner myReader = new Scanner(arq);
 
-
-
             Vendedor tempVendedor;
 
             while(myReader.hasNextLine()){
-
-
 
                 String leitura = myReader.nextLine();
                 System.out.println("Leitura: \n" + leitura);
@@ -163,7 +153,6 @@ public class TelaInicialGUI extends JFrame {
         //ler gerentes
 
         try{
-
             File arq = new File("gerentes.txt");
             Scanner myReader2 = new Scanner(arq);
 

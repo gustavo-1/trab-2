@@ -89,8 +89,6 @@ public class AlterarCliente extends JFrame {
         ler();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(PainelAlterarCliente);
-        //this.setLocationRelativeTo(null);
-        //this.setSize(111,111);
         this.pack();
         this.setLocationRelativeTo(null);
         this.setVisible(true);
@@ -134,7 +132,6 @@ public class AlterarCliente extends JFrame {
     public void escolherCliente(){
         int escolha = jlistaCliente.getSelectedIndex();
         this.escolha = escolha;
-        System.out.println("Escolheu: " + escolha);
 
         Cliente clienteEscolhido = listaCliente.get(escolha);
 
@@ -150,31 +147,19 @@ public class AlterarCliente extends JFrame {
         ruatextfield.setText(String.valueOf(clienteEscolhido.getRua()));
         nruatextfield.setText(String.valueOf(clienteEscolhido.getNrua()));
         bairrotextfield.setText(String.valueOf(clienteEscolhido.getBairro()));
-       cidadetextfield.setText(String.valueOf(clienteEscolhido.getCidade()));
-
+        cidadetextfield.setText(String.valueOf(clienteEscolhido.getCidade()));
 
         rendatextfield.setText(String.valueOf(clienteEscolhido.getRenda()));
         dependentestextfield.setText(String.valueOf(clienteEscolhido.getDependentes()));
-
-
     }
 
     public void ler(){
-
-
         //ler clientes
         try{
-
-
             File arq2= new File("clientes.txt");
             Scanner myReader2 = new Scanner(arq2);
 
-
-
             while(myReader2.hasNextLine()){
-
-
-
                 String leitura = myReader2.nextLine();
                 System.out.println("Leitura: \n" + leitura);
 
@@ -196,11 +181,6 @@ public class AlterarCliente extends JFrame {
                 double renda =  Double.parseDouble(atributos2[9]) ;
                 int dependentes =  Integer.parseInt(atributos2[10]) ;
 
-
-
-
-
-
                 for(String s: atributos2){
                     System.out.println("Atributos: \n" + s);
                 }
@@ -208,20 +188,12 @@ public class AlterarCliente extends JFrame {
                 Cliente clienteNovo = new Cliente(cpf, nome, dia, mes, ano, rua, nrua, bairro, cidade, renda, dependentes);
 
                 listaCliente.add(clienteNovo);
-
-
-
             }
-
-
             myReader2.close();
         }
         catch (IOException e){
             System.out.println("Erro: " + e);
         }
-
-        //System.out.println("dia1"+listaCliente.get(0).getNascimento().getDia());
-        //System.out.println("dia2"+listaCliente.get(1).getNascimento().getDia());
     }
 
     public void clicou()  {
@@ -267,7 +239,6 @@ public class AlterarCliente extends JFrame {
                     writer.write(currentLine+"\n");
                 }
                 else{
-                    //writer.newLine();
                     writer.write(textoSaida);
                     writer.newLine();
                 }
@@ -292,7 +263,6 @@ public class AlterarCliente extends JFrame {
            // recria clientes.txt
             File novoCliente = new File("clientes.txt");
             BufferedWriter escritor = new BufferedWriter(new FileWriter( novoCliente));
-            System.out.println("++++++++\n\n"+textoCompleto+"++++++++\n\n");
             escritor.write(textoCompleto);
 
             escritor.close();
@@ -304,18 +274,11 @@ public class AlterarCliente extends JFrame {
         catch (IOException e){
             System.out.println("Erro: " + e);
         }
-
-        ///////////////////
-
-        //volta para menu gerente apenas por enquanto
-        //MenuGerente mg = new MenuGerente();
         close();
-
         }catch (Exception e){
             erroEntrada.setVisible(true);
             System.out.println("--------------------------------erro-----------------------------"+e);
         }
-
     }
     public DefaultListModel criaModeloCliente(){
         DefaultListModel modelo = new DefaultListModel();
@@ -323,9 +286,7 @@ public class AlterarCliente extends JFrame {
         for(Cliente c: listaCliente){
             temp = "Nome: " + c.getNome() + " CPF:" + c.getCpf();
             modelo.addElement(temp);
-
         }
-
         return modelo;
     }
     private void close(){

@@ -71,25 +71,21 @@ public class AdicionarGerente extends JFrame {
         int tdmesAd = Integer.parseInt(mesAd.getText());
         int tdanoAd = Integer.parseInt(anoAd.getText());
         double tsalario = Double.parseDouble(salario.getText());
-       // double ttrestante = Double.parseDouble(trestante.getText());
         String tsenha = senha.getText();
         int tanosExp = Integer.parseInt(experiencia.getText());
 
         Gerente gerenteTemp = new Gerente(trg,tnome,tdiaNasc,tdmesNasc,tanoNasc,tdiaAd,tdmesAd,tdanoAd,tsalario,tanosExp,tsenha);
 
         try {
-            //BufferedWriter saida = new BufferedWriter(new FileWriter("clientes.txt"));
 
             File arq = new File("gerentes.txt");
             FileWriter saida = new FileWriter(arq, true);
 
-
             String textoSaida = trg + "~"+ tnome+ "~" +tdiaNasc+ "~"+tdmesNasc + "~"+tanoNasc + "~"+tdiaAd+ "~" + tdmesAd+ "~" + tdanoAd + "~"+tsalario + "~"+tanosExp  + "~"+ tsenha+"\n";
 
             saida.write(textoSaida);
-
-
             saida.close();
+
         } catch (IOException e) {
             System.out.println("Erro: " + e);
         }
@@ -100,7 +96,6 @@ public class AdicionarGerente extends JFrame {
             erroEntrada.setVisible(true);
             System.out.println("--------------------------------erro-----------------------------"+e);
         }
-
     }
     private void close(){
         setVisible(false);

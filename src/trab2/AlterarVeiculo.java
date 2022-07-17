@@ -78,34 +78,24 @@ public class AlterarVeiculo extends JFrame {
        // this.setLocationRelativeTo(null);
         this.setVisible(true);
 
-
-
-
-
         DefaultListModel modeloCarros = criaModeloCarro();
         list1.setModel(modeloCarros);
 
         DefaultListModel modeloMotos = criaModeloMotos();
         list2.setModel(modeloMotos);
 
-
         carroButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                 PainelAddCarro.setVisible(true);
                 PainelAddMoto.setVisible(false);
-
             }
         });
         motoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-
                 PainelAddCarro.setVisible(false);
                 PainelAddMoto.setVisible(true);
-
             }
         });
         list1.addMouseListener(new MouseAdapter() {
@@ -154,14 +144,11 @@ public class AlterarVeiculo extends JFrame {
         this.setVisible(true);
         //this.setSize(600,600);
 
-
-
         DefaultListModel modeloCarros = criaModeloCarro();
         list1.setModel(modeloCarros);
 
         DefaultListModel modeloMotos = criaModeloMotos();
         list2.setModel(modeloMotos);
-
 
         carroButton.addActionListener(new ActionListener() {
             @Override
@@ -169,7 +156,6 @@ public class AlterarVeiculo extends JFrame {
 
                 PainelAddCarro.setVisible(true);
                 PainelAddMoto.setVisible(false);
-
             }
         });
         motoButton.addActionListener(new ActionListener() {
@@ -179,7 +165,6 @@ public class AlterarVeiculo extends JFrame {
 
                 PainelAddCarro.setVisible(false);
                 PainelAddMoto.setVisible(true);
-
             }
         });
         list1.addMouseListener(new MouseAdapter() {
@@ -217,13 +202,11 @@ public class AlterarVeiculo extends JFrame {
         });
     }
 
-
     public static void main(String[] args) {
         AlterarVeiculo av = new AlterarVeiculo();
     }
 
     public void escolheuCarro(){
-
         Carro carroEscolhido = listaCarros.get(list1.getSelectedIndex());
 
         Nchassi.setText(String.valueOf(carroEscolhido.getNumeroDoChassi()));
@@ -242,8 +225,6 @@ public class AlterarVeiculo extends JFrame {
         altura.setText(String.valueOf(carroEscolhido.getDimensoes().getAltura()));
         largura.setText(String.valueOf(carroEscolhido.getDimensoes().getLargura()));
         comprimento.setText(String.valueOf(carroEscolhido.getDimensoes().getComprimento()));
-
-
     }
     public void escolheuMoto(){
         Motocicleta motoEscolhido = listaMoto.get(list2.getSelectedIndex());
@@ -259,30 +240,16 @@ public class AlterarVeiculo extends JFrame {
 
 
         cilindradasMoto.setText(String.valueOf(motoEscolhido.getCilindradas()));
-
         tipoMoto2.setText(String.valueOf(motoEscolhido.getTipo()));
-
-
     }
-
-
     public void ler(){
-
         //ler carros
         try{
-            //BufferedWriter saida = new BufferedWriter(new FileWriter("carros.txt"));
-
             File arq = new File("carros.txt");
             Scanner myReader = new Scanner(arq);
-            //BufferedReader leitor = new BufferedReader(arq);
-
-
             Carro tempCarro;
 
             while(myReader.hasNextLine()){
-
-
-
                 String leitura = myReader.nextLine();
                 System.out.println("Leitura: \n" + leitura);
 
@@ -303,17 +270,9 @@ public class AlterarVeiculo extends JFrame {
                 double alt= Double.parseDouble(atributos[12]);
                 double larg= Double.parseDouble(atributos[13]);
                 double compri= Double.parseDouble(atributos[14]);
-
-                for(String s: atributos){
-                    System.out.println("Atributos:\n"+s);
-                }
-
-
                 tempCarro = new Carro(numeroDoChassi ,marca,modelo,ano,km,tipoCombustivel,peso,vendido,potencia,nDeCilindros,nDeOcupantes, tipo,alt,larg,compri);
                 listaCarros.add(tempCarro);
-
             }
-
             myReader.close();
         }
         catch (IOException e){
@@ -322,19 +281,12 @@ public class AlterarVeiculo extends JFrame {
 
         //ler motos
         try{
-            //BufferedWriter saida = new BufferedWriter(new FileWriter("carros.txt"));
-
             File arq = new File("motos.txt");
             Scanner myReader = new Scanner(arq);
-            //BufferedReader leitor = new BufferedReader(arq);
-
 
             Motocicleta tempMotos;
 
             while(myReader.hasNextLine()){
-
-
-
                 String leitura = myReader.nextLine();
                 System.out.println("Leitura: \n" + leitura);
 
@@ -352,17 +304,9 @@ public class AlterarVeiculo extends JFrame {
                 int nDeCilindros = Integer.parseInt(atributos[8]);
                 String tipo  = atributos[9];
 
-
-
-
-                for(String s: atributos){
-                    System.out.println("Atributos: \n" + s);
-                }
-
                 tempMotos = new Motocicleta(numeroDoChassi ,marca,modelo,ano,km,tipoCombustivel,peso,vendido,nDeCilindros, tipo);
                 listaMoto.add(tempMotos);
             }
-
             myReader.close();
         }
         catch (IOException e){
@@ -401,17 +345,13 @@ public class AlterarVeiculo extends JFrame {
             File inputFile = new File("carros.txt");
             File tempFile = new File("carros2.txt");
 
-
             BufferedReader reader = new BufferedReader(new FileReader(inputFile));
             BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
 
-
             String currentLine;
-
 
             for(int i=0;i< listaCarros.size();i++){
                 currentLine = reader.readLine();
-
 
                 if(i != list1.getSelectedIndex()){
 
@@ -419,13 +359,9 @@ public class AlterarVeiculo extends JFrame {
 
                 }
                 else{
-                    //writer.newLine();
                     writer.write(textoSaida);
-                    //writer.newLine();
-
                 }
             }
-
             reader.close();
             writer.close();
 
@@ -453,17 +389,10 @@ public class AlterarVeiculo extends JFrame {
 
             //apaga cliente2.txt
             Vendedores2.delete();
-
-
         }
         catch (IOException e){
             System.out.println("Erro: " + e);
         }
-
-        ///////////////////
-
-        //volta para menu gerente apenas por enquanto
-        //MenuGerente mg = new MenuGerente();
         close();
         }catch (Exception e){
             erroEntrada.setVisible(true);
@@ -508,10 +437,7 @@ public class AlterarVeiculo extends JFrame {
                     writer.write(currentLine+"\n");
                 }
                 else{
-                    //writer.newLine();
                     writer.write(textoSaida);
-                    //writer.newLine();
-
                 }
             }
 
@@ -535,7 +461,6 @@ public class AlterarVeiculo extends JFrame {
             // recria clientes.txt
             File novoCliente = new File("motos.txt");
             BufferedWriter escritor = new BufferedWriter(new FileWriter( novoCliente));
-            System.out.println("++++++++\n\n"+textoCompleto+"++++++++\n\n");
             escritor.write(textoCompleto);
 
             escritor.close();
@@ -547,9 +472,6 @@ public class AlterarVeiculo extends JFrame {
             System.out.println("Erro: " + e);
         }
 
-        ///////////////////
-
-        //volta para menu gerente apenas por enquanto
         MenuGerente mg = new MenuGerente();
         close();
         }catch (Exception e){
@@ -557,9 +479,6 @@ public class AlterarVeiculo extends JFrame {
             System.out.println("--------------------------------erro-----------------------------"+e);
         }
     }
-
-
-
 
     public DefaultListModel criaModeloCarro(){
         DefaultListModel modelo = new DefaultListModel();
