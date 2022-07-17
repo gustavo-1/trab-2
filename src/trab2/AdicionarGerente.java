@@ -77,7 +77,6 @@ public class AdicionarGerente extends JFrame {
         Gerente gerenteTemp = new Gerente(trg,tnome,tdiaNasc,tdmesNasc,tanoNasc,tdiaAd,tdmesAd,tdanoAd,tsalario,tanosExp,tsenha);
 
         try {
-
             File arq = new File("gerentes.txt");
             FileWriter saida = new FileWriter(arq, true);
 

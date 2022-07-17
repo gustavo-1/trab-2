@@ -42,8 +42,6 @@ public class AdicionarVendedor extends JFrame{
         this.setLocationRelativeTo(null);
         this.setVisible(true);
 
-
-        //DefaultListModel modeloGerente = criaModeloGerente();
         String temp;
         for(Gerente c: listaGerentes){
             temp = "Nome: " + c.getNome() + " CPF: " + c.getRg();
@@ -80,16 +78,12 @@ public class AdicionarVendedor extends JFrame{
         this.setLocationRelativeTo(null);
         this.setVisible(true);
 
-
-        //DefaultListModel modeloGerente = criaModeloGerente();
         String temp;
         for(Gerente c: listaGerentes){
             temp = "Nome: " + c.getNome() + " CPF: " + c.getRg();
             listGerente.addItem(temp);
 
         }
-
-        //listGerente.setModel((ComboBoxModel) modeloGerente);
 
         button1.addActionListener(new ActionListener() {
             @Override
@@ -100,13 +94,10 @@ public class AdicionarVendedor extends JFrame{
         close.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                 MenuVendedor mv = new MenuVendedor(v);
                 close();
-
             }
         });
-
     }
 
     public static void main(String[] args) {
@@ -114,14 +105,10 @@ public class AdicionarVendedor extends JFrame{
     }
 
     private void ler() {
-
         try{
-
 
             File arq = new File("gerentes.txt");
             Scanner myReader2 = new Scanner(arq);
-
-
 
             Vendedor tempVendedor;
 

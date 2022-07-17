@@ -88,12 +88,6 @@ public class MenuGerente extends JFrame{
 
                      Desempenho d = new Desempenho(desempenhoseller.getText());
                      close();
-
-              //  for (DesempenhoVendedor vendedorrecorrente : listaDesempenho){
-                //    if(Objects.equals(vendedorrecorrente.getNomeseller(), desempenhoseller.getText())){
-                  //      Desempenho d = new Desempenho(vendedorrecorrente.getNomeseller());
-               //     }
-             //   }
             }
         });
 

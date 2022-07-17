@@ -89,7 +89,6 @@ public class ExcluirCliente extends JFrame {
         ExcluirCliente ex = new ExcluirCliente();
     }
 
-
     public void clicou(){
 
         //Reescreve clientes com a linha alterada no lugar da antiga
@@ -101,9 +100,7 @@ public class ExcluirCliente extends JFrame {
             BufferedReader reader = new BufferedReader(new FileReader(inputFile));
             BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
 
-
             String currentLine;
-
 
             for(int i=0;i< listaCliente.size();i++){
                 currentLine = reader.readLine();

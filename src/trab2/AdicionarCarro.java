@@ -139,11 +139,8 @@ public class AdicionarCarro extends JFrame {
 
         //escreve em arquivo veiculo criado
         try{
-            //BufferedWriter saida = new BufferedWriter(new FileWriter("carros.txt"));
-
             File arq = new File("carros.txt");
             FileWriter saida = new FileWriter(arq,true);
-
 
             String textoSaida =  nchassi + "~"+ tmarca + "~" + tmodelo + "~"+ tano + "~"+ tquilometragem + "~"+tTipoDeCombustivel+ "~" + tPeso + "~"+ tVendido  +"~"+tpotencia +"~"+tnDeCilindros+ "~" +tnDeOcupantes +"~"+ ttipo  +"~"+talt +"~"+tlarg+ "~" + tcompri+"\n";
             saida.write(textoSaida);

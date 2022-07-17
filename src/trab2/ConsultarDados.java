@@ -89,9 +89,6 @@ public class ConsultarDados extends JFrame{
         ConsultarDados cs = new ConsultarDados();
     }
 
-
-
-
     public void ler(){
         //ler carros
         try{

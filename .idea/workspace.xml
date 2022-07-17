@@ -4,17 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2772f62a-3ecb-4a45-ab0f-9535f696762f" name="Changes" comment="Falta pegar o carro mais popular2">
+    <list default="true" id="2772f62a-3ecb-4a45-ab0f-9535f696762f" name="Changes" comment="Tirei SOUT's e deixei o código mais limpo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carros.txt" beforeDir="false" afterPath="$PROJECT_DIR$/carros.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/clientes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gerentes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gerentes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/motos.txt" beforeDir="false" afterPath="$PROJECT_DIR$/motos.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarGerente.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarGerente.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarVendedor.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarVendedor.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarCarro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarCarro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarGerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarGerente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarMotocicleta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarMotocicleta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarVendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarVendedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendas.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendedores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendedores.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/AlterarCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AlterarCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/AlterarGerente.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AlterarGerente.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/AlterarGerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AlterarGerente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/AlterarVeiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AlterarVeiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/AlterarVendedor.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AlterarVendedor.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/ConsultarDados.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ConsultarDados.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/ConsultarDados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ConsultarDados.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirCliente.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirCliente.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirGerente.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirGerente.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirVeiculo.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirVeiculo.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirVeiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirVeiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirVendedor.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirVendedor.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirVendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirVendedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/MenuGerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuGerente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/TelaInicialGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/TelaInicialGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,19 +58,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "227",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "389",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "last_opened_file_path": "/home/brnuo/Documentos/lpoo/trab-2/src/trab2",
-    "settings.editor.selected.configurable": "configurable.group.language"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;227&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;389&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/brnuo/Documentos/lpoo/trab-2/src/trab2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.language&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/trab2" />

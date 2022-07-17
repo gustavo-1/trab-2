@@ -384,7 +384,6 @@ public class AlterarVeiculo extends JFrame {
             myReader2.close();
 
             //apagar carro
-
             inputFile.delete();
 
             // recria clientes.txt
@@ -422,7 +421,6 @@ public class AlterarVeiculo extends JFrame {
         int tcilindradas = Integer.parseInt(cilindradasMoto.getText());
         String ttipo  = tipoMoto2.getText();
 
-        //informações especificas sobre carro ou moto ainda não foram adicionadas pra eu poder comecar a testar
         Motocicleta motoNova = new Motocicleta(nchaci,tmarca,tmodelo,tano,tquilometragem,tTipoDeCombustivel,tPeso,tVendido, tcilindradas,ttipo);
         String textoCompleto="";
         String textoSaida =  nchaci + "~"+ tmarca+ "~" + tmodelo + "~"+ tano + "~"+ tquilometragem + "~"+tTipoDeCombustivel+ "~" + tPeso + "~"+ tVendido  +"~"+tcilindradas + "~"+ ttipo+"\n";

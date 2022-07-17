@@ -91,7 +91,7 @@ public class TelaInicialGUI extends JFrame {
         });
     }
 
-    private void close(){
+    private void close(){ // Fechar janela
         setVisible(false);
         dispose();
     }
@@ -105,7 +105,7 @@ public class TelaInicialGUI extends JFrame {
 
     public void ler(){
 
-        //ler vendedores
+        // Ler as informações dos vendedores salvos no arquivo vendedores.txt
         try{
 
             File arq = new File("vendedores.txt");
@@ -114,10 +114,7 @@ public class TelaInicialGUI extends JFrame {
             Vendedor tempVendedor;
 
             while(myReader.hasNextLine()){
-
                 String leitura = myReader.nextLine();
-               // System.out.println("Leitura: \n" + leitura);
-
                 String[] atributos = leitura.split("~");
 
                 String trg  = atributos[0];
@@ -130,13 +127,7 @@ public class TelaInicialGUI extends JFrame {
                 int tdanoAd = Integer.parseInt(atributos[7]) ;
                 double tsalario = Double.parseDouble(atributos[8]);
                 double ttrestante =  Double.parseDouble(atributos[9]);
-                //Gerente gerente = atributos[10]
                 String tsenha  = atributos[11];
-
-               /// for(String s: atributos){
-               ///     System.out.println("Atributos: \n" + s);
-               /// }
-
 
                 Gerente gerenteGenerico= new Gerente("4325432-x","anderson",1,1,1,2,2,2,1000,0,"senhaGenerica");
                tempVendedor = new Vendedor(trg,tnome,tdiaNasc,tdmesNasc,tanoNasc,tdiaAd,tdmesAd,tdanoAd,tsalario,ttrestante,gerenteGenerico,tsenha);
@@ -150,7 +141,7 @@ public class TelaInicialGUI extends JFrame {
             System.out.println("Erro: " + e);
         }
 
-        //ler gerentes
+        // Ler os gerentes salvos no arquivo gerentes.txt
 
         try{
             File arq = new File("gerentes.txt");
@@ -159,10 +150,7 @@ public class TelaInicialGUI extends JFrame {
             Vendedor tempVendedor;
 
             while(myReader2.hasNextLine()){
-
                 String leitura = myReader2.nextLine();
-                //System.out.println("Leitura: \n" + leitura);
-
                 String[] atributos = leitura.split("~");
 
                 String trg  = atributos[0];
@@ -177,10 +165,6 @@ public class TelaInicialGUI extends JFrame {
                 int tanosExp =  Integer.parseInt(atributos[9]);
 
                 String tsenha  = atributos[10];
-
-
-
-                //depois arrumar uma forma de passar o gerente correto, talvez buscar ele por rg
                 Gerente gerenteGenerico = new Gerente(trg,tnome,tdiaNasc,tdmesNasc,tanoNasc,tdiaAd,tdmesAd,tdanoAd,tsalario,tanosExp,tsenha);
                 listaGerentes.add(gerenteGenerico);
 
@@ -192,13 +176,10 @@ public class TelaInicialGUI extends JFrame {
         }
     }
 
-    public boolean verificarNomeESenha(){
+    public boolean verificarNomeESenha(){ // Sistema de login para vendedores
         boolean resposta = false;
         int index=0;
         for(Vendedor v:listaVendedores){
-          //  if(String.equals(v.getNome(), loginvendedor.getText() ) && Arrays.equals(v.getSenha(), senhaVendedor.getText() ) ){
-          //      resposta = true;
-           //}
             if(Objects.equals(v.getNome(), loginvendedor.getText()) && Objects.equals(v.getSenha(), senhaVendedor.getText())){
                vendedorEscolhido = index;
                 resposta = true;
@@ -207,13 +188,10 @@ public class TelaInicialGUI extends JFrame {
         }
         return resposta;
     }
-    public boolean verificarNomeESenhaGerente(){
+    public boolean verificarNomeESenhaGerente(){ // Sistema de login para gerentes
         boolean resposta = false;
         int index=0;
         for(Gerente v:listaGerentes){
-            //  if(String.equals(v.getNome(), loginvendedor.getText() ) && Arrays.equals(v.getSenha(), senhaVendedor.getText() ) ){
-            //      resposta = true;
-            //}
             System.out.println("v: Nome: "+ v.getNome()+ "  Senha: "+v.getSenha());
             if(Objects.equals(v.getNome(), logingerente.getText()) && Objects.equals(v.getSenha(), SenhaDoGerente.getText())){
                 gerenteEscolhido = index;

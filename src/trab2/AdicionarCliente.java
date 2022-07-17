@@ -49,13 +49,10 @@ public class AdicionarCliente extends JFrame {
         this.retornar = retornar;
         this.vendedor=v;
 
-
         close.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                     MenuVendedor ven = new MenuVendedor(v);
-
                 close();
             }
         });
@@ -109,7 +106,6 @@ public class AdicionarCliente extends JFrame {
     }
 
     public void adicionar() throws IOException {
-
         try{
 
         int cpf = Integer.parseInt(CPFtextfield.getText());
@@ -132,15 +128,11 @@ public class AdicionarCliente extends JFrame {
 
         //escreve em arquivo veiculo criado
         try {
-            //BufferedWriter saida = new BufferedWriter(new FileWriter("clientes.txt"));
-
             File arq = new File("clientes.txt");
             FileWriter saida = new FileWriter(arq, true);
 
-
             String textoSaida = cpf + "~" + nome + "~" + dia + "~" + mes + "~" + ano + "~" + rua + "~" + nrua + "~" + bairro + "~" + cidade + "~" + renda + "~" + dependentes+"\n";
             saida.write(textoSaida);
-
 
             saida.close();
         } catch (IOException e) {

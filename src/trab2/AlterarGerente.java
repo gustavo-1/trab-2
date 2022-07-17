@@ -74,8 +74,6 @@ public class AlterarGerente extends JFrame {
         int escolha = list1.getSelectedIndex();
         this.escolha = escolha;
 
-        //////////////
-
         Gerente gerenteEscolhido = listaGerentes.get(escolha);
         rg.setText(gerenteEscolhido.getRg());
         nome.setText(gerenteEscolhido.getNome());
@@ -94,7 +92,6 @@ public class AlterarGerente extends JFrame {
     }
     private void ler() {
         try{
-
             File arq = new File("gerentes.txt");
             Scanner myReader2 = new Scanner(arq);
 

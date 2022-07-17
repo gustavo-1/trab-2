@@ -46,8 +46,6 @@ public class AlterarCliente extends JFrame {
         ler();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(PainelAlterarCliente);
-        //this.setLocationRelativeTo(null);
-        //this.setSize(111,111);
         this.pack();
         this.setLocationRelativeTo(null);
         this.setVisible(true);
@@ -171,19 +169,13 @@ public class AlterarCliente extends JFrame {
                 int mes =  Integer.parseInt(atributos2[3]) ;
                 int ano =  Integer.parseInt(atributos2[4]) ;
 
-                // endereço
                 String rua = atributos2[5];
                 int nrua =  Integer.parseInt(atributos2[6]) ;
                 String bairro = atributos2[7];
                 String cidade= atributos2[8];
-                // fim
 
                 double renda =  Double.parseDouble(atributos2[9]) ;
                 int dependentes =  Integer.parseInt(atributos2[10]) ;
-
-                for(String s: atributos2){
-                    System.out.println("Atributos: \n" + s);
-                }
 
                 Cliente clienteNovo = new Cliente(cpf, nome, dia, mes, ano, rua, nrua, bairro, cidade, renda, dependentes);
 
@@ -225,7 +217,6 @@ public class AlterarCliente extends JFrame {
         try {
             File inputFile = new File("clientes.txt");
             File tempFile = new File("clientes2.txt");
-
 
             BufferedReader reader = new BufferedReader(new FileReader(inputFile));
             BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
@@ -293,5 +284,4 @@ public class AlterarCliente extends JFrame {
         setVisible(false);
         dispose();
     }
-
 }

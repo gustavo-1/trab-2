@@ -154,10 +154,8 @@ public class ExcluirVendedor extends JFrame{
                 int tdanoAd = Integer.parseInt(atributos[7]) ;
                 double tsalario = Double.parseDouble(atributos[8]);
                 double ttrestante =  Double.parseDouble(atributos[9]);
-                //Gerente gerente = atributos[10]
                 String tsenha  = atributos[11];
 
-                //depois arrumar uma forma de passar o gerente correto, talvez buscar ele por rg
                 Gerente gerenteGenerico= new Gerente("4325432-x","anderson",1,1,1,2,2,2,1000,0,"senhaGenerica");
                 tempVendedor = new Vendedor(trg,tnome,tdiaNasc,tdmesNasc,tanoNasc,tdiaAd,tdmesAd,tdanoAd,tsalario,ttrestante,gerenteGenerico,tsenha);
                 listaVendedores.add(tempVendedor);

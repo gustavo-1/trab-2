@@ -65,7 +65,6 @@ public class AdicionarMotocicleta extends JFrame {
             this.retornar=retornar;
             this.vendedor =v;
 
-
             this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             this.setContentPane(PainelAddMoto);
             this.pack();
@@ -119,11 +118,8 @@ public class AdicionarMotocicleta extends JFrame {
 
         //escreve em arquivo veiculo criado
         try{
-            //BufferedWriter saida = new BufferedWriter(new FileWriter("carros.txt"));
-
             File arq = new File("motos.txt");
             FileWriter saida = new FileWriter(arq,true);
-
 
             String textoSaida =  nchaci + "~"+ tmarca+ "~" + tmodelo + "~"+ tano + "~"+ tquilometragem + "~"+tTipoDeCombustivel+ "~" + tPeso + "~"+ tVendido  +"~"+tcilindradas + "~"+ ttipo+"\n";
 
