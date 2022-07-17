@@ -3,6 +3,12 @@ package trab2;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+import java.util.Scanner;
 
 public class MenuGerente extends JFrame{
 
@@ -15,9 +21,13 @@ public class MenuGerente extends JFrame{
     private JTextField desempenhoseller;
     private JButton pesquisarsellerButton;
     private JButton gerenteButton;
+    private Vendedor vendedor;
+
+    static List<DesempenhoVendedor> listaDesempenho= new ArrayList<DesempenhoVendedor>();
 
     public MenuGerente(){
         super("Menu - Gerente");
+        ler();
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(painelGerente);
@@ -75,7 +85,11 @@ public class MenuGerente extends JFrame{
         pesquisarsellerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                for (DesempenhoVendedor vendedorrecorrente : listaDesempenho){
+                    if(Objects.equals(vendedorrecorrente.getNomeseller(), desempenhoseller.getText())){
+                        Desempenho d = new Desempenho(vendedorrecorrente.getNomeseller());
+                    }
+                }
             }
         });
 
@@ -102,6 +116,47 @@ public class MenuGerente extends JFrame{
                 }
             }
         });
+    }
+
+    public void ler(){
+
+        //ler vendedor
+        try{
+            File arq = new File("vendas.txt");
+            Scanner myReader = new Scanner(arq);
+            //BufferedReader leitor = new BufferedReader(arq);
+
+            Vendedor tempVendedor;
+
+            while(myReader.hasNextLine()){
+
+                String leitura = myReader.nextLine();
+                System.out.println("Leitura: \n" + leitura);
+
+                String[] atributos = leitura.split("~");
+
+
+                int tid = Integer.parseInt(atributos[0]);
+                String nomeseller = atributos[1];
+                String tipoVeiculo = atributos[2];
+                int cpf = Integer.parseInt(atributos[2]);
+                String tipoPagamento = atributos[10];
+
+                for(String s: atributos){
+                    System.out.println("atributos:\n"+s);
+                }
+
+                Vendedor vendedor = this.vendedor;
+
+                DesempenhoVendedor tempDesempenho = new DesempenhoVendedor(tid, nomeseller, cpf, tipoVeiculo, tipoPagamento);
+                listaDesempenho.add(tempDesempenho);
+
+            }
+            myReader.close();
+        }
+        catch (IOException e){
+            System.out.println("erro: "+e);
+        }
     }
 
     private void close(){

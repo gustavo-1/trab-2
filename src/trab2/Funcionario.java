@@ -42,4 +42,7 @@ public abstract class Funcionario{
         this.salario = salario;
     }
 
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 }
