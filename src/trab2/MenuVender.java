@@ -39,9 +39,7 @@ public class MenuVender extends JFrame{
         //this.setLocationRelativeTo(null);
         //this.setSize(111,111);
         this.pack();
-
         this.setVisible(true);
-
         this.vendedor = v;
         NomeVendedor.setText(v.getNome());
 
@@ -220,8 +218,6 @@ public class MenuVender extends JFrame{
             Carro tempCarro;
 
             while(myReader.hasNextLine()){
-
-
 
                 String leitura = myReader.nextLine();
                 System.out.println("Leitura: \n" + leitura);
