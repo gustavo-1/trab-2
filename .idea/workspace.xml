@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ec128bb-b4dc-4fbe-baa4-1fb051094707" name="Changes" comment="Deixei o codigo mais bonito 2">
+    <list default="true" id="1ec128bb-b4dc-4fbe-baa4-1fb051094707" name="Changes" comment=".">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarCarro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarCarro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/Desempenho.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/Desempenho.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/Desempenho.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/Desempenho.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirVeiculo.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirVeiculo.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirVeiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirVeiculo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirVendedor.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirVendedor.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirVendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirVendedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/MenuVendedor.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuVendedor.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/MenuVender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuVender.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +63,7 @@
       <recent name="C:\Users\gusta\IdeaProjects\trab-2\src\trab2" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.MenuVender">
     <configuration name="AdicionarCarro" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="trab2.AdicionarCarro" />
       <module name="trab2matheus" />
@@ -130,6 +131,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MenuVender" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.AlterarCliente" />
         <item itemvalue="Application.AdicionarCarro" />
@@ -250,7 +252,8 @@
     <MESSAGE value="16/07&#10;12:19" />
     <MESSAGE value="deixei o codigo mais bonito" />
     <MESSAGE value="Deixei o codigo mais bonito 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deixei o codigo mais bonito 2" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
