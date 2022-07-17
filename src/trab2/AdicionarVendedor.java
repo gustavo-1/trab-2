@@ -71,6 +71,48 @@ public class AdicionarVendedor extends JFrame{
 
     }
 
+    //veio do vendedor
+    public AdicionarVendedor(int retornar, Vendedor v){
+        super("Adicionar Funcionário");
+        ler();
+
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setContentPane(painelAddVendedor);
+        this.pack();
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
+
+
+        //DefaultListModel modeloGerente = criaModeloGerente();
+        String temp;
+        for(Gerente c: listaGerentes){
+            temp = "Nome: " + c.getNome() + " CPF: " + c.getRg();
+            listGerente.addItem(temp);
+
+        }
+
+
+        //listGerente.setModel((ComboBoxModel) modeloGerente);
+
+
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                adicionarVendedor();
+            }
+        });
+        close.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                MenuVendedor mv = new MenuVendedor(v);
+                close();
+
+            }
+        });
+
+    }
+
     public static void main(String[] args) {
         AdicionarVendedor ad = new AdicionarVendedor();
     }

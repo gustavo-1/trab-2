@@ -44,6 +44,7 @@ public class ExcluirVendedor extends JFrame{
         });
     }
 
+    //veio do vendedor
     public ExcluirVendedor(int retornar, Vendedor v){
         ler();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

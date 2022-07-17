@@ -51,6 +51,7 @@ public class ExcluirCliente extends JFrame {
         });
     }
 
+    //veio do vendedor
     public ExcluirCliente(int retornar, Vendedor v){
         ler();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -71,6 +72,14 @@ public class ExcluirCliente extends JFrame {
 
                 MenuVendedor mv = new MenuVendedor(v);
 
+                close();
+            }
+        });
+
+        close.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MenuVendedor mv = new MenuVendedor(v);
                 close();
             }
         });
