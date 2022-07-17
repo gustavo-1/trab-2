@@ -7,7 +7,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class MenuGerente extends JFrame{
@@ -21,6 +20,7 @@ public class MenuGerente extends JFrame{
     private JTextField desempenhoseller;
     private JButton pesquisarsellerButton;
     private JButton gerenteButton;
+    private JButton consultarDadosButton;
     private Vendedor vendedor;
 
     static List<DesempenhoVendedor> listaDesempenho= new ArrayList<DesempenhoVendedor>();
@@ -118,6 +118,13 @@ public class MenuGerente extends JFrame{
                     irParaExcluirGerente();
                     close();
                 }
+            }
+        });
+        consultarDadosButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ConsultarDados cs = new ConsultarDados();
+                close();
             }
         });
     }

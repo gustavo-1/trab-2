@@ -28,6 +28,7 @@ public class AlterarVendedor extends JFrame{
     private List<Vendedor> listaVendedores = new ArrayList<Vendedor>();
     private JButton close;
     private JList list1;
+    private JLabel erroEntrada;
     private int escolha;
     static List<Gerente> listaGerentes = new ArrayList<Gerente>();
     private Vendedor vendedorEscolhido;
@@ -221,6 +222,8 @@ public class AlterarVendedor extends JFrame{
         }
     }
     public void clicou()  {
+        try{
+
         String trg = rg.getText();
         String tnome = nome.getText();
         int tdiaNasc = Integer.parseInt(diaNasc.getText());
@@ -290,6 +293,10 @@ public class AlterarVendedor extends JFrame{
             System.out.println("Erro: " + e);
         }
         close();
+
+        }catch (Exception e){
+            erroEntrada.setVisible(true);
+        }
     }
     public DefaultListModel criaModeloGerente(){
         DefaultListModel modelo = new DefaultListModel();

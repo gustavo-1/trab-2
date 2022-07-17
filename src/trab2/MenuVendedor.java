@@ -13,6 +13,7 @@ public class MenuVendedor extends JFrame {
     private JButton clienteButton;
     private JButton venderButton;
     private JLabel NomeVendedor;
+    private JButton consultarDadosButton;
     private Vendedor vendedor;
 
     public MenuVendedor(Vendedor v){
@@ -39,6 +40,14 @@ public class MenuVendedor extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 TelaInicialGUI ti = new TelaInicialGUI("José Motors");
                 close();
+            }
+        });
+        consultarDadosButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ConsultarDados cs = new ConsultarDados(vendedor);
+                close();
+
             }
         });
     }

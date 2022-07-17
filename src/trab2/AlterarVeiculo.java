@@ -404,7 +404,6 @@ public class AlterarVeiculo extends JFrame {
         close();
         }catch (Exception e){
             erroEntrada.setVisible(true);
-            System.out.println("--------------------------------erro-----------------------------"+e);
         }
     }
 
