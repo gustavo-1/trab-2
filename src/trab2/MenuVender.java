@@ -9,12 +9,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class MenuVender extends JFrame{
     private JPanel painelvender;
     private JList listCarros;
-    private JButton venderCarro;
+    private JButton venderCarroButton;
     private JList jlistaCliente;
     private JTextField valor;
     private JTextField hora;
@@ -28,6 +29,8 @@ public class MenuVender extends JFrame{
     private JList listMotos;
     private JButton venderMotoButton;
     private JLabel NomeVendedor;
+    private JComboBox tipopagamento;
+    private JLabel tipo;
     static List<Carro>  listaCarros= new ArrayList<Carro>();
     static List<Cliente>  listaCliente= new ArrayList<Cliente>();
     static List <Motocicleta> listaMotos= new ArrayList<Motocicleta>();
@@ -55,11 +58,11 @@ public class MenuVender extends JFrame{
         DefaultListModel modeloCliente = criaModeloCliente();
         jlistaCliente.setModel(modeloCliente);
 
-        venderCarro.addActionListener(new ActionListener() {
+        venderCarroButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                clicou();
+                venderCarro();
             }
         });
 
@@ -84,7 +87,7 @@ public class MenuVender extends JFrame{
        // MenuVender m = new MenuVender();
 
     }
-    public void clicou(){
+    public void venderCarro(){
 
         System.out.println("Escolhido: "+ listCarros.getSelectedIndex());
         int resposta1 = listCarros.getSelectedIndex();
@@ -103,10 +106,11 @@ public class MenuVender extends JFrame{
             int tminutos = Integer.parseInt(minutos.getText());
            // int tsegundos = Integer.parseInt(segundos.getText());
             double tvalor = Double.parseDouble(valor.getText());
+            String tipoPagamento = Objects.toString(tipopagamento.getSelectedItem());
 
             Vendedor vendedor = this.vendedor;
             Cliente cliente = listaCliente.get(resposta2);
-            Veiculo veiculo = listaCarros.get(resposta1);
+            Carro veiculo = listaCarros.get(resposta1);
 
             if(veiculo.getVendido() == false){
                 System.out.println("Já está vendido!");
@@ -115,22 +119,18 @@ public class MenuVender extends JFrame{
             }
 
             Venda venda = new Venda(tid,vendedor,cliente,veiculo,tvalor,tdia,tmes,tano,thora,tminutos);
-            /////escrever venda;
+            /////escrever venda e desempenho do vendedor
 
             try {
                 //BufferedWriter saida = new BufferedWriter(new FileWriter("clientes.txt"));
-
                 File arq = new File("vendas.txt");
                 FileWriter saida = new FileWriter(arq, true);
 
-
-                String textoSaida = tid + "~"+ vendedor.getRg()+ "~"+cliente.getCpf()+ "~"+veiculo.getNumeroDoChassi()  +"~"    +tvalor +tdia+ "~" +tmes+ "~"+tano + "~"+thora + "~"+tminutos+  "\n" ;
+                String textoSaida = tid + "~"+ vendedor.getNome() + "~" + cliente.getCpf() + "~" + veiculo.getTipo() + "~"+tvalor + "~" + tdia + "~" +tmes+ "~"+tano + "~"+thora + "~"+tminutos + "~" + tipoPagamento + "\n" ;
 
                 saida.write(textoSaida);
 
-
                 saida.close();
-
 
             } catch (IOException e) {
                 System.out.println("Erro: " + e);
@@ -165,12 +165,13 @@ public class MenuVender extends JFrame{
             int tminutos = Integer.parseInt(minutos.getText());
             // int tsegundos = Integer.parseInt(segundos.getText());
             double tvalor = Double.parseDouble(valor.getText());
+            String tipoPagamento = Objects.toString(tipopagamento.getSelectedItem());
 
             Vendedor vendedor = this.vendedor;
             Cliente cliente = listaCliente.get(resposta2);
-            Veiculo veiculo = listaMotos.get(resposta1);
+            Motocicleta veiculo = listaMotos.get(resposta1);
 
-            if(veiculo.getVendido() == false){
+            if(!veiculo.getVendido()){
                 System.out.println("Já está vendido!");
                 ////colocar na tela
                 return;
@@ -186,10 +187,9 @@ public class MenuVender extends JFrame{
                 FileWriter saida = new FileWriter(arq, true);
 
 
-                String textoSaida = tid + "~"+ vendedor.getRg()+ "~"+cliente.getCpf()+ "~"+veiculo.getNumeroDoChassi()  +"~"    +tvalor +tdia+ "~" +tmes+ "~"+tano + "~"+thora + "~"+tminutos+  "\n" ;
+                String textoSaida = tid + "~" + vendedor.getNome()+ "~" + cliente.getCpf() + "~" + veiculo.getTipo() + "~" + tvalor  + " ~ " + tdia+ "~" +tmes+ "~"+tano + "~" + thora + "~" + tminutos + "~" + tipoPagamento + "\n" ;
 
                 saida.write(textoSaida);
-
 
                 saida.close();
 

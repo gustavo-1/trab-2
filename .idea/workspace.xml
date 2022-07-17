@@ -6,14 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="2772f62a-3ecb-4a45-ab0f-9535f696762f" name="Changes" comment="acho que arrumei excluiCliente">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarVendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarVendedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/clientes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/trab2/AlterarCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AlterarCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/AlterarGerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AlterarGerente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/AlterarVeiculo.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AlterarVeiculo.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/trab2/AlterarVeiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AlterarVeiculo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/trab2/AlterarVendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AlterarVendedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirVeiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirVeiculo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirVendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirVendedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/MenuVendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuVendedor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendedores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendedores.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +50,6 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "false",
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "227",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "360",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "last_opened_file_path": "/home/brnuo/Documentos/lpoo/trab-2/src/trab2",
@@ -150,7 +147,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2772f62a-3ecb-4a45-ab0f-9535f696762f" name="Changes" comment="acho que arrumei excluiCliente" />
+      <changelist id="1ec128bb-b4dc-4fbe-baa4-1fb051094707" name="Changes" comment="" />
       <created>1656204851503</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -250,11 +247,6 @@
           <url>file://$PROJECT_DIR$/src/trab2/AlterarGerente.java</url>
           <line>63</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/trab2/Main.java</url>
-          <line>3</line>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
