@@ -39,9 +39,7 @@ public class MenuVender extends JFrame{
         //this.setLocationRelativeTo(null);
         //this.setSize(111,111);
         this.pack();
-
         this.setVisible(true);
-
         this.vendedor = v;
         NomeVendedor.setText(v.getNome());
 
@@ -221,8 +219,6 @@ public class MenuVender extends JFrame{
 
             while(myReader.hasNextLine()){
 
-
-
                 String leitura = myReader.nextLine();
                 System.out.println("Leitura: \n" + leitura);
 
@@ -282,7 +278,7 @@ public class MenuVender extends JFrame{
                 String cidade= atributos2[8];
                 // fim
 
-                int renda =  Integer.parseInt(atributos2[9]) ;
+                Double renda =  Double.parseDouble(atributos2[9]) ;
                 int dependentes =  Integer.parseInt(atributos2[10]) ;
 
                 for(String s: atributos2){

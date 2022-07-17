@@ -185,9 +185,6 @@ public class ExcluirVeiculo extends JFrame {
 
     }
 
-
-
-
     public void ler(){
 
         //ler carros
@@ -236,11 +233,7 @@ public class ExcluirVeiculo extends JFrame {
                 tempCarro = new Carro(numeroDoChassi ,marca,modelo,ano,km,tipoCombustivel,peso,vendido,potencia,nDeCilindros,nDeOcupantes, tipo,alt,larg,compri);
                 listaCarros.add(tempCarro);
 
-
-
             }
-
-
             myReader.close();
         }
         catch (IOException e){
@@ -292,19 +285,13 @@ public class ExcluirVeiculo extends JFrame {
                 tempMoto = new Motocicleta(numeroDoChassi ,marca,modelo,ano,km,tipoCombustivel,peso,vendido,nDeCilindros, tipo);
                 listaMotos.add(tempMoto);
 
-
-
             }
-
 
             myReader.close();
         }
         catch (IOException e){
             System.out.println("erro: "+e);
         }
-
-
-
 
     }
 
