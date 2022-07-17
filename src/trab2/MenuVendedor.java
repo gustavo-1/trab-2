@@ -19,10 +19,11 @@ public class MenuVendedor extends JFrame {
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(painelMenuVendedor);
-        this.setLocationRelativeTo(null);
-        //this.setSize(111,111);
         this.pack();
+        this.setLocationRelativeTo(null);
         this.setVisible(true);
+        //this.setSize(111,111);
+
 
         this.vendedor = v;
 

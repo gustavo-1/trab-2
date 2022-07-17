@@ -1,6 +1,7 @@
 package trab2;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -32,14 +33,16 @@ public class MenuVender extends JFrame{
     static List <Motocicleta> listaMotos= new ArrayList<Motocicleta>();
     private Vendedor vendedor;
 
+
+
     public MenuVender(Vendedor v){
         ler();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(painelvender);
-        //this.setLocationRelativeTo(null);
-        //this.setSize(111,111);
         this.pack();
+        this.setLocationRelativeTo(null);
         this.setVisible(true);
+        //this.setSize(111,111);
         this.vendedor = v;
         NomeVendedor.setText(v.getNome());
 
