@@ -70,11 +70,12 @@ public class AlterarVeiculo extends JFrame {
 
     public AlterarVeiculo(){
         ler();
-        //this.setSize(600,600);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setSize(1800,2100);
+
         this.setContentPane(PainelEdtCarro);
         this.pack();
-        this.setLocationRelativeTo(null);
+       // this.setLocationRelativeTo(null);
         this.setVisible(true);
 
 
