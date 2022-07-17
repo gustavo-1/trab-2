@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Objects;
 
 public class AdicionarCarro extends JFrame {
     private JTextField marca;
@@ -29,7 +30,6 @@ public class AdicionarCarro extends JFrame {
     private JTextField potencia;
     private JTextField nCilindros;
     private JTextField nOcupantes;
-    private JTextField tipo;
     private JLabel tipoDeCombustívelLabel;
     private JTextField altura;
     private JTextField largura;
@@ -42,6 +42,7 @@ public class AdicionarCarro extends JFrame {
     private JLabel númeroDeCilindrosLabel;
     private JLabel potenciaLabel;
     private JLabel statusLabel;
+    private JComboBox comboBox1;
     private Vendedor vendedor;
     private int retornar;
 
@@ -128,7 +129,8 @@ public class AdicionarCarro extends JFrame {
         int tpotencia = Integer.parseInt(potencia.getText());
         int tnDeCilindros = Integer.parseInt(nCilindros.getText());
         int tnDeOcupantes = Integer.parseInt(nOcupantes.getText());
-        String ttipo  = tipo.getText();
+        String ttipo  = Objects.toString(comboBox1.getSelectedItem());
+
         double talt= Double.parseDouble(altura.getText());
         double tlarg= Double.parseDouble(largura.getText());
         double tcompri= Double.parseDouble(comprimento.getText());

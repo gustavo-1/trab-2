@@ -85,11 +85,14 @@ public class MenuGerente extends JFrame{
         pesquisarsellerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                for (DesempenhoVendedor vendedorrecorrente : listaDesempenho){
-                    if(Objects.equals(vendedorrecorrente.getNomeseller(), desempenhoseller.getText())){
-                        Desempenho d = new Desempenho(vendedorrecorrente.getNomeseller());
-                    }
-                }
+
+                     Desempenho d = new Desempenho(desempenhoseller.getText());
+
+              //  for (DesempenhoVendedor vendedorrecorrente : listaDesempenho){
+                //    if(Objects.equals(vendedorrecorrente.getNomeseller(), desempenhoseller.getText())){
+                  //      Desempenho d = new Desempenho(vendedorrecorrente.getNomeseller());
+               //     }
+             //   }
             }
         });
 
