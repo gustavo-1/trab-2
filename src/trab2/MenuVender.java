@@ -282,7 +282,7 @@ public class MenuVender extends JFrame{
                 String cidade= atributos2[8];
                 // fim
 
-                int renda =  Integer.parseInt(atributos2[9]) ;
+                Double renda =  Double.parseDouble(atributos2[9]) ;
                 int dependentes =  Integer.parseInt(atributos2[10]) ;
 
                 for(String s: atributos2){

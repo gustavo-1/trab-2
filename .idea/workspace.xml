@@ -4,33 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ec128bb-b4dc-4fbe-baa4-1fb051094707" name="Changes" comment="escreve alguma anotação do q vc adicionou ou removeu, ou n bota nada aq">
+    <list default="true" id="1ec128bb-b4dc-4fbe-baa4-1fb051094707" name="Changes" comment="Alterar e remover completo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carros.txt" beforeDir="false" afterPath="$PROJECT_DIR$/carros.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/clientes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/motos.txt" beforeDir="false" afterPath="$PROJECT_DIR$/motos.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AlterarVeiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AlterarVeiculo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarCarro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarCarro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarGerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarGerente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarMotocicleta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarMotocicleta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarVendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarVendedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AlterarCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AlterarCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AlterarVendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AlterarVendedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirCliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirVeiculo.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirVeiculo.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirVeiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirVeiculo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirVendedor.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirVendedor.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirVendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirVendedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/MenuGerente.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuGerente.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/MenuGerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuGerente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/trab2/MenuVendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuVendedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/MenuVender.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuVender.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/MenuVender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuVender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/TelaInicialGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/TelaInicialGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendedores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendedores.txt" afterDir="false" />
     </list>
+    <list id="bd9ad54b-a450-4241-9f83-e8636646a099" name="Changes by brnuo" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -150,6 +130,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MenuVender" />
         <item itemvalue="Application.AlterarCliente" />
         <item itemvalue="Application.AdicionarCarro" />
         <item itemvalue="Application.trab2.TelaInicialGUI" />
