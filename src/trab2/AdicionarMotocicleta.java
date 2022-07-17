@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Objects;
 
 public class AdicionarMotocicleta extends JFrame {
     private JTextField Nchassi;
@@ -28,7 +29,7 @@ public class AdicionarMotocicleta extends JFrame {
     private JLabel JLabelNumero;
     private JTextField peso;
     private JTextField cilindradas;
-    private JTextField tipo;
+    private JComboBox tipo;
     private JLabel JLabelNchassi;
     private JLabel cinlindradasLabel;
     private JLabel tipoLabel;
@@ -110,7 +111,7 @@ public class AdicionarMotocicleta extends JFrame {
         boolean tVendido = vendidoCheckBox.isSelected();
 
         int tcilindradas = Integer.parseInt(cilindradas.getText());
-        String ttipo  = tipo.getText();
+        String ttipo  = Objects.toString(tipo.getSelectedItem());
 
         //informações especificas sobre carro ou moto ainda não foram adicionadas pra eu poder comecar a testar
         Motocicleta motoNova = new Motocicleta(nchaci,tmarca,tmodelo,tano,tquilometragem,tTipoDeCombustivel,tPeso,tVendido, tcilindradas,ttipo);
@@ -132,7 +133,7 @@ public class AdicionarMotocicleta extends JFrame {
 
 
 
-            if(this.retornar == 2){
+            if(this.retornar == 1){
                 MenuVendedor mv = new MenuVendedor(vendedor);
                 close();
             }else{

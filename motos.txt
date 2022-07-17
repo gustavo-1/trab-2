@@ -1,2 +1,1 @@
-1234~marca4~modelo4~2009~6.0~gasosa~555.0~false~55~esporte
-1231~Marca1~Modelo4~12345~76656.0~alcool~345.0~false~97868~vcfdfg
+65~marca2~modelo2~85~65.0~gf~53.0~true~765~Esportiva

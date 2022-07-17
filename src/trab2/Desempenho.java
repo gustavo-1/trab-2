@@ -6,7 +6,6 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Desempenho extends JFrame{
     private JPanel paineldesempenho;
@@ -20,10 +19,11 @@ public class Desempenho extends JFrame{
     private JLabel fieldTipopagamento;
     private JLabel fieldMostpopularcar;
     private Vendedor vendedor;
-    private String nomeseller;
+    private String nomevendedor;
     static List <DesempenhoVendedor> listaDesempenho= new ArrayList<DesempenhoVendedor>();
+    Map<String, Integer> stringsCount = new HashMap<>();
 
-     public Desempenho(String nomeseller){
+    public Desempenho(String nomevendedor){
         ler();
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -32,9 +32,8 @@ public class Desempenho extends JFrame{
         this.setLocationRelativeTo(null);
         this.setVisible(true);
 
-        textvendedor.setText(nomeseller);
-
-        texteqtdvendas.setText(mostRepeatedWord);
+        textvendedor.setText(nomevendedor);
+        textmostpopularcar.setText(tipoMaisPopular().toString());
         close.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -45,9 +44,37 @@ public class Desempenho extends JFrame{
 
     }
 
-    public void tipoMaisPopular(){
+    public String tipoMaisPopular(){
         /* Trail, Street, Esportivo, Custom, Carro: Utilitário, Sedan, Hatch, Esportivo */
         // Usar collections pra verificar o tipo mais frequente
+        for(DesempenhoVendedor vendedores: listaDesempenho) {
+
+        }
+        int Trail = Collections.frequency(listaDesempenho, "Trail");
+        int Street = Collections.frequency(listaDesempenho, "Street");
+        int Esportivo = Collections.frequency(listaDesempenho, "Esportivo");
+        int Custom = Collections.frequency(listaDesempenho, "Custom");
+        int Utilitario = Collections.frequency(listaDesempenho, "Utilitario");
+        int Sedan = Collections.frequency(listaDesempenho, "Sedan");
+        int Hatch = Collections.frequency(listaDesempenho, "Hatch");
+
+        stringsCount.put("Trail", Trail);
+        stringsCount.put("Street", Street);
+        stringsCount.put("Esportivo", Esportivo);
+        stringsCount.put("Custom", Custom);
+        stringsCount.put("Utilitario", Utilitario);
+        stringsCount.put("Sedan", Sedan);
+        stringsCount.put("Hatch", Hatch);
+
+        int maxValueInMap=(Collections.max(stringsCount.values()));
+
+        Iterator<String> i = stringsCount.keySet().iterator();
+        while(i.hasNext()) {
+            if(){
+
+            }
+        }
+
     }
     public void close() {
         setVisible(false);
@@ -85,10 +112,10 @@ public class Desempenho extends JFrame{
                 }
 
                 Vendedor vendedor = this.vendedor;
-
-                DesempenhoVendedor tempDesempenho = new DesempenhoVendedor(tid, nomeseller, cpf, tipoVeiculo, tipoPagamento);
-                listaDesempenho.add(tempDesempenho);
-
+                if(Objects.equals(nomeseller, nomevendedor)){
+                    DesempenhoVendedor tempDesempenho = new DesempenhoVendedor(tid, nomeseller, cpf, tipoVeiculo, tipoPagamento);
+                    listaDesempenho.add(tempDesempenho);
+                }
             }
             myReader.close();
         }

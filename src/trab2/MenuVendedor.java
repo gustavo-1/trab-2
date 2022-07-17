@@ -31,7 +31,6 @@ public class MenuVendedor extends JFrame {
         venderButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                 irParaVender(v);
             }
         });

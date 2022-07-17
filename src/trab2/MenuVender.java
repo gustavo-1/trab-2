@@ -58,7 +58,6 @@ public class MenuVender extends JFrame{
         venderCarroButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                 venderCarro();
             }
         });
@@ -109,7 +108,7 @@ public class MenuVender extends JFrame{
             Cliente cliente = listaCliente.get(resposta2);
             Carro veiculo = listaCarros.get(resposta1);
 
-            if(veiculo.getVendido() == false){
+            if(veiculo.getVendido()){
                 System.out.println("Já está vendido!");
                 ////colocar na tela
                 return;
