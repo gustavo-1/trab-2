@@ -84,7 +84,7 @@ public class Desempenho extends JFrame{
                 indiceMaior=i;
             }
         }
-        textmostpopularcar.setText("mais popular:"+tipos[indiceMaior]+ "com "+totais[indiceMaior] +" vendas.");
+        textmostpopularcar.setText("mais popular: "+tipos[indiceMaior]+ " com "+totais[indiceMaior] +" vendas.");
     }
 
     public void close() {

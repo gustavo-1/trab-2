@@ -85,7 +85,15 @@ public class MenuGerente extends JFrame{
         pesquisarsellerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                      Desempenho d = new Desempenho(desempenhoseller.getText());
+                     close();
+
+              //  for (DesempenhoVendedor vendedorrecorrente : listaDesempenho){
+                //    if(Objects.equals(vendedorrecorrente.getNomeseller(), desempenhoseller.getText())){
+                  //      Desempenho d = new Desempenho(vendedorrecorrente.getNomeseller());
+               //     }
+             //   }
             }
         });
 
@@ -131,6 +139,7 @@ public class MenuGerente extends JFrame{
 
                 String[] atributos = leitura.split("~");
 
+
                 int tid = Integer.parseInt(atributos[0]);
                 String nomeseller = atributos[1];
                 String tipoVeiculo = atributos[2];
@@ -140,6 +149,7 @@ public class MenuGerente extends JFrame{
                 for(String s: atributos){
                     System.out.println("atributos:\n"+s);
                 }
+
                 Vendedor vendedor = this.vendedor;
 
                 DesempenhoVendedor tempDesempenho = new DesempenhoVendedor(tid, nomeseller, cpf, tipoVeiculo, tipoPagamento);
