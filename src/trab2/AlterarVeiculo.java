@@ -75,7 +75,7 @@ public class AlterarVeiculo extends JFrame {
 
         this.setContentPane(PainelEdtCarro);
         this.pack();
-       // this.setLocationRelativeTo(null);
+        this.setLocationRelativeTo(null);
         this.setVisible(true);
 
 
@@ -126,12 +126,17 @@ public class AlterarVeiculo extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 clicouCarro();
+                MenuGerente mg = new MenuGerente();
             }
+
         });
+
+
         adicionarMotoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 clicouMoto();
+                //MenuGerente mg = new MenuGerente();
             }
         });
         close.addActionListener(new ActionListener() {
@@ -200,12 +205,15 @@ public class AlterarVeiculo extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 clicouCarro();
+                MenuVendedor mv = new MenuVendedor(v);
             }
+
         });
         adicionarMotoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 clicouMoto();
+                //MenuVendedor mv = new MenuVendedor(v);
             }
         });
         close.addActionListener(new ActionListener() {

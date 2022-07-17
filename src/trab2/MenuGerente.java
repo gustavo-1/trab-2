@@ -87,6 +87,7 @@ public class MenuGerente extends JFrame{
             public void actionPerformed(ActionEvent e) {
 
                      Desempenho d = new Desempenho(desempenhoseller.getText());
+                     close();
 
               //  for (DesempenhoVendedor vendedorrecorrente : listaDesempenho){
                 //    if(Objects.equals(vendedorrecorrente.getNomeseller(), desempenhoseller.getText())){
