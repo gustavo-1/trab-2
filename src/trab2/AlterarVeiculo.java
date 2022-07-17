@@ -73,7 +73,7 @@ public class AlterarVeiculo extends JFrame {
         this.setContentPane(PainelEdtCarro);
 
         this.pack();
-        //this.setLocationRelativeTo(null);
+        this.setLocationRelativeTo(null);
         this.setVisible(true);
         this.setSize(600,600);
 
