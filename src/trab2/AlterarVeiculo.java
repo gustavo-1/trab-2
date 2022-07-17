@@ -140,6 +140,80 @@ public class AlterarVeiculo extends JFrame {
         });
     }
 
+    //veio do funcionario
+    public AlterarVeiculo(int retorna, Vendedor v){
+        ler();
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setContentPane(PainelEdtCarro);
+
+        this.pack();
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
+        this.setSize(600,600);
+
+
+
+        DefaultListModel modeloCarros = criaModeloCarro();
+        list1.setModel(modeloCarros);
+
+        DefaultListModel modeloMotos = criaModeloMotos();
+        list2.setModel(modeloMotos);
+
+
+        carroButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                PainelAddCarro.setVisible(true);
+                PainelAddMoto.setVisible(false);
+
+            }
+        });
+        motoButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+
+                PainelAddCarro.setVisible(false);
+                PainelAddMoto.setVisible(true);
+
+            }
+        });
+        list1.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                escolheuCarro();
+            }
+        });
+        list2.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                escolheuMoto();
+            }
+        });
+        AddCarro.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                clicouCarro();
+            }
+        });
+        adicionarMotoButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                clicouMoto();
+            }
+        });
+        close.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MenuVendedor mv = new MenuVendedor(v);
+                close();
+            }
+        });
+    }
+
 
     public static void main(String[] args) {
         AlterarVeiculo av = new AlterarVeiculo();

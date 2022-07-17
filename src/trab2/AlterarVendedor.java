@@ -75,6 +75,49 @@ public class AlterarVendedor extends JFrame{
         });
     }
 
+    //veio do vendedor
+    public AlterarVendedor(int retornar, Vendedor v){
+        listaVendedores.clear();
+        ler();
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setContentPane(PainelEdtVendedor);
+        this.pack();
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
+
+        DefaultListModel modeloCliente = criaModeloGerente();
+        list1.setModel(modeloCliente);
+
+
+        String temp;
+        for(Gerente c: listaGerentes){
+            temp = "Nome: " + c.getNome()+" CPF: " + c.getRg();
+            listGerente.addItem(temp);
+
+        }
+
+        list1.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                escolherVendedor();
+            }
+        });
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                clicou();
+            }
+        });
+        close.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MenuVendedor mv = new MenuVendedor(v);
+                close();
+            }
+        });
+    }
+
     public static void main(String[] args) {
         AlterarVendedor ed = new AlterarVendedor();
     }

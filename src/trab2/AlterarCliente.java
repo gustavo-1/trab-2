@@ -83,6 +83,49 @@ public class AlterarCliente extends JFrame {
         });
     }
 
+    //veio do vendedor
+    public AlterarCliente(int retornar, Vendedor v){
+        ler();
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setContentPane(PainelAlterarCliente);
+        //this.setLocationRelativeTo(null);
+        //this.setSize(111,111);
+        this.pack();
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
+
+        DefaultListModel modeloCliente = criaModeloCliente();
+        jlistaCliente.setModel(modeloCliente);
+
+        jlistaCliente.addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentResized(ComponentEvent e) {
+                super.componentResized(e);
+                escolherCliente();
+            }
+        });
+        jlistaCliente.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                escolherCliente();
+            }
+        });
+        alterarClienteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                clicou();
+            }
+        });
+        close.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MenuVendedor mv = new MenuVendedor(v);
+                close();
+            }
+        });
+    }
+
     public static void main(String[] args) {
         AlterarCliente at = new AlterarCliente();
     }
