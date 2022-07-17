@@ -1,1 +1,2 @@
-54353~daphne~6~12~2003~algo~2341~bairro~mogi~30000.1~2
+72410~Lucas~6~2~1998~Ruagenerica~3591~bairrogenerico~Sjrp~90000~1
+55010~Joao~21~7~1965~Ruagen~9859~bairrogenerico~citygenerica~12000~4

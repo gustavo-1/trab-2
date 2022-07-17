@@ -33,6 +33,7 @@ public class AdicionarVendedor extends JFrame{
 
     public AdicionarVendedor(){
         super("Adicionar Funcionário");
+        listaGerentes.clear();
         ler();
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

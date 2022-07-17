@@ -4,15 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2772f62a-3ecb-4a45-ab0f-9535f696762f" name="Changes" comment="arrumei uma coisinha no menu vender">
+    <list default="true" id="2772f62a-3ecb-4a45-ab0f-9535f696762f" name="Changes" comment="Falta pegar o carro mais popular2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarCarro.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarCarro.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarCarro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarCarro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarMotocicleta.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarMotocicleta.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/Desempenho.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/Desempenho.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/MenuGerente.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuGerente.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/MenuGerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuGerente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carros.txt" beforeDir="false" afterPath="$PROJECT_DIR$/carros.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/clientes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gerentes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gerentes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motos.txt" beforeDir="false" afterPath="$PROJECT_DIR$/motos.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarGerente.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarGerente.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarVendedor.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarVendedor.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarVendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarVendedor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendas.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendas.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendedores.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendedores.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +52,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "227",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "360",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "389",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "last_opened_file_path": "/home/brnuo/Documentos/lpoo/trab-2/src/trab2",
     "settings.editor.selected.configurable": "configurable.group.language"
@@ -147,7 +149,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1ec128bb-b4dc-4fbe-baa4-1fb051094707" name="Changes" comment="" />
+      <changelist id="2772f62a-3ecb-4a45-ab0f-9535f696762f" name="Changes" comment="Falta pegar o carro mais popular2" />
       <created>1656204851503</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -216,14 +218,7 @@
       <option name="project" value="LOCAL" />
       <updated>1657984725285</updated>
     </task>
-    <task id="LOCAL-00010" summary="arrumei uma coisinha no menu vender">
-      <created>1658074309275</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1658074309275</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -245,15 +240,14 @@
     <MESSAGE value="Centralizei as UIs&#10;&#10;Criei um menu para Moto, assim o Menu para adicionar veículo leva a um Menu que te faz escolher entre adicionar carros e motos&#10;&#10;Adicionei um botão de &quot;fechar a janela&quot; que basicamente volta pra janela anterior, e também toda vez que você clica em um botão que entra em outro menu, o menu anterior fecha" />
     <MESSAGE value="coisas adicionadas" />
     <MESSAGE value="16/07&#10;12:19" />
-    <MESSAGE value="arrumei uma coisinha no menu vender" />
-    <option name="LAST_COMMIT_MESSAGE" value="arrumei uma coisinha no menu vender" />
+    <option name="LAST_COMMIT_MESSAGE" value="16/07&#10;12:19" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/trab2/AlterarGerente.java</url>
-          <line>63</line>
+          <line>64</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
