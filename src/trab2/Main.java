@@ -3,6 +3,8 @@
 * Daphne Lie Haranaka Pereira
 * Gustavo Tomaello Juiz
 * Lucas Xavier de Britto Pereira
+*
+* Observação: A interface gráfica foi criada no IntelliJ, portanto o projeto funciona no IntelliJ
 * */
 
 package trab2;
