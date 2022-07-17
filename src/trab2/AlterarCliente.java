@@ -48,6 +48,7 @@ public class AlterarCliente extends JFrame {
         //this.setLocationRelativeTo(null);
         //this.setSize(111,111);
         this.pack();
+        this.setLocationRelativeTo(null);
         this.setVisible(true);
 
         DefaultListModel modeloCliente = criaModeloCliente();

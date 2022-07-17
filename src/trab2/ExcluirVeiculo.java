@@ -108,7 +108,7 @@ public class ExcluirVeiculo extends JFrame {
 
 
     public void clicouCarro(){
-        System.out.println("escolido: "+listCarros.getSelectedIndex());
+        System.out.println("escolhido: "+listCarros.getSelectedIndex());
         int resposta1 = listCarros.getSelectedIndex();
 
         //agora deve se remover a linha selecionada
