@@ -4,30 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2772f62a-3ecb-4a45-ab0f-9535f696762f" name="Changes" comment="Tirei SOUT's e deixei o código mais limpo">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarCarro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarCarro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarGerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarGerente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarMotocicleta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarMotocicleta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AdicionarVendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AdicionarVendedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AlterarCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AlterarCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AlterarGerente.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AlterarGerente.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AlterarGerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AlterarGerente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AlterarVeiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AlterarVeiculo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/AlterarVendedor.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/AlterarVendedor.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/ConsultarDados.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ConsultarDados.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/ConsultarDados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ConsultarDados.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirCliente.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirCliente.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirGerente.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirGerente.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirVeiculo.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirVeiculo.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirVeiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirVeiculo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirVendedor.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirVendedor.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/ExcluirVendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/ExcluirVendedor.java" afterDir="false" />
+    <list default="true" id="2772f62a-3ecb-4a45-ab0f-9535f696762f" name="Changes" comment="Versão semi-final">
       <change beforePath="$PROJECT_DIR$/src/trab2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/MenuGerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/MenuGerente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trab2/TelaInicialGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/trab2/TelaInicialGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657984725285</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Versão semi-final">
+      <created>1658096857698</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1658096857698</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -253,7 +238,8 @@
     <MESSAGE value="Centralizei as UIs&#10;&#10;Criei um menu para Moto, assim o Menu para adicionar veículo leva a um Menu que te faz escolher entre adicionar carros e motos&#10;&#10;Adicionei um botão de &quot;fechar a janela&quot; que basicamente volta pra janela anterior, e também toda vez que você clica em um botão que entra em outro menu, o menu anterior fecha" />
     <MESSAGE value="coisas adicionadas" />
     <MESSAGE value="16/07&#10;12:19" />
-    <option name="LAST_COMMIT_MESSAGE" value="16/07&#10;12:19" />
+    <MESSAGE value="Versão semi-final" />
+    <option name="LAST_COMMIT_MESSAGE" value="Versão semi-final" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

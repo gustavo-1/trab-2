@@ -2,6 +2,7 @@
 * Bruno Vinicius Veronez de Jesus
 * Daphne Lie Haranaka Pereira
 * Gustavo Tomaello Juiz
+* Lucas Xavier de Britto Pereira
 * */
 
 package trab2;
