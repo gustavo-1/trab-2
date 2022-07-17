@@ -63,6 +63,7 @@ public class AlterarVeiculo extends JFrame {
     private JTextField pesoMoto;
     private JCheckBox vendidoMoto;
     private JTextField tipoMoto2;
+    private JButton close;
     private List<Carro> listaCarros = new ArrayList<Carro>();
     private List<Motocicleta> listaMoto = new ArrayList<Motocicleta>();
 
@@ -128,6 +129,13 @@ public class AlterarVeiculo extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 clicouMoto();
+            }
+        });
+        close.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MenuGerente mg = new MenuGerente();
+                close();
             }
         });
     }
@@ -376,7 +384,7 @@ public class AlterarVeiculo extends JFrame {
         ///////////////////
 
         //volta para menu gerente apenas por enquanto
-        MenuGerente mg = new MenuGerente();
+        //MenuGerente mg = new MenuGerente();
         close();
 
     }

@@ -73,6 +73,13 @@ public class AlterarCliente extends JFrame {
                 clicou();
             }
         });
+        close.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MenuGerente mg = new MenuGerente();
+                close();
+            }
+        });
     }
 
     public static void main(String[] args) {
@@ -254,7 +261,7 @@ public class AlterarCliente extends JFrame {
         ///////////////////
 
         //volta para menu gerente apenas por enquanto
-        MenuGerente mg = new MenuGerente();
+        //MenuGerente mg = new MenuGerente();
         close();
 
     }
