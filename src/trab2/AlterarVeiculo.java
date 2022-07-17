@@ -64,6 +64,7 @@ public class AlterarVeiculo extends JFrame {
     private JCheckBox vendidoMoto;
     private JTextField tipoMoto2;
     private JButton close;
+    private JLabel erroEntrada;
     private List<Carro> listaCarros = new ArrayList<Carro>();
     private List<Motocicleta> listaMoto = new ArrayList<Motocicleta>();
 
@@ -221,6 +222,7 @@ public class AlterarVeiculo extends JFrame {
     }
 
     public void escolheuCarro(){
+
         Carro carroEscolhido = listaCarros.get(list1.getSelectedIndex());
 
         Nchassi.setText(String.valueOf(carroEscolhido.getNumeroDoChassi()));
@@ -368,6 +370,7 @@ public class AlterarVeiculo extends JFrame {
     }
 
     public void clicouCarro(){
+        try{
 
         int nchassi = Integer.parseInt(Nchassi.getText());
         String tmarca = marca.getText();
@@ -461,11 +464,14 @@ public class AlterarVeiculo extends JFrame {
         //volta para menu gerente apenas por enquanto
         //MenuGerente mg = new MenuGerente();
         close();
-
+        }catch (Exception e){
+            erroEntrada.setVisible(true);
+            System.out.println("--------------------------------erro-----------------------------"+e);
+        }
     }
 
     public void clicouMoto(){
-
+        try{
 
         int nchaci = Integer.parseInt(NchassiMoto.getText());
         String tmarca = marcaMoto.getText();
@@ -545,6 +551,10 @@ public class AlterarVeiculo extends JFrame {
         //volta para menu gerente apenas por enquanto
         MenuGerente mg = new MenuGerente();
         close();
+        }catch (Exception e){
+            erroEntrada.setVisible(true);
+            System.out.println("--------------------------------erro-----------------------------"+e);
+        }
     }
 
 

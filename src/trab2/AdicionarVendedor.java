@@ -29,6 +29,7 @@ public class AdicionarVendedor extends JFrame{
 
     private JButton close;
     private JComboBox listGerente;
+    private JLabel erroEntrada;
 
     public AdicionarVendedor(){
         super("Adicionar Funcionário");
@@ -183,6 +184,8 @@ public class AdicionarVendedor extends JFrame{
       //  AdicionarVendedor a = new AdicionarVendedor();
    // }
     public void adicionarVendedor(){
+        try{
+
         String trg = rg.getText();
         String tnome = nome.getText();
         int tdiaNasc = Integer.parseInt(diaNasc.getText());
@@ -224,6 +227,11 @@ public class AdicionarVendedor extends JFrame{
 
         MenuGerente menuGerente = new MenuGerente();
         close();
+
+        }catch (Exception e){
+            erroEntrada.setVisible(true);
+            System.out.println("--------------------------------erro-----------------------------"+e);
+        }
 
 
 

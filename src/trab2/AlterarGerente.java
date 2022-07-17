@@ -26,6 +26,7 @@ public class AlterarGerente extends JFrame {
     private JButton close;
     private JTextField experiencia;
     private JList list1;
+    private JLabel erroEntrada;
     static List<Gerente> listaGerentes = new ArrayList<Gerente>();
     private Gerente gerenteEscolhido;
     private int escolha;
@@ -156,6 +157,8 @@ public class AlterarGerente extends JFrame {
 
 
     public void clicou()  {
+
+        try{
         String trg = rg.getText();
         String tnome = nome.getText();
         int tdiaNasc = Integer.parseInt(diaNasc.getText());
@@ -251,6 +254,11 @@ public class AlterarGerente extends JFrame {
         //volta para menu gerente apenas por enquanto
         //MenuGerente mg = new MenuGerente();
         close();
+
+        }catch (Exception e){
+            erroEntrada.setVisible(true);
+            System.out.println("--------------------------------erro-----------------------------"+e);
+        }
 
     }
 

@@ -33,6 +33,7 @@ public class AdicionarMotocicleta extends JFrame {
     private JLabel JLabelNchassi;
     private JLabel cinlindradasLabel;
     private JLabel tipoLabel;
+    private JLabel erroEntrada;
     private  Vendedor vendedor;
     private  int retornar;
 
@@ -101,6 +102,8 @@ public class AdicionarMotocicleta extends JFrame {
         dispose();
     }
     public void adicionar() throws IOException {
+
+        try{
         int nchaci = Integer.parseInt(Nchassi.getText());
         String tmarca = marca.getText();
         String tmodelo = modelo.getText();
@@ -145,6 +148,11 @@ public class AdicionarMotocicleta extends JFrame {
         }
         catch (IOException e){
             System.out.println("Erro: " + e);
+        }
+
+        }catch (Exception e){
+            erroEntrada.setVisible(true);
+            System.out.println("--------------------------------erro-----------------------------"+e);
         }
 
 

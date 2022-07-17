@@ -33,6 +33,7 @@ public class AdicionarCliente extends JFrame {
     private JTextField anotextfield;
     private JTextField rendatextfield;
     private JButton adicionarClienteButton;
+    private JLabel erroEntrada;
     private int retornar;
     private Vendedor vendedor;
 
@@ -113,6 +114,9 @@ public class AdicionarCliente extends JFrame {
     }
 
     public void adicionar() throws IOException {
+
+        try{
+
         int cpf = Integer.parseInt(CPFtextfield.getText());
         String nome = nometextfield.getText();
         int dia = Integer.parseInt(diatextfield.getText());
@@ -156,8 +160,13 @@ public class AdicionarCliente extends JFrame {
         else{ //retorna para menu vendedor
             MenuVendedor mv = new MenuVendedor(this.vendedor);
         }
+            close();
+        }catch (Exception e){
+            erroEntrada.setVisible(true);
+            System.out.println("--------------------------------erro-----------------------------"+e);
+        }
 
-        close();
+
 
     }
 }

@@ -24,6 +24,7 @@ public class AdicionarGerente extends JFrame {
     private JTextField senha;
     private JButton close;
     private JTextField experiencia;
+    private JLabel erroEntrada;
 
     public AdicionarGerente(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -59,6 +60,7 @@ public class AdicionarGerente extends JFrame {
     }
 
     public void adicionar(){
+        try{
 
         String trg = rg.getText();
         String tnome = nome.getText();
@@ -94,7 +96,10 @@ public class AdicionarGerente extends JFrame {
 
         MenuGerente mg = new MenuGerente();
         close();
-
+        }catch (Exception e){
+            erroEntrada.setVisible(true);
+            System.out.println("--------------------------------erro-----------------------------"+e);
+        }
 
     }
     private void close(){

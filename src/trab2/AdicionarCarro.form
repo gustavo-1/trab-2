@@ -144,6 +144,14 @@
         </constraints>
         <properties/>
       </component>
+      <component id="7ff48" class="javax.swing.JTextField" binding="tipo">
+        <constraints>
+          <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
       <component id="153d" class="javax.swing.JTextField" binding="altura">
         <constraints>
           <grid row="13" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
@@ -275,20 +283,6 @@
         <properties>
           <background color="-1618884"/>
           <text value="X"/>
-        </properties>
-      </component>
-      <component id="bc54b" class="javax.swing.JComboBox" binding="tipo">
-        <constraints>
-          <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <model>
-            <item value="Utilitario"/>
-            <item value="Pickup"/>
-            <item value="Sedan"/>
-            <item value="Hatch"/>
-            <item value="Esportivo"/>
-          </model>
         </properties>
       </component>
     </children>

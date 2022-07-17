@@ -36,6 +36,7 @@ public class AlterarCliente extends JFrame {
     private JTextField anotextfield;
     private JButton alterarClienteButton;
     private JList jlistaCliente;
+    private JLabel erroEntrada;
     private int retornar;
     private int escolha;
     private Vendedor vendedor;
@@ -224,6 +225,8 @@ public class AlterarCliente extends JFrame {
     }
 
     public void clicou()  {
+        try{
+
         int cpf = Integer.parseInt(CPFtextfield.getText());
         String nome = nometextfield.getText();
         int dia = Integer.parseInt(diatextfield.getText());
@@ -307,6 +310,11 @@ public class AlterarCliente extends JFrame {
         //volta para menu gerente apenas por enquanto
         //MenuGerente mg = new MenuGerente();
         close();
+
+        }catch (Exception e){
+            erroEntrada.setVisible(true);
+            System.out.println("--------------------------------erro-----------------------------"+e);
+        }
 
     }
     public DefaultListModel criaModeloCliente(){

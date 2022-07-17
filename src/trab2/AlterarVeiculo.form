@@ -8,7 +8,7 @@
     <properties>
       <maximumSize width="-1" height="-1"/>
       <minimumSize width="-1" height="-1"/>
-      <preferredSize width="1200" height="575"/>
+      <preferredSize width="-1" height="-1"/>
       <visible value="true"/>
     </properties>
     <border type="none"/>
@@ -20,253 +20,6 @@
         <properties>
           <text value="Moto"/>
         </properties>
-      </component>
-      <component id="83f9a" class="javax.swing.JButton" binding="close">
-        <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false">
-            <minimum-size width="10" height="10"/>
-            <preferred-size width="25" height="25"/>
-            <maximum-size width="50" height="50"/>
-          </grid>
-        </constraints>
-        <properties>
-          <background color="-1618884"/>
-          <text value="X"/>
-        </properties>
-      </component>
-      <grid id="afe65" binding="PainelAddMoto" layout-manager="GridLayoutManager" row-count="11" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-        <margin top="0" left="0" bottom="0" right="0"/>
-        <constraints>
-          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <visible value="true"/>
-        </properties>
-        <border type="none"/>
-        <children>
-          <component id="b4f6f" class="javax.swing.JLabel" binding="JLabelNchassi">
-            <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="167" height="16"/>
-              </grid>
-            </constraints>
-            <properties>
-              <text value="Numero do Chassi"/>
-            </properties>
-          </component>
-          <component id="4b1a9" class="javax.swing.JLabel">
-            <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="167" height="16"/>
-              </grid>
-            </constraints>
-            <properties>
-              <text value="Marca"/>
-            </properties>
-          </component>
-          <component id="3faec" class="javax.swing.JLabel">
-            <constraints>
-              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="167" height="16"/>
-              </grid>
-            </constraints>
-            <properties>
-              <text value="Modelo"/>
-            </properties>
-          </component>
-          <component id="173f4" class="javax.swing.JLabel">
-            <constraints>
-              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="167" height="16"/>
-              </grid>
-            </constraints>
-            <properties>
-              <text value="Ano"/>
-            </properties>
-          </component>
-          <component id="22622" class="javax.swing.JLabel">
-            <constraints>
-              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="167" height="16"/>
-              </grid>
-            </constraints>
-            <properties>
-              <text value="Quilometragem"/>
-            </properties>
-          </component>
-          <component id="52eae" class="javax.swing.JLabel">
-            <constraints>
-              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="167" height="16"/>
-              </grid>
-            </constraints>
-            <properties>
-              <text value="Peso"/>
-            </properties>
-          </component>
-          <component id="6f99c" class="javax.swing.JLabel" binding="JLabelStatus">
-            <constraints>
-              <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="167" height="16"/>
-              </grid>
-            </constraints>
-            <properties>
-              <text value="Status"/>
-            </properties>
-          </component>
-          <component id="1bace" class="javax.swing.JLabel">
-            <constraints>
-              <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="167" height="16"/>
-              </grid>
-            </constraints>
-            <properties>
-              <text value="Tipo"/>
-            </properties>
-          </component>
-          <component id="1c80e" class="javax.swing.JTextField" binding="NchassiMoto">
-            <constraints>
-              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
-              </grid>
-            </constraints>
-            <properties>
-              <text value=""/>
-            </properties>
-          </component>
-          <component id="50060" class="javax.swing.JLabel">
-            <constraints>
-              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="167" height="16"/>
-              </grid>
-            </constraints>
-            <properties>
-              <text value="Tipo de Combustível"/>
-            </properties>
-          </component>
-          <component id="d16bc" class="javax.swing.JLabel" binding="cinlindradasLabel">
-            <constraints>
-              <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                <preferred-size width="167" height="16"/>
-              </grid>
-            </constraints>
-            <properties>
-              <text value="Cinlindradas"/>
-            </properties>
-          </component>
-          <component id="9c6b3" class="javax.swing.JTextField" binding="marcaMoto">
-            <constraints>
-              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
-              </grid>
-            </constraints>
-            <properties/>
-          </component>
-          <component id="dd7af" class="javax.swing.JTextField" binding="modeloMoto">
-            <constraints>
-              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
-              </grid>
-            </constraints>
-            <properties/>
-          </component>
-          <component id="e50a6" class="javax.swing.JTextField" binding="anoMoto">
-            <constraints>
-              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
-              </grid>
-            </constraints>
-            <properties/>
-          </component>
-          <component id="5f61e" class="javax.swing.JTextField" binding="quilometragemMoto">
-            <constraints>
-              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
-              </grid>
-            </constraints>
-            <properties>
-              <text value=""/>
-            </properties>
-          </component>
-          <component id="3b409" class="javax.swing.JTextField" binding="tipoMoto">
-            <constraints>
-              <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
-              </grid>
-            </constraints>
-            <properties>
-              <text value=""/>
-            </properties>
-          </component>
-          <component id="c3ec2" class="javax.swing.JTextField" binding="pesoMoto">
-            <constraints>
-              <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
-              </grid>
-            </constraints>
-            <properties>
-              <text value=""/>
-            </properties>
-          </component>
-          <component id="3e2e5" class="javax.swing.JTextField" binding="cilindradasMoto">
-            <constraints>
-              <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
-              </grid>
-            </constraints>
-            <properties>
-              <text value=""/>
-            </properties>
-          </component>
-          <component id="f84ef" class="javax.swing.JTextField" binding="tipoMoto2">
-            <constraints>
-              <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="-1"/>
-              </grid>
-            </constraints>
-            <properties/>
-          </component>
-          <component id="99d6b" class="javax.swing.JCheckBox" binding="vendidoMoto">
-            <constraints>
-              <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Vendido"/>
-            </properties>
-          </component>
-          <component id="a4f3b" class="javax.swing.JButton" binding="adicionarMotoButton">
-            <constraints>
-              <grid row="10" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Adicionar Moto"/>
-            </properties>
-          </component>
-        </children>
-      </grid>
-      <component id="81c9f" class="javax.swing.JButton" binding="carroButton" default-binding="true">
-        <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Carro"/>
-        </properties>
-      </component>
-      <component id="8994c" class="javax.swing.JList" binding="list1" default-binding="true">
-        <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="50"/>
-          </grid>
-        </constraints>
-        <properties/>
-      </component>
-      <component id="33921" class="javax.swing.JList" binding="list2" default-binding="true">
-        <constraints>
-          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="50"/>
-          </grid>
-        </constraints>
-        <properties/>
       </component>
       <grid id="705fd" binding="PainelAddCarro" layout-manager="GridLayoutManager" row-count="16" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
@@ -544,6 +297,253 @@
           </component>
         </children>
       </grid>
+      <component id="83f9a" class="javax.swing.JButton" binding="close">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="10" height="10"/>
+            <preferred-size width="25" height="25"/>
+            <maximum-size width="50" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-1618884"/>
+          <text value="X"/>
+        </properties>
+      </component>
+      <grid id="afe65" binding="PainelAddMoto" layout-manager="GridLayoutManager" row-count="11" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <visible value="true"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="b4f6f" class="javax.swing.JLabel" binding="JLabelNchassi">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="167" height="16"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="Numero do Chassi"/>
+            </properties>
+          </component>
+          <component id="4b1a9" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="167" height="16"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="Marca"/>
+            </properties>
+          </component>
+          <component id="3faec" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="167" height="16"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="Modelo"/>
+            </properties>
+          </component>
+          <component id="173f4" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="167" height="16"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="Ano"/>
+            </properties>
+          </component>
+          <component id="22622" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="167" height="16"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="Quilometragem"/>
+            </properties>
+          </component>
+          <component id="52eae" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="167" height="16"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="Peso"/>
+            </properties>
+          </component>
+          <component id="6f99c" class="javax.swing.JLabel" binding="JLabelStatus">
+            <constraints>
+              <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="167" height="16"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="Status"/>
+            </properties>
+          </component>
+          <component id="1bace" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="167" height="16"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="Tipo"/>
+            </properties>
+          </component>
+          <component id="1c80e" class="javax.swing.JTextField" binding="NchassiMoto">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="50060" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="167" height="16"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="Tipo de Combustível"/>
+            </properties>
+          </component>
+          <component id="d16bc" class="javax.swing.JLabel" binding="cinlindradasLabel">
+            <constraints>
+              <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="167" height="16"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value="Cinlindradas"/>
+            </properties>
+          </component>
+          <component id="9c6b3" class="javax.swing.JTextField" binding="marcaMoto">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="dd7af" class="javax.swing.JTextField" binding="modeloMoto">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="e50a6" class="javax.swing.JTextField" binding="anoMoto">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="5f61e" class="javax.swing.JTextField" binding="quilometragemMoto">
+            <constraints>
+              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="3b409" class="javax.swing.JTextField" binding="tipoMoto">
+            <constraints>
+              <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="c3ec2" class="javax.swing.JTextField" binding="pesoMoto">
+            <constraints>
+              <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="3e2e5" class="javax.swing.JTextField" binding="cilindradasMoto">
+            <constraints>
+              <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="f84ef" class="javax.swing.JTextField" binding="tipoMoto2">
+            <constraints>
+              <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="99d6b" class="javax.swing.JCheckBox" binding="vendidoMoto">
+            <constraints>
+              <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Vendido"/>
+            </properties>
+          </component>
+          <component id="a4f3b" class="javax.swing.JButton" binding="adicionarMotoButton">
+            <constraints>
+              <grid row="10" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Adicionar Moto"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <component id="81c9f" class="javax.swing.JButton" binding="carroButton" default-binding="true">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Carro"/>
+        </properties>
+      </component>
+      <component id="8994c" class="javax.swing.JList" binding="list1" default-binding="true">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="33921" class="javax.swing.JList" binding="list2" default-binding="true">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
     </children>
   </grid>
 </form>

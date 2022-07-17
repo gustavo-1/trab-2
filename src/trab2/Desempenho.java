@@ -47,7 +47,9 @@ public class Desempenho extends JFrame{
     public String tipoMaisPopular(){
         /* Trail, Street, Esportivo, Custom, Carro: Utilitário, Sedan, Hatch, Esportivo */
         // Usar collections pra verificar o tipo mais frequente
+        for(DesempenhoVendedor vendedores: listaDesempenho) {
 
+        }
         int Trail = Collections.frequency(listaDesempenho, "Trail");
         int Street = Collections.frequency(listaDesempenho, "Street");
         int Esportivo = Collections.frequency(listaDesempenho, "Esportivo");

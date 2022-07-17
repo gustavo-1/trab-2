@@ -39,6 +39,10 @@ public class MenuVender extends JFrame{
 
 
     public MenuVender(Vendedor v){
+        listaCliente.clear();
+        listaCarros.clear();
+        listaCarros.clear();
+
         ler();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(painelvender);
